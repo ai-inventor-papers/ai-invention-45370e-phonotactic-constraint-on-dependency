@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "phonotactic-dlm-evaluation"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+    "statsmodels==0.15.0",
+    "loguru==0.7.3",
+    "conllu==6.0.0",
+    "datasets==5.0.1",
+    "pandas==3.0.5",
+    "requests==2.34.2",
+    "tqdm==4.70.0",
+]

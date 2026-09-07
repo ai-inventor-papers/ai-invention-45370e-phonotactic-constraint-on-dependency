@@ -1,0 +1,68 @@
+{
+  "metrics_agg": {
+    "mean_mdd_word_space": 2.777591973244147,
+    "mean_mdd_phoneme_space": 10.624289297658862,
+    "mean_dlm_strength": 0.3600240818783865,
+    "mean_phon_density": 0.571,
+    "n_languages": 8,
+    "n_families": 1,
+    "regression_phon_density_coef": -3.023456270664571e-16,
+    "regression_phon_density_pval": 0.0,
+    "regression_r_squared": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "universal_dependencies_evaluation",
+      "examples": [
+        {
+          "input": "UD treebank for en (Indo-European, SVO)",
+          "output": "{\"lang_code\": \"en\", \"language_family\": \"Indo-European\", \"word_order\": \"SVO\", \"phon_density\": 0.615, \"phoneme_count\": 44.0, \"phonotactic_complexity\": 0.6, \"mdd_word\": 2.777591973244147, \"mdd_phoneme\": 12.22140468227425, \"mdd_functional\": 2.7294685990338166, \"mdd_lexical\": 2.8030690537084397, \"n_arcs\": 598, \"n_sentences\": 50, \"data_source\": \"synthetic\", \"dlm_strength\": 0.3600240818783865}",
+          "predict_mdd_word": "2.777591973244147",
+          "predict_mdd_phoneme": "12.22140468227425",
+          "predict_phon_density": "0.615",
+          "predict_dlm_strength": "0.3600240818783865",
+          "eval_mdd_word": 2.777591973244147,
+          "eval_mdd_phoneme": 12.22140468227425,
+          "eval_phon_density": 0.615,
+          "eval_dlm_strength": 0.3600240818783865,
+          "metadata_language_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_n_sentences": 50,
+          "metadata_n_arcs": 598
+        },
+        {
+          "input": "UD treebank for de (Indo-European, SVO)",
+          "output": "{\"lang_code\": \"de\", \"language_family\": \"Indo-European\", \"word_order\": \"SVO\", \"phon_density\": 0.623, \"phoneme_count\": 45.0, \"phonotactic_complexity\": 0.6, \"mdd_word\": 2.777591973244147, \"mdd_phoneme\": 12.499163879598662, \"mdd_functional\": 2.7294685990338166, \"mdd_lexical\": 2.8030690537084397, \"n_arcs\": 598, \"n_sentences\": 50, \"data_source\": \"synthetic\", \"dlm_strength\": 0.3600240818783865}",
+          "predict_mdd_word": "2.777591973244147",
+          "predict_mdd_phoneme": "12.499163879598662",
+          "predict_phon_density": "0.623",
+          "predict_dlm_strength": "0.3600240818783865",
+          "eval_mdd_word": 2.777591973244147,
+          "eval_mdd_phoneme": 12.499163879598662,
+          "eval_phon_density": 0.623,
+          "eval_dlm_strength": 0.3600240818783865,
+          "metadata_language_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_n_sentences": 50,
+          "metadata_n_arcs": 598
+        },
+        {
+          "input": "UD treebank for fr (Indo-European, SVO)",
+          "output": "{\"lang_code\": \"fr\", \"language_family\": \"Indo-European\", \"word_order\": \"SVO\", \"phon_density\": 0.554, \"phoneme_count\": 36.0, \"phonotactic_complexity\": 0.6, \"mdd_word\": 2.777591973244147, \"mdd_phoneme\": 9.99933110367893, \"mdd_functional\": 2.7294685990338166, \"mdd_lexical\": 2.8030690537084397, \"n_arcs\": 598, \"n_sentences\": 50, \"data_source\": \"synthetic\", \"dlm_strength\": 0.3600240818783865}",
+          "predict_mdd_word": "2.777591973244147",
+          "predict_mdd_phoneme": "9.99933110367893",
+          "predict_phon_density": "0.554",
+          "predict_dlm_strength": "0.3600240818783865",
+          "eval_mdd_word": 2.777591973244147,
+          "eval_mdd_phoneme": 9.99933110367893,
+          "eval_phon_density": 0.554,
+          "eval_dlm_strength": 0.3600240818783865,
+          "metadata_language_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_n_sentences": 50,
+          "metadata_n_arcs": 598
+        }
+      ]
+    }
+  ]
+}
