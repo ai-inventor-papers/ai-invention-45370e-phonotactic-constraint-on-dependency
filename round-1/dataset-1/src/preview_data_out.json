@@ -1,0 +1,1603 @@
+{
+  "datasets": [
+    {
+      "dataset": "Universal Dependencies \u2013 English (en_ewt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Al\", \"-\", \"Zaman\", \":\", \"American\", \"forces\", \"killed\", \"Shaikh\", \"Abdullah\", \"al\", \"-\", \"Ani\", \",\", \"the\", \"preacher\", \"at\", \"the\", \"mosque\", \"in\", \"the\"], \"head\": [0, 3, 1, 7, 6, 7, 1, ",
+          "output": "{\"avg_dependency_distance\": 3.321, \"n_dependencies\": 28}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"[\", \"This\", \"killing\", \"of\", \"a\", \"respected\", \"cleric\", \"will\", \"be\", \"causing\", \"us\", \"trouble\", \"for\", \"years\", \"to\", \"come\", \".\", \"]\"], \"head\": [10, 3, 10, 7, 7, 7, 3, 10, 10, 0, 10, ",
+          "output": "{\"avg_dependency_distance\": 3.294, \"n_dependencies\": 17}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"DPA\", \":\", \"Iraqi\", \"authorities\", \"announced\", \"that\", \"they\", \"had\", \"busted\", \"up\", \"3\", \"terrorist\", \"cells\", \"operating\", \"in\", \"Baghdad\", \".\"], \"head\": [0, 5, 4, 5, 1, 9, 9, 9, 5, 9",
+          "output": "{\"avg_dependency_distance\": 2.938, \"n_dependencies\": 16}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 German (de_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Sehr\", \"gute\", \"Beratung\", \",\", \"schnelle\", \"Behebung\", \"der\", \"Probleme\", \",\", \"so\", \"stelle\", \"ich\", \"mir\", \"Kundenservice\", \"vor\", \".\"], \"head\": [2, 3, 0, 6, 6, 3, 8, 6, 11, 11, 3, 11,",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 15}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Die\", \"Kosten\", \"sind\", \"definitiv\", \"auch\", \"in\", \"dem\", \"Rahmen\", \".\"], \"head\": [2, 3, 0, 3, 3, 8, 8, 3, 3], \"dependency_distances\": [1, 1, 1, 2, 2, 1, 5, 6]}",
+          "output": "{\"avg_dependency_distance\": 2.375, \"n_dependencies\": 8}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Nette\", \"Gespr\\u00e4che\", \",\", \"klasse\", \"Ergebnis\"], \"head\": [2, 0, 5, 5, 2], \"dependency_distances\": [1, 2, 1, 3]}",
+          "output": "{\"avg_dependency_distance\": 1.75, \"n_dependencies\": 4}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 French (fr_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Les\", \"commotions\", \"c\\u00e9r\\u00e9brales\", \"sont\", \"devenu\", \"si\", \"courantes\", \"dans\", \"ce\", \"sport\", \"qu'\", \"on\", \"les\", \"consid\\u00e9re\", \"presque\", \"comme\", \"la\", \"routine\", \".\"], \"h",
+          "output": "{\"avg_dependency_distance\": 2.833, \"n_dependencies\": 18}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 7.2,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"L'\", \"\\u0153uvre\", \"est\", \"situ\\u00e9e\", \"dans\", \"la\", \"galerie\", \"de\", \"les\", \"batailles\", \",\", \"dans\", \"le\", \"ch\\u00e2teau\", \"de\", \"Versailles\", \".\"], \"head\": [2, 4, 4, 0, 7, 7, 4, 10, ",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 16}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 7.2,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Le\", \"comportement\", \"de\", \"la\", \"Turquie\", \"vis-\\u00e0-vis\", \"de\", \"le\", \"probl\\u00e8me\", \"palestinien\", \"a\", \"fait\", \"qu'\", \"elle\", \"n'\", \"est\", \"plus\", \"en\", \"odeur\", \"de\"], \"head\": [2",
+          "output": "{\"avg_dependency_distance\": 3.182, \"n_dependencies\": 33}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 7.2,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Spanish (es_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Adem\\u00e1s\", \"se\", \"le\", \"pedir\\u00eda\", \"a\", \"las\", \"empresas\", \"interesadas\", \"en\", \"prestar\", \"el\", \"servicio\", \"que\", \"se\", \"hagan\", \"cargo\", \"de\", \"la\", \"se\\u00f1alizaci\\u00f3n\", \"y",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 28}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 24,
+          "metadata_phonological_density": 6.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Producto\", \"de\", \"el\", \"fin\", \"de\", \"el\", \"imperio\", \"y\", \"las\", \"invasiones\", \"germanas\", \"la\", \"poblaci\\u00f3n\", \"isle\\u00f1a\", \"cay\\u00f3\", \"a\", \"1\", \"mill\\u00f3n\", \"durante\", \"el\"], \"",
+          "output": "{\"avg_dependency_distance\": 3.879, \"n_dependencies\": 58}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 24,
+          "metadata_phonological_density": 6.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"MADRID\", \",\", \"3\", \"(\", \"EUROPA\", \"PRESS\", \")\", \"Las\", \"tenistas\", \"espa\\u00f1olas\", \"Anabel\", \"Medina\", \",\", \"Carla\", \"Su\\u00e1rez\", \",\", \"Mar\\u00eda\", \"Jos\\u00e9\", \"Mart\\u00ednez\", \",\"]",
+          "output": "{\"avg_dependency_distance\": 3.909, \"n_dependencies\": 88}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 24,
+          "metadata_phonological_density": 6.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Russian (ru_syntagrus)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0410\\u043d\\u043a\\u0435\\u0442\\u0430\", \".\"], \"head\": [0, 1], \"dependency_distances\": [1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 1}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 50,
+          "metadata_phonological_density": 10.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u041d\\u0430\\u0447\\u0430\\u043b\\u044c\\u043d\\u0438\\u043a\", \"\\u043e\\u0431\\u043b\\u0430\\u0441\\u0442\\u043d\\u043e\\u0433\\u043e\", \"\\u0443\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f\", \"\\",
+          "output": "{\"avg_dependency_distance\": 3.485, \"n_dependencies\": 33}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 50,
+          "metadata_phonological_density": 10.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0412\", \"\\u043f\\u0440\\u0438\\u0435\\u043c\\u043d\\u043e\\u0439\", \"\\u0435\\u0433\\u043e\", \"\\u0441\", \"\\u0443\\u0442\\u0440\\u0430\", \"\\u043e\\u0436\\u0438\\u0434\\u0430\\u043b\\u0438\", \"\\u043f\\u043e\\u0441\\",
+          "output": "{\"avg_dependency_distance\": 3.424, \"n_dependencies\": 33}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 50,
+          "metadata_phonological_density": 10.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Hindi (hi_hdtb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u092f\\u0939\", \"\\u090f\\u0936\\u093f\\u092f\\u093e\", \"\\u0915\\u0940\", \"\\u0938\\u092c\\u0938\\u0947\", \"\\u092c\\u0921\\u093c\\u0940\", \"\\u092e\\u0938\\u094d\\u091c\\u093f\\u0926\\u094b\\u0902\", \"\\u092e\\u0947\\",
+          "output": "{\"avg_dependency_distance\": 1.7, \"n_dependencies\": 10}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0907\\u0938\\u0947\", \"\\u0928\\u0935\\u093e\\u092c\", \"\\u0936\\u093e\\u0939\\u091c\\u0947\\u0939\\u0928\", \"\\u0928\\u0947\", \"\\u092c\\u0928\\u0935\\u093e\\u092f\\u093e\", \"\\u0925\\u093e\", \"\\u0964\"], \"head\": [",
+          "output": "{\"avg_dependency_distance\": 1.833, \"n_dependencies\": 6}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0907\\u0938\\u0915\\u093e\", \"\\u092a\\u094d\\u0930\\u0935\\u0947\\u0936\", \"\\u0926\\u094d\\u0935\\u093e\\u0930\", \"\\u0926\\u094b\", \"\\u092e\\u0902\\u091c\\u093f\\u0932\\u093e\", \"\\u0939\\u0948\", \"\\u0964\"], \"he",
+          "output": "{\"avg_dependency_distance\": 1.5, \"n_dependencies\": 6}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Persian (fa_seraji)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0627\\u0648\\u0644\\u06cc\\u0646\", \"\\u0633\\u06cc\\u0627\\u0631\\u0647\", \"\\u062e\\u0627\\u0631\\u062c\", \"\\u0627\\u0632\", \"\\u0645\\u0646\\u0638\\u0648\\u0645\\u0647\", \"\\u0634\\u0645\\u0633\\u06cc\", \"\\u062f\\",
+          "output": "{\"avg_dependency_distance\": 2.0, \"n_dependencies\": 8}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0648\\u0627\\u0634\\u0646\\u06af\\u062a\\u0646\", \"-\", \"\\u062e\\u0628\\u0631\\u06af\\u0632\\u0627\\u0631\\u06cc\", \"\\u062c\\u0645\\u0647\\u0648\\u0631\\u06cc\", \"\\u0627\\u0633\\u0644\\u0627\\u0645\\u06cc\"], \"hea",
+          "output": "{\"avg_dependency_distance\": 1.25, \"n_dependencies\": 4}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0633\\u062a\\u0627\\u0631\\u0647\\u200c\\u0634\\u0646\\u0627\\u0633\\u0627\\u0646\", \"\\u0645\\u06cc\\u200c\\u06af\\u0648\\u06cc\\u0646\\u062f\", \"\\u06a9\\u0647\", \"\\u0645\\u0645\\u06a9\\u0646\", \"\\u0627\\u0633\\u0",
+          "output": "{\"avg_dependency_distance\": 3.357, \"n_dependencies\": 14}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Greek (el_gdt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0397\", \"\\u039c\\u03ac\\u03bd\\u03c4\\u03c3\\u03b5\\u03c3\\u03c4\\u03b5\\u03c1\", \"\\u0393\\u03b9\\u03bf\\u03c5\\u03bd\\u03ac\\u03b9\\u03c4\\u03b5\\u03bd\\u03c4\", \"\\u03b7\\u03c4\\u03c4\\u03ae\\u03b8\\u03b7\\u03ba\\",
+          "output": "{\"avg_dependency_distance\": 1.9, \"n_dependencies\": 10}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 30,
+          "metadata_phonological_density": 7.5,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"2012-03-09\"], \"head\": [0], \"dependency_distances\": []}",
+          "output": "{\"avg_dependency_distance\": 0, \"n_dependencies\": 0}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 30,
+          "metadata_phonological_density": 7.5,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u03a7\\u03b8\\u03b5\\u03c2\", \",\", \"\\u03b7\", \"\\u039c\\u03ac\\u03bd\\u03c4\\u03c3\\u03b5\\u03c3\\u03c4\\u03b5\\u03c1\", \"\\u0393\\u03b9\\u03bf\\u03c5\\u03bd\\u03ac\\u03b9\\u03c4\\u03b5\\u03bd\\u03c4\", \"\\u03b7\\u03",
+          "output": "{\"avg_dependency_distance\": 2.92, \"n_dependencies\": 25}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 30,
+          "metadata_phonological_density": 7.5,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Dutch (nl_alpino)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Dat\", \"is\", \"alvast\", \"meegenomen\", \",\", \"mocht\", \"over\", \"zes\", \"maanden\", \"blijken\", \"dat\", \"de\", \"inhoud\", \"tegenvalt\", \".\"], \"head\": [4, 4, 4, 0, 10, 10, 9, 9, 10, 4, 14, 13, 14, 10, ",
+          "output": "{\"avg_dependency_distance\": 3.214, \"n_dependencies\": 14}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"De\", \"breuk\", \"in\", \"de\", \"federale\", \"regering\", \"van\", \"Joegoslavi\\u00eb\", \"kan\", \"volgens\", \"de\", \"Servische\", \"premier\", \"Djindjic\", \"nog\", \"worden\", \"gelijmd\", \".\"], \"head\": [2, 17, ",
+          "output": "{\"avg_dependency_distance\": 3.059, \"n_dependencies\": 17}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Met\", \"hervormingen\", \",\", \"niet\", \"met\", \"nieuwe\", \"verkiezingen\", \".\"], \"head\": [2, 0, 7, 7, 7, 7, 2, 2], \"dependency_distances\": [1, 4, 3, 2, 1, 5, 6]}",
+          "output": "{\"avg_dependency_distance\": 3.143, \"n_dependencies\": 7}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Italian (it_isdt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"LONDRA\", \".\"], \"head\": [0, 1], \"dependency_distances\": [1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 1}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Gas\", \"da\", \"la\", \"statua\", \".\"], \"head\": [0, 4, 4, 1, 1], \"dependency_distances\": [2, 1, 3, 4]}",
+          "output": "{\"avg_dependency_distance\": 2.5, \"n_dependencies\": 4}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"LONDRA\", \".\"], \"head\": [0, 1], \"dependency_distances\": [1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 1}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Finnish (fi_tdt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"K\\u00e4velyreitti\", \"III\"], \"head\": [0, 1], \"dependency_distances\": [1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 1}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"J\\u00e4\\u00e4ll\\u00e4\", \"k\\u00e4vely\", \"avaa\", \"aina\", \"hauskoja\", \"ja\", \"erikoisia\", \"n\\u00e4k\\u00f6kulmia\", \"kaupunkiin\", \".\"], \"head\": [2, 3, 0, 3, 8, 7, 5, 3, 8, 3], \"dependency_dista",
+          "output": "{\"avg_dependency_distance\": 2.444, \"n_dependencies\": 9}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"V\\u00e4h\\u00e4n\", \"samanlainen\", \"tunne\", \"kuin\", \"silloin\", \",\", \"kun\", \"yst\\u00e4v\\u00e4mme\", \"vei\", \"meid\\u00e4t\", \"kerran\", \"yl\\u00f6s\", \"tuomiokirkon\", \"torniin\", \".\"], \"head\": [2, 3",
+          "output": "{\"avg_dependency_distance\": 2.786, \"n_dependencies\": 14}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Hungarian (hu_szeged)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"A\", \"vil\\u00e1gban\", \"imm\\u00e1r\", \"t\\u00edz\", \"\\u00e9ve\", \"tart\\u00f3\", \"folyamatos\", \"gazdas\\u00e1gi\", \"fellend\\u00fcl\\u00e9s\", \"minden\", \"eddigi\", \"konjunkt\\u00fara-id\\u0151szakn\\u00e1",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 13}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"A\", \"gazdas\\u00e1g\", \"ilyen\", \"m\\u00e9rt\\u00e9k\\u0171\", \"fejl\\u0151d\\u00e9s\\u00e9t\", \"t\\u00f6bb\", \"folyamat\", \"gerjeszti\", \",\", \"t\\u00f6bbek\", \"k\\u00f6z\\u00f6tt\", \"a\", \"mag\\u00e1nos\\u00ed",
+          "output": "{\"avg_dependency_distance\": 2.647, \"n_dependencies\": 17}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"A\", \"globaliz\\u00e1ci\\u00f3r\\u00f3l\", \"\\u00e9s\", \"annak\", \"a\", \"magyar\", \"gazdas\\u00e1gra\", \"gyakorolt\", \"hat\\u00e1sair\\u00f3l\", \"B\\u00e9kesi\", \"L\\u00e1szl\\u00f3\", \"volt\", \"p\\u00e9nz\\u00f",
+          "output": "{\"avg_dependency_distance\": 4.711, \"n_dependencies\": 38}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Estonian (et_ewt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Nartsissidest\"], \"head\": [0], \"dependency_distances\": []}",
+          "output": "{\"avg_dependency_distance\": 0, \"n_dependencies\": 0}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 15,
+          "metadata_phonological_density": 5.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"reetpa67\", \":\", \"Juba\", \"teist\", \"aastat\", \"ei\", \"\\u00f5itse\", \"mul\", \"aias\", \"nartsissid\", \".\"], \"head\": [7, 1, 4, 5, 7, 7, 0, 7, 7, 7, 7], \"dependency_distances\": [6, 1, 1, 1, 2, 1, 1, ",
+          "output": "{\"avg_dependency_distance\": 2.2, \"n_dependencies\": 10}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 15,
+          "metadata_phonological_density": 5.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Mida\", \"teha\", \"?\"], \"head\": [2, 0, 2], \"dependency_distances\": [1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 2}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 15,
+          "metadata_phonological_density": 5.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Latin (la_proiel)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"liber\", \"generationis\", \"Iesu\", \"Christi\", \"filii\", \"David\", \"filii\", \"Abraham\"], \"head\": [0, 1, 2, 3, 3, 5, 5, 7], \"dependency_distances\": [1, 1, 1, 2, 1, 2, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.286, \"n_dependencies\": 7}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Abraham\", \"genuit\", \"Isaac\"], \"head\": [2, 0, 2], \"dependency_distances\": [1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 2}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Isaac\", \"autem\", \"genuit\", \"Iacob\"], \"head\": [3, 3, 0, 3], \"dependency_distances\": [2, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.333, \"n_dependencies\": 3}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Turkish (tr_imst)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"G\\u00fcld\\u00fc\", \".\"], \"head\": [0, 1], \"dependency_distances\": [1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 1}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u015eimdi\", \"hi\\u00e7bir\", \"\\u015feye\", \"yaramad\\u0131klar\\u0131n\\u0131\", \"d\\u00fc\\u015f\\u00fcnsem\", \"de\", \",\", \"ya\\u015fayabilmek\", \"i\\u00e7in\", \"yazmak\", \"!\", \"B\\u00f6ylece\", \",\", \"o\",",
+          "output": "{\"avg_dependency_distance\": 4.219, \"n_dependencies\": 32}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Kendine\", \"d\\u00f6nmek\", \"isteyen\", \"bir\", \"insan\\u0131n\", \"gidebilece\\u011fi\", \"neresi\", \"vard\\u0131r\", \"ki\", \"?\"], \"head\": [2, 3, 5, 5, 6, 7, 8, 0, 8, 8], \"dependency_distances\": [1, 1,",
+          "output": "{\"avg_dependency_distance\": 1.222, \"n_dependencies\": 9}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Kazakh (kk_ktb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0428\\u043e\\u043b\\u043f\\u0430\\u043d\", \"\\u0421\\u04d9\\u0440\\u0441\\u0435\\u043d\\u0431\\u0430\\u0439\\u0493\\u0430\", \"\\u0448\\u044b\\u049b\\u049b\\u0430\\u043d\", \"\\u0436\\u044b\\u043b\\u044b\", \"\\u04e9\\u0",
+          "output": "{\"avg_dependency_distance\": 4.04, \"n_dependencies\": 25}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u041c\\u0430\\u043b\", \"\\u043e\\u0440\\u043d\\u044b\\u043d\\u0430\", \"\\u0441\\u0430\\u0442\\u044b\\u043b\\u044b\\u043f\", \",\", \"\\u0436\\u0430\\u043d\\u044b\", \"\\u0441\\u04af\\u0439\\u043c\\u0435\\u0433\\u0435\\u04",
+          "output": "{\"avg_dependency_distance\": 2.083, \"n_dependencies\": 24}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0410\\u049b\", \"\\u043e\\u0442\\u0430\\u0443\\u0434\\u044b\\u04a3\", \"\\u0456\\u0448\\u0456\\u043d\\u0434\\u0435\", \"\\u043e\\u04a3\\u0430\\u0448\\u0430\", \"\\u0436\\u0430\\u0442\\u0441\\u0430\", \"\\u0434\\u0430\", \",",
+          "output": "{\"avg_dependency_distance\": 4.161, \"n_dependencies\": 31}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Arabic (ar_padt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0628\\u0631\\u0644\\u064a\\u0646\", \"\\u062a\\u0631\\u0641\\u0636\", \"\\u062d\\u0635\\u0648\\u0644\", \"\\u0634\\u0631\\u0643\\u0629\", \"\\u0627\\u0645\\u064a\\u0631\\u0643\\u064a\\u0629\", \"\\u0639\\u0644\\u0649\", \"\\",
+          "output": "{\"avg_dependency_distance\": 1.583, \"n_dependencies\": 12}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 28,
+          "metadata_phonological_density": 7.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0628\\u0631\\u0644\\u064a\\u0646\", \"15\", \"-\", \"7\", \"(\", \"\\u0627\\u0641\", \"\\u0628\", \")\", \"-\", \"\\u0627\\u0641\\u0627\\u062f\\u062a\", \"\\u0635\\u062d\\u064a\\u0641\\u0629\", \"\\u0627\\u0644\\u0627\\u062d\\u06",
+          "output": "{\"avg_dependency_distance\": 3.754, \"n_dependencies\": 57}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 28,
+          "metadata_phonological_density": 7.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0648\", \"\\u0641\\u064a\", \"\\u0646\\u064a\\u0633\\u0627\\u0646\", \"/\", \"\\u0627\\u0628\\u0631\\u064a\\u0644\", \"\\u0627\\u0644\\u0645\\u0627\\u0636\\u064a\", \"\\u060c\", \"\\u062a\\u062e\\u0644\\u062a\", \"\\u0627\\u06",
+          "output": "{\"avg_dependency_distance\": 3.477, \"n_dependencies\": 44}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 28,
+          "metadata_phonological_density": 7.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Hebrew (he_htb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u05d4\", \"\\u05e7\\u05d4\\u05dc\", \"\\u05d0\\u05d9\\u05ea\\u05e8\", \"\\u05e1\\u05d5\\u05e3\", \"\\u05e1\\u05d5\\u05e3\", \"\\u05e2\\u05e8\\u05d1\\u05d9\", \"\\u05d5\", \"\\u05d9\\u05d4\\u05d5\\u05d3\\u05d9\\u05dd\", \"\\u05d",
+          "output": "{\"avg_dependency_distance\": 2.643, \"n_dependencies\": 14}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 27,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u05d0\\u05e0\\u05e9\\u05d9\", \"\\u05de\\u05d2\\\"\\u05d1\", \"\\u05d7\\u05e9\\u05d5\", \"\\u05d0\\u05dc\", \"\\u05d4\", \"\\u05e4\\u05e6\\u05d5\\u05e2\", \"\\u05d5\", \"\\u05d4\\u05d2\\u05d9\\u05e9\\u05d5\", \"\\u05dc_\", \"_\\u0",
+          "output": "{\"avg_dependency_distance\": 2.667, \"n_dependencies\": 12}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 27,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u05d4\", \"\\u05d0\\u05de\\u05d1\\u05d5\\u05dc\\u05e0\\u05e1\", \"\\u05d4\\u05ea\\u05e7\\u05e8\\u05d1\", \"\\u05d0\\u05da\", \"\\u05d1\\u05e7\\u05d5\\u05e9\\u05d9\", \"\\u05d5\", \"\\u05d2\\u05dd\", \"\\u05db\\u05d0\\u05e9\\u0",
+          "output": "{\"avg_dependency_distance\": 3.417, \"n_dependencies\": 24}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 27,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Chinese (zh_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u770b\\u4f3c\", \"\\u7c21\\u55ae\", \"\\uff0c\", \"\\u53ea\", \"\\u662f\", \"\\u4e8c\", \"\\u9078\", \"\\u4e00\", \"\\u505a\", \"\\u6c7a\\u64c7\", \"\\uff0c\", \"\\u4f46\", \"\\u5176\\u5be6\", \"\\u4ed6\\u5011\", \"\\u4ee3\\u8868\", \"\\",
+          "output": "{\"avg_dependency_distance\": 5.436, \"n_dependencies\": 39}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_phonological_density": 10.25,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u5176\", \"\\u4fbf\\u7576\", \"\\u90fd\\u662f\", \"\\u8cb7\\u4f86\", \"\\u7684\", \"\\uff0c\", \"\\u5c31\\u7b97\", \"\\u52a0\\u71b1\", \"\\u4e5f\\u662f\", \"\\u7531\", \"\\u5abd\\u5abd\", \"\\u8ca0\\u8cac\", \"\\uff08\", \"\\u5f8c\\u4",
+          "output": "{\"avg_dependency_distance\": 3.571, \"n_dependencies\": 28}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_phonological_density": 10.25,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u9019\", \"\\u6b21\", \"\\u904a\\u884c\", \"\\u6700\\u5927\", \"\\u7684\", \"\\u7279\\u8272\", \"\\uff0c\", \"\\u5728\", \"\\u65bc\", \"\\u8d8a\\u4f86\\u8d8a\", \"\\u591a\", \"\\u5e74\\u8f15\", \"\\u4eba\", \"\\u4e0a\\u8857\", \"\\u904",
+          "output": "{\"avg_dependency_distance\": 3.083, \"n_dependencies\": 24}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_phonological_density": 10.25,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Tamil (ta_ttb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0b9a\\u0bc6\\u0ba9\\u0bcd\\u0ba9\\u0bc8\", \"\\u0b85\\u0bb0\\u0bc1\\u0b95\\u0bc7\", \"\\u0bb8\\u0bcd\\u0bb0\\u0bc0\", \"\\u0baa\\u0bc6\\u0bb0\\u0bc1\\u0bae\\u0bcd\\u0baa\\u0bc1\\u0ba4\\u0bc2\\u0bb0\\u0bbf\\u0bb2\\u0bcd\"",
+          "output": "{\"avg_dependency_distance\": 2.958, \"n_dependencies\": 24}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0b87\\u0ba4\\u0bc1\", \"\\u0ba4\\u0bca\\u0b9f\\u0bb0\\u0bcd\\u0baa\\u0bbe\\u0b95\", \",\", \"\\u0b85\\u0bb5\\u0bb0\\u0bcd\", \"\\u0baa\\u0bc1\\u0ba4\\u0ba9\\u0bcd\\u0b95\\u0bbf\\u0bb4\\u0bae\\u0bc8\", \"\\u0bb5\\u0bc6\\u0b",
+          "output": "{\"avg_dependency_distance\": 1.875, \"n_dependencies\": 8}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0ba8\\u0bbe\\u0b9f\\u0bc1\", \"\\u0bae\\u0bc1\\u0bb4\\u0bc1\\u0bb5\\u0ba4\\u0bc1\\u0bae\\u0bcd\", \"\\u0bb5\\u0bbf\\u0bae\\u0bbe\\u0ba9\\u0baa\\u0bcd\", \"\\u0baa\\u0bcb\\u0b95\\u0bcd\\u0b95\\u0bc1\\u0bb5\\u0bb0\\u0ba4\\",
+          "output": "{\"avg_dependency_distance\": 3.286, \"n_dependencies\": 28}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Marathi (mr_cmupan)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0938\\u0930\\u094d\\u0935\", \"\\u0926\\u0947\\u0936\\u0935\\u093e\\u0938\\u0940\\u092f\\u093e\\u0902\\u0928\\u093e\", \"\\u092e\\u093e\\u091d\\u093e\", \"\\u0906\\u0926\\u0930\\u092a\\u0942\\u0930\\u094d\\u0935\\u0915\"",
+          "output": "{\"avg_dependency_distance\": 1.75, \"n_dependencies\": 4}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0917\\u0947\\u0932\\u094d\\u092f\\u093e\", \"\\u091a\\u093e\\u0930\", \"\\u092e\\u0939\\u093f\\u0928\\u094d\\u092f\\u093e\\u0902\\u092a\\u0947\\u0915\\u094d\\u0937\\u093e\", \"\\u091c\\u093e\\u0938\\u094d\\u0924\", \"\\u0",
+          "output": "{\"avg_dependency_distance\": 2.083, \"n_dependencies\": 12}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u092f\\u093e\", \"\\u0915\\u093e\\u0933\\u093e\\u0924\", \"\\u092c\\u0939\\u0941\\u0924\\u0947\\u0915\", \"\\u0926\\u0947\\u0936\\u093e\\u0902\\u092e\\u0927\\u0940\\u0932\", \"42\", \"\\u0932\\u093e\\u0916\", \"\\u0932\\u094",
+          "output": "{\"avg_dependency_distance\": 2.6, \"n_dependencies\": 10}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Japanese (ja_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u30db\\u30c3\\u30b1\\u30fc\", \"\\u306b\", \"\\u306f\", \"\\u30c7\\u30f3\\u30b8\\u30e3\\u30e9\\u30b9\", \"\\u30d7\\u30ec\\u30fc\", \"\\u306e\", \"\\u53cd\\u5247\", \"\\u304c\", \"\\u3042\\u308b\", \"\\u306e\", \"\\u3067\", \"\\u300",
+          "output": "{\"avg_dependency_distance\": 2.385, \"n_dependencies\": 39}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u307e\\u305f\", \"\\u884c\\u304d\", \"\\u305f\\u3044\", \"\\u3001\", \"\\u305d\\u3093\\u306a\", \"\\u6c17\\u6301\\u3061\", \"\\u306b\", \"\\u3055\", \"\\u305b\", \"\\u3066\", \"\\u304f\\u308c\\u308b\", \"\\u304a\", \"\\u5e97\", \"\\u3",
+          "output": "{\"avg_dependency_distance\": 2.286, \"n_dependencies\": 14}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u624b\", \"\\u306b\", \"\\u6301\\u3063\", \"\\u305f\", \"\\u7279\\u6b8a\", \"\\u306a\", \"\\u5203\\u7269\", \"\\u3092\", \"\\u4f7f\\u3063\", \"\\u305f\", \"\\u30a2\\u30af\\u30ed\\u30d0\\u30c6\\u30a3\\u30c3\\u30af\", \"\\u306a\", \"\\",
+          "output": "{\"avg_dependency_distance\": 2.133, \"n_dependencies\": 30}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Korean (ko_gsd)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\uc7a1\\uc2a4\\ub294\", \"\\uc6cc\\uc988\\ub2c8\\uc545\\uc5d0\\uac8c\", \"\\ubcf4\\uc218\\ub97c\", \"\\ubc18\\uc529\", \"\\ub098\\ub204\\ub294\", \"\\uc870\\uac74\\uc73c\\ub85c\", \"\\ub3c4\\uc6c0\\uc744\", \"\\uccad\\ud558\\ua",
+          "output": "{\"avg_dependency_distance\": 3.261, \"n_dependencies\": 23}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\uacf5\\uae30\\uac00\", \"\\uc88b\\uace0\", \"\\ub4b7\\uc0b0\\uc5d0\\uc11c\\ub294\", \"\\uc544\\uc9c1\\ub3c4\", \"\\uac1c\\uad6c\\ub9ac\\uac00\", \"\\ud569\\ucc3d\\ud558\\ub294\", \"\\uc11c\\uc6b8\\uc5d0\\uc11c\", \"\\ub4dc\\ub",
+          "output": "{\"avg_dependency_distance\": 2.6, \"n_dependencies\": 10}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\ubd80\\uc0b0\\uacf5\\uc5c5\\ud559\\uad50\\ub97c\", \"\\uc878\\uc5c5\\ud588\\uace0\", \",\", \"1949\\ub144\", \"\\ubd80\\uce5c\\uacfc\", \"\\ud568\\uaed8\", \"\\ubd80\\uc0b0\\uc5d0\", \"\\uad6d\\uc81c\\uace0\\ubb34\\uacf5\\uc5",
+          "output": "{\"avg_dependency_distance\": 3.333, \"n_dependencies\": 15}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Polish (pl_pdb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"M\\u0119\\u017cczyzna\", \"w\", \"czapce\", \"z\", \"daszkiem\", \"trzyma\", \"w\", \"r\\u0119kach\", \"kamer\\u0119\", \"i\", \"spogl\\u0105da\", \"przez\", \"obiektyw\", \".\"], \"head\": [6, 3, 1, 5, 3, 0, 8, 6, 6, 11,",
+          "output": "{\"avg_dependency_distance\": 2.615, \"n_dependencies\": 13}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Kobieta\", \"w\", \"d\\u0142ugiej\", \",\", \"ciemnej\", \"sukience\", \"i\", \"bia\\u0142ym\", \"kapeluszu\", \"stoi\", \"z\", \"jedn\\u0105\", \"du\\u017c\\u0105\", \"torb\\u0105\", \"na\", \"ramieniu\", \",\", \"drug\\u0105\",",
+          "output": "{\"avg_dependency_distance\": 4.135, \"n_dependencies\": 37}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Ch\\u0142opiec\", \"w\", \"niebieskiej\", \"kurtce\", \"biegnie\", \"po\", \"\\u015bniegu\", \",\", \"trzymaj\\u0105c\", \"desk\\u0119\", \",\", \"a\", \"za\", \"nim\", \"biegnie\", \"pies\", \".\"], \"head\": [5, 4, 4, 1, 0, ",
+          "output": "{\"avg_dependency_distance\": 3.188, \"n_dependencies\": 16}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Vietnamese (vi_vtb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"T\\u00f4i\", \"nh\\u1edb\", \"l\\u1eddi\", \"anh\", \"ch\\u1ee7 t\\u1ecbch\", \"x\\u00e3\", \"B\\u00f9i V\\u0103n Luy\\u1ebfn\", \"nh\\u1eafc\", \"\\u0111i\", \"nh\\u1eafc\", \"l\\u1ea1i\", \":\", \"\\\"\", \"Coi b\\u1ed9\", \"nh\\u",
+          "output": "{\"avg_dependency_distance\": 2.611, \"n_dependencies\": 18}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Hi\\u1ec7n nay\", \"x\\u00e3\", \"c\\u00f3\", \"68\", \"t\\u1ed5\", \"nh\\u00e2n d\\u00e2n\", \",\", \"m\\u1ed7i\", \"t\\u1ed5\", \"ph\\u1ee5 tr\\u00e1ch\", \"40\", \"gia \\u0111\\u00ecnh\", \".\"], \"head\": [3, 3, 0, 5, 3, 5",
+          "output": "{\"avg_dependency_distance\": 2.75, \"n_dependencies\": 12}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Ch\\u1ee7 tr\\u01b0\\u01a1ng\", \"t\\u1ed1t\", \"nh\\u01b0ng\", \"d\\u00e2n\", \"kh\\u00f4ng\", \"hi\\u1ec3u\", \",\", \"kh\\u00f4ng\", \"h\\u01b0\\u1edfng \\u1ee9ng\", \"th\\u00ec\", \"c\\u0169ng\", \"ch\\u1ecbu thua\", \"!\"]",
+          "output": "{\"avg_dependency_distance\": 2.833, \"n_dependencies\": 12}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Georgian (ka_glc)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u10d9\\u10e3\\u10da\\u10e2\\u10e3\\u10e0\\u10d8\\u10e1\", \"\\u10e4\\u10d4\\u10dc\\u10dd\\u10db\\u10d4\\u10dc\\u10d8\", \"\\u10e1\\u10ee\\u10d5\\u10d0\\u10d3\\u10d0\\u10e1\\u10ee\\u10d5\\u10d0\", \"\\u10db\\u10d4\\u10ea\\",
+          "output": "{\"avg_dependency_distance\": 1.571, \"n_dependencies\": 7}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 52,
+          "metadata_phonological_density": 10.4,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u10e3\\u10eb\\u10d5\\u10d4\\u10da\\u10d4\\u10e1\\u10d8\", \"\\u10d3\\u10e0\\u10dd\\u10d8\", \"\\u10d3\\u10d0\\u10dc\", \"\\u10ee\\u10d0\\u10da\\u10ee\", \"\\u10e8\\u10d8\", \"\\u10d2\\u10e0\\u10dd\\u10d5\\u10d3\\u10d4\\u10d",
+          "output": "{\"avg_dependency_distance\": 4.833, \"n_dependencies\": 24}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 52,
+          "metadata_phonological_density": 10.4,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u10db\\u10e2\\u10d9\\u10d5\\u10d0\\u10e0-\\u10d0\\u10e0\\u10d0\\u10e5\\u10e1\\u10d8\\u10e1\", \"\\u10d9\\u10e3\\u10da\\u10e2\\u10e3\\u10e0\\u10d8\\u10e1\", \"\\u10d0\\u10d3\\u10e0\\u10d8\\u10dc\\u10d3\\u10d4\\u10da\", \"",
+          "output": "{\"avg_dependency_distance\": 3.042, \"n_dependencies\": 24}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 52,
+          "metadata_phonological_density": 10.4,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Romanian (ro_rrt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Lui\", \"Winston\", \"\\u00eei\", \"displ\\u0103cuse\", \"fata\", \"asta\", \"din\", \"primul\", \"moment\", \"c\\u00e2nd\", \"o\", \"v\\u0103zuse\", \".\"], \"head\": [2, 4, 4, 0, 4, 5, 9, 9, 4, 12, 12, 9, 4], \"depend",
+          "output": "{\"avg_dependency_distance\": 2.417, \"n_dependencies\": 12}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0218tia\", \"\\u0219i\", \"de\", \"ce\", \".\"], \"head\": [0, 4, 4, 1, 1], \"dependency_distances\": [2, 1, 3, 4]}",
+          "output": "{\"avg_dependency_distance\": 2.5, \"n_dependencies\": 4}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Din\", \"cauza\", \"atmosferei\", \"de\", \"gazon\", \"de\", \"hochei\", \"\\u0219i\", \"de\", \"b\\u0103i\", \"reci\", \"\\u0219i\", \"de\", \"excursii\", \"\\u00een\", \"grup\", \"\\u0219i\", \"\\u00een\", \"general\", \"de\"], \"h",
+          "output": "{\"avg_dependency_distance\": 4.133, \"n_dependencies\": 30}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Serbian (sr_set)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Kazna\", \"medijskom\", \"mogulu\", \"obnovila\", \"debatu\", \"u\", \"Makedoniji\"], \"head\": [4, 3, 1, 0, 4, 7, 4], \"dependency_distances\": [3, 1, 2, 1, 1, 3]}",
+          "output": "{\"avg_dependency_distance\": 1.833, \"n_dependencies\": 6}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Neki\", \"tvrde\", \"da\", \"je\", \"presuda\", \"Veliji\", \"Ramkovskom\", \"napad\", \"na\", \"slobodu\", \"medija\", \",\", \"ali\", \"drugi\", \"tvrde\", \"da\", \"dokazi\", \"o\", \"njegovim\", \"krivi\\u010dnim\"], \"head\"",
+          "output": "{\"avg_dependency_distance\": 4.13, \"n_dependencies\": 23}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Medijski\", \"mogul\", \"Velija\", \"Ramkovski\", \"osu\\u0111en\", \"je\", \"na\", \"13\", \"godina\", \"zatvora\", \"zbog\", \"utaje\", \"poreza\", \"i\", \"pranja\", \"novca\", \".\"], \"head\": [2, 5, 2, 3, 0, 5, 9, 9, ",
+          "output": "{\"avg_dependency_distance\": 2.562, \"n_dependencies\": 16}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Czech (cs_cac)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Feder\\u00e1ln\\u00ed\", \"ministerstvo\", \"vnitra\", \"stanov\\u00ed\", \"v\", \"dohod\\u011b\", \"se\", \"z\\u00fa\\u010dastn\\u011bn\\u00fdmi\", \"\\u00fast\\u0159edn\\u00edmi\", \"org\\u00e1ny\", \"podle\", \"vl\\u00e",
+          "output": "{\"avg_dependency_distance\": 3.292, \"n_dependencies\": 24}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Politick\\u00fd\", \",\", \"hospod\\u00e1\\u0159sk\\u00fd\", \"a\", \"kulturn\\u00ed\", \"v\\u00fdvoj\", \",\", \"jako\\u017e\", \"i\", \"rychl\\u00fd\", \"rozvoj\", \"motorismu\", \"a\", \"cestovn\\u00edho\", \"ruchu\", \"v\",",
+          "output": "{\"avg_dependency_distance\": 3.321, \"n_dependencies\": 28}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Spln\\u011bn\\u00ed\", \"tohoto\", \"po\\u017eadavku\", \"umo\\u017e\\u0148uje\", \"vedle\", \"jin\\u00fdch\", \"\\u010dinitel\\u016f\", \"\\u00fa\\u010deln\\u00e1\", \"\\u00faprava\", \"Pravidel\", \"provozu\", \"na\", \"s",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 31}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Swedish (sv_talbanken)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Individuell\", \"beskattning\", \"av\", \"arbetsinkomster\"], \"head\": [2, 0, 4, 2], \"dependency_distances\": [1, 1, 2]}",
+          "output": "{\"avg_dependency_distance\": 1.333, \"n_dependencies\": 3}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 39,
+          "metadata_phonological_density": 7.8,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Genom\", \"skattereformen\", \"inf\\u00f6rs\", \"individuell\", \"beskattning\", \"(\", \"s\\u00e4rbeskattning\", \")\", \"av\", \"arbetsinkomster\", \".\"], \"head\": [2, 3, 0, 5, 3, 5, 5, 5, 10, 5, 3], \"depende",
+          "output": "{\"avg_dependency_distance\": 2.5, \"n_dependencies\": 10}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 39,
+          "metadata_phonological_density": 7.8,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Det\", \"inneb\\u00e4r\", \"bl.a.\", \"att\", \"endast\", \"en\", \"skatteskala\", \"kommer\", \"att\", \"finnas\", \"f\\u00f6r\", \"ber\\u00e4kning\", \"av\", \"statlig\", \"inkomstskatt\", \".\"], \"head\": [2, 0, 2, 10, ",
+          "output": "{\"avg_dependency_distance\": 3.133, \"n_dependencies\": 15}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 39,
+          "metadata_phonological_density": 7.8,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Danish (da_ddt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"P\\u00e5\", \"fredag\", \"har\", \"SID\", \"inviteret\", \"til\", \"reception\", \"i\", \"SID-huset\", \"i\", \"anledning\", \"af\", \"at\", \"formanden\", \"Kjeld\", \"Christensen\", \"g\\u00e5r\", \"ind\", \"i\", \"de\"], \"hea",
+          "output": "{\"avg_dependency_distance\": 3.045, \"n_dependencies\": 22}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Eller\", \"slet\", \"og\", \"ret\", \"tykke\", \"og\", \"fede\", \"i\", \"mere\", \"eller\", \"mindre\", \"grad\", \",\", \"som\", \"en\", \"enkelt\", \"udtrykker\", \"det\", \".\"], \"head\": [7, 5, 4, 2, 0, 7, 5, 9, 5, 11, 9",
+          "output": "{\"avg_dependency_distance\": 3.444, \"n_dependencies\": 18}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Under\", \"rejser\", \"og\", \"ophold\", \"i\", \"udlandet\", \"f\\u00f8lger\", \"sygeplejersker\", \"og\", \"hj\\u00e6lpere\", \"med\", \".\"], \"head\": [2, 7, 4, 2, 6, 2, 0, 7, 10, 8, 7, 7], \"dependency_distance",
+          "output": "{\"avg_dependency_distance\": 2.455, \"n_dependencies\": 11}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Norwegian (no_bokmaal)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Lam\", \"og\", \"piggvar\", \"p\\u00e5\", \"bryllupsmenyen\"], \"head\": [0, 3, 1, 5, 1], \"dependency_distances\": [1, 2, 1, 4]}",
+          "output": "{\"avg_dependency_distance\": 2.0, \"n_dependencies\": 4}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Kamskjell\", \",\", \"piggvar\", \"og\", \"lammefilet\", \"sto\", \"p\\u00e5\", \"menyen\", \"under\", \"den\", \"kongelige\", \"gallamiddagen\", \".\"], \"head\": [6, 3, 1, 5, 1, 0, 8, 6, 12, 12, 12, 6, 6], \"depend",
+          "output": "{\"avg_dependency_distance\": 2.917, \"n_dependencies\": 12}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Og\", \"til\", \"dessert\", \":\", \"Parfait\", \"\\u00e0\", \"la\", \"Mette-Marit\", \".\"], \"head\": [5, 3, 5, 3, 0, 5, 5, 5, 5], \"dependency_distances\": [4, 1, 2, 1, 1, 2, 3, 4]}",
+          "output": "{\"avg_dependency_distance\": 2.25, \"n_dependencies\": 8}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 7.6,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Ukrainian (uk_iu)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0423\", \"\\u0434\\u043e\\u043c\\u0456\", \"\\u0440\\u0438\\u043c\\u0441\\u044c\\u043a\\u043e\\u0433\\u043e\", \"\\u043f\\u0430\\u0442\\u0440\\u0438\\u0446\\u0456\\u044f\", \"\\u0420\\u0443\\u0444\\u0456\\u043d\\u0430\", ",
+          "output": "{\"avg_dependency_distance\": 2.077, \"n_dependencies\": 13}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 45,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u042f\\u043a\\u043e\\u0441\\u044c\", \"\\u0437\\u0456\\u0431\\u0440\\u0430\\u043b\\u0438\\u0441\\u044f\", \"\\u0443\", \"\\u043d\\u044c\\u043e\\u0433\\u043e\", \",\", \"\\u0445\\u043e\\u0432\\u0430\\u044e\\u0447\\u0438\\u04",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 13}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 45,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0419\", \"\\u043e\\u0434\\u0440\\u0430\\u0437\\u0443\", \"\\u0436\", \"\\u0443\\u0437\\u044f\\u043b\\u0438\\u0441\\u044f\", \"\\u0437\\u0430\\u043c\\u0430\\u0437\\u0443\\u0432\\u0430\\u0442\\u0438\", \"\\u0441\\u0442\\u045",
+          "output": "{\"avg_dependency_distance\": 3.35, \"n_dependencies\": 20}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 45,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Bulgarian (bg_btb)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\u0412\", \"\\u0434\\u0438\\u0441\\u043a\\u0443\\u0441\\u0438\\u044f\\u0442\\u0430\", \",\", \"\\u043f\\u0440\\u0435\\u0434\\u043f\\u043e\\u043b\\u0430\\u0433\\u0430\\u043c\", \",\", \"\\u0449\\u0435\", \"\\u0441\\u0435\", \"\\",
+          "output": "{\"avg_dependency_distance\": 2.2, \"n_dependencies\": 10}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0414\\u044a\\u043b\\u0433\\u0438\\u044f\\u0442\", \"\\u043f\\u044a\\u0442\", \",\", \"\\u0438\\u0437\\u0433\\u043b\\u0435\\u0436\\u0434\\u0430\", \",\", \"\\u0433\\u043e\", \"\\u0431\\u0435\\u0448\\u0435\", \"\\u0443\\u043c\\",
+          "output": "{\"avg_dependency_distance\": 2.125, \"n_dependencies\": 8}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0417\\u0430\", \"\\u0449\\u0430\\u0441\\u0442\\u0438\\u0435\", \",\", \"\\u0442\\u043e\\u0439\", \"\\u043d\\u0435\", \"\\u0443\\u0431\\u0438\", \"\\u043d\\u0438\\u043a\\u043e\\u0433\\u043e\", \".\"], \"head\": [2, 6, 2, 6, ",
+          "output": "{\"avg_dependency_distance\": 1.714, \"n_dependencies\": 7}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 38,
+          "metadata_phonological_density": 9.5,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Czech (cs_cac)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Feder\\u00e1ln\\u00ed\", \"ministerstvo\", \"vnitra\", \"stanov\\u00ed\", \"v\", \"dohod\\u011b\", \"se\", \"z\\u00fa\\u010dastn\\u011bn\\u00fdmi\", \"\\u00fast\\u0159edn\\u00edmi\", \"org\\u00e1ny\", \"podle\", \"vl\\u00e",
+          "output": "{\"avg_dependency_distance\": 3.292, \"n_dependencies\": 24}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Politick\\u00fd\", \",\", \"hospod\\u00e1\\u0159sk\\u00fd\", \"a\", \"kulturn\\u00ed\", \"v\\u00fdvoj\", \",\", \"jako\\u017e\", \"i\", \"rychl\\u00fd\", \"rozvoj\", \"motorismu\", \"a\", \"cestovn\\u00edho\", \"ruchu\", \"v\",",
+          "output": "{\"avg_dependency_distance\": 3.321, \"n_dependencies\": 28}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Spln\\u011bn\\u00ed\", \"tohoto\", \"po\\u017eadavku\", \"umo\\u017e\\u0148uje\", \"vedle\", \"jin\\u00fdch\", \"\\u010dinitel\\u016f\", \"\\u00fa\\u010deln\\u00e1\", \"\\u00faprava\", \"Pravidel\", \"provozu\", \"na\", \"s",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 31}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 32,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Romanian (ro_rrt)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Lui\", \"Winston\", \"\\u00eei\", \"displ\\u0103cuse\", \"fata\", \"asta\", \"din\", \"primul\", \"moment\", \"c\\u00e2nd\", \"o\", \"v\\u0103zuse\", \".\"], \"head\": [2, 4, 4, 0, 4, 5, 9, 9, 4, 12, 12, 9, 4], \"depend",
+          "output": "{\"avg_dependency_distance\": 2.417, \"n_dependencies\": 12}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"\\u0218tia\", \"\\u0219i\", \"de\", \"ce\", \".\"], \"head\": [0, 4, 4, 1, 1], \"dependency_distances\": [2, 1, 3, 4]}",
+          "output": "{\"avg_dependency_distance\": 2.5, \"n_dependencies\": 4}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Din\", \"cauza\", \"atmosferei\", \"de\", \"gazon\", \"de\", \"hochei\", \"\\u0219i\", \"de\", \"b\\u0103i\", \"reci\", \"\\u0219i\", \"de\", \"excursii\", \"\\u00een\", \"grup\", \"\\u0219i\", \"\\u00een\", \"general\", \"de\"], \"h",
+          "output": "{\"avg_dependency_distance\": 4.133, \"n_dependencies\": 30}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Croatian (hr_set)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Kazna\", \"medijskom\", \"mogulu\", \"obnovila\", \"raspravu\", \"u\", \"Makedoniji\"], \"head\": [4, 3, 1, 0, 4, 7, 4], \"dependency_distances\": [3, 1, 2, 1, 1, 3]}",
+          "output": "{\"avg_dependency_distance\": 1.833, \"n_dependencies\": 6}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Neki\", \"tvrde\", \"da\", \"je\", \"presuda\", \"Veliji\", \"Ramkovskom\", \"napad\", \"na\", \"slobodu\", \"medija\", \",\", \"dok\", \"drugi\", \"tvrde\", \"kako\", \"dokazi\", \"o\", \"njegovim\", \"kaznenim\"], \"head\": [2",
+          "output": "{\"avg_dependency_distance\": 4.13, \"n_dependencies\": 23}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Medijski\", \"mogul\", \"Velija\", \"Ramkovski\", \"osu\\u0111en\", \"je\", \"na\", \"13\", \"godina\", \"zatvora\", \"zbog\", \"utaje\", \"poreza\", \"i\", \"pranja\", \"novca\", \".\"], \"head\": [2, 5, 2, 3, 0, 5, 9, 9, ",
+          "output": "{\"avg_dependency_distance\": 2.562, \"n_dependencies\": 16}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 40,
+          "metadata_phonological_density": 8.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Slovak (sk_snk)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Kde\", \"t\\u00e1\", \"\\u013eudsk\\u00e1\", \"du\\u0161a\", \"drieme\", \"?\"], \"head\": [5, 4, 4, 5, 0, 5], \"dependency_distances\": [4, 2, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.8, \"n_dependencies\": 5}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Pre\\u010do\", \"to\", \"tu\", \"p\\u00ed\\u0161em\", \"?\"], \"head\": [4, 4, 4, 0, 4], \"dependency_distances\": [3, 2, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.75, \"n_dependencies\": 4}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Pre\\u010do\", \"je\", \"dne\\u0161n\\u00fd\", \"humor\", \"such\\u00fd\", \"?\"], \"head\": [5, 5, 4, 5, 0, 5], \"dependency_distances\": [4, 3, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 2.0, \"n_dependencies\": 5}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 35,
+          "metadata_phonological_density": 8.75,
+          "metadata_sentence_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies \u2013 Slovenian (sl_ssj)",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"\\\"\", \"Tistega\", \"ve\\u010dera\", \"sem\", \"preve\\u010d\", \"popil\", \",\", \"zgodilo\", \"se\", \"je\", \"mesec\", \"dni\", \"po\", \"tem\", \",\", \"ko\", \"sem\", \"izvedel\", \",\", \"da\"], \"head\": [6, 3, 6, 6, 6, 0, ",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 23}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Dogodek\", \"v\", \"Ankaranu\", \"je\", \"bila\", \"dramati\\u010dna\", \"nesre\\u010da\", \".\"], \"head\": [0, 3, 1, 1, 1, 7, 1, 1], \"dependency_distances\": [1, 2, 3, 4, 1, 6, 7]}",
+          "output": "{\"avg_dependency_distance\": 3.429, \"n_dependencies\": 7}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Dekle\", \"je\", \"ob\", \"vzvratni\", \"vo\\u017enji\", \"za\\u010delo\", \"vpiti\", \",\", \"da\", \"bi\", \"jo\", \"uti\\u0161al\", \",\", \"sem\", \"prijel\", \"no\\u017e\", \".\"], \"head\": [6, 6, 5, 5, 7, 0, 6, 12, 12, ",
+          "output": "{\"avg_dependency_distance\": 3.188, \"n_dependencies\": 16}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 36,
+          "metadata_phonological_density": 9.0,
+          "metadata_sentence_index": 2
+        }
+      ]
+    }
+  ]
+}

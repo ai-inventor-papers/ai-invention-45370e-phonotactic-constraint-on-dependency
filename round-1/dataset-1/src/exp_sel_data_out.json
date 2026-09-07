@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Experiment Data Selection Output",
+  "type": "object",
+  "required": ["meta", "datasets"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "n_languages", "total_examples"],
+      "properties": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "source": {"type": "string"},
+        "n_languages": {"type": "integer"},
+        "n_datasets": {"type": "integer"},
+        "total_examples": {"type": "integer"},
+        "families": {"type": "array", "items": {"type": "string"}},
+        "word_orders": {"type": "array", "items": {"type": "string"}},
+        "created": {"type": "string"}
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dataset", "examples"],
+        "properties": {
+          "dataset": {"type": "string"},
+          "n_examples": {"type": "integer"},
+          "family": {"type": "string"},
+          "word_order": {"type": "string"},
+          "phoneme_count": {"type": "integer"},
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["input", "output"],
+              "properties": {
+                "input": {"type": "string"},
+                "output": {"type": "string"},
+                "metadata_config_id": {"type": "string"},
+                "metadata_language": {"type": "string"},
+                "metadata_family": {"type": "string"},
+                "metadata_word_order": {"type": "string"},
+                "metadata_register": {"type": "string"},
+                "metadata_phoneme_count": {"type": "integer"},
+                "metadata_phonological_density": {"type": "number"},
+                "metadata_sentence_index": {"type": "integer"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
