@@ -1,0 +1,656 @@
+{
+  "metadata": {
+    "method_name": "Phonological Density and Dependency Distance Minimization",
+    "description": "Computes word-space and phoneme-space dependency distances across UD treebanks",
+    "n_treebanks": 55,
+    "n_successful": 55,
+    "n_languages": 55,
+    "n_families": 10,
+    "runtime_seconds": 600,
+    "baseline_comparison": {
+      "SVO": {
+        "n": 41,
+        "mean": 3.0704112250046447,
+        "std": 0.627020094305298,
+        "median": 3.2912835601324018
+      },
+      "SOV": {
+        "n": 11,
+        "mean": 3.037240415600176,
+        "std": 0.5807105536737617,
+        "median": 2.9048950841989996
+      },
+      "VSO": {
+        "n": 3,
+        "mean": 3.670602960813337,
+        "std": 0.3507039642684216,
+        "median": 3.525046997677762
+      },
+      "anova_f": 1.3584783601134198,
+      "anova_p": 0.2660214378500177,
+      "kruskal_h": 2.2305525959627914,
+      "kruskal_p": 0.3278246890854276
+    },
+    "regression_results": {
+      "model": "SimpleOLS",
+      "n_languages": 55,
+      "r_squared": 0.049867992873755984,
+      "phon_density_coefficient": 1.497678659368229,
+      "intercept": 2.3425697417813556,
+      "spearman_r": 0.1898685285441185,
+      "spearman_p": 0.1650071176072114
+    },
+    "figures": [
+      "figures/fig1_density_vs_mdd.pdf",
+      "figures/fig2_word_vs_phoneme_mdd.pdf",
+      "figures/fig3_functional_vs_lexical.pdf"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "af_afribooms",
+      "examples": [
+        {
+          "input": "Language: af, Family: Indo-European, Word Order: SVO, Phoneme Count: 39, Phon Density: 0.609",
+          "output": "{\"mdd_word\": {\"mean\": 3.355403371925191, \"median\": 2.0, \"std\": 4.440366426233689, \"entropy\": 2.6657048105995536, \"p_gt_2\": 0.3554340816263858, \"p_gt_5\": 0.15391702238737218}, \"mdd_phoneme\": {\"mean\": 11.510886589073488, \"median\": 3.0, \"std\": 23.011669323611542, \"entropy\": 3.9097179742435735, \"p_gt_2\": 0.5049903264441237, \"p_gt_5\": 0.376224549335135}, \"mdd_word_functional\": {\"mean\": 2.2479775574112737, \"median\": 1.0, \"std\": 3.14492538379569, \"entropy\": 1.9324621059924538, \"p_gt_2\": 0.18338987473903967, \"p_gt_5\": 0.07313413361169102}, \"mdd_word_lexical\": {\"mean\": 4.34029590948651, \"median\": 3.0, \"std\": 5.137625303791818, \"entropy\": 3.1409616936835607, \"p_gt_2\": 0.5084421235857267, \"p_gt_5\": 0.2257615317667537}, \"n_sentences\": 1315, \"n_arcs\": 32563}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.355403371925191}",
+          "predict_our_method": "{\"phon_density\": 0.609375, \"phoneme_count\": 39, \"mdd_word_mean\": 3.355403371925191, \"mdd_phoneme_mean\": 11.510886589073488}"
+        }
+      ]
+    },
+    {
+      "dataset": "sq_staf",
+      "examples": [
+        {
+          "input": "Language: sq, Family: Indo-European, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.2912835601324018, \"median\": 2.0, \"std\": 4.968355301555212, \"entropy\": 2.545196354596954, \"p_gt_2\": 0.34056638470025746, \"p_gt_5\": 0.12945936005884517}, \"mdd_phoneme\": {\"mean\": 8.029054799558661, \"median\": 2.0, \"std\": 19.330203064700534, \"entropy\": 3.745264909025302, \"p_gt_2\": 0.4071349760941523, \"p_gt_5\": 0.29606472968002945}, \"mdd_word_functional\": {\"mean\": 3.25516693163752, \"median\": 1.0, \"std\": 5.9203168967668764, \"entropy\": 2.2537269821663055, \"p_gt_2\": 0.28298887122416533, \"p_gt_5\": 0.12003179650238474}, \"mdd_word_lexical\": {\"mean\": 3.3223819301848048, \"median\": 2.0, \"std\": 3.9695244001823906, \"entropy\": 2.7145297915173576, \"p_gt_2\": 0.39014373716632444, \"p_gt_5\": 0.1375770020533881}, \"n_sentences\": 160, \"n_arcs\": 2719}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.2912835601324018}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.2912835601324018, \"mdd_phoneme_mean\": 8.029054799558661}"
+        }
+      ]
+    },
+    {
+      "dataset": "grc_perseus",
+      "examples": [
+        {
+          "input": "Language: grc, Family: Indo-European, Word Order: SVO, Phoneme Count: 35, Phon Density: 0.547",
+          "output": "{\"mdd_word\": {\"mean\": 3.494053995782211, \"median\": 2.0, \"std\": 4.438173093421067, \"entropy\": 2.842911597984281, \"p_gt_2\": 0.42791017322579994, \"p_gt_5\": 0.16826686610204894}, \"mdd_phoneme\": {\"mean\": 11.647983074943236, \"median\": 4.0, \"std\": 21.45967394259612, \"entropy\": 4.114985933700434, \"p_gt_2\": 0.5633847418457205, \"p_gt_5\": 0.45981309670594733}, \"mdd_word_functional\": {\"mean\": 3.9135385357934225, \"median\": 2.0, \"std\": 4.9934343047490675, \"entropy\": 2.8933944294775245, \"p_gt_2\": 0.4254843026699721, \"p_gt_5\": 0.20552423158772296}, \"mdd_word_lexical\": {\"mean\": 3.308125401116319, \"median\": 2.0, \"std\": 4.154950417046299, \"entropy\": 2.8048995184554975, \"p_gt_2\": 0.4289853945039771, \"p_gt_5\": 0.15175324296466286}, \"n_sentences\": 11476, \"n_arcs\": 148419}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.494053995782211}",
+          "predict_our_method": "{\"phon_density\": 0.546875, \"phoneme_count\": 35, \"mdd_word_mean\": 3.494053995782211, \"mdd_phoneme_mean\": 11.647983074943236}"
+        }
+      ]
+    },
+    {
+      "dataset": "hbo_ptnk",
+      "examples": [
+        {
+          "input": "Language: hbo, Family: Afroasiatic, Word Order: SOV, Phoneme Count: 25, Phon Density: 0.391",
+          "output": "{\"mdd_word\": {\"mean\": 3.9947826245034856, \"median\": 2.0, \"std\": 7.97167867287447, \"entropy\": 2.494320723273003, \"p_gt_2\": 0.3306216312024505, \"p_gt_5\": 0.15860276139142132}, \"mdd_phoneme\": {\"mean\": 12.586182135488151, \"median\": 1.0, \"std\": 35.95131640812807, \"entropy\": 3.753427421149959, \"p_gt_2\": 0.3884217893598262, \"p_gt_5\": 0.29761764091004117}, \"mdd_word_functional\": {\"mean\": 3.5310356555750806, \"median\": 1.0, \"std\": 7.868666424743712, \"entropy\": 1.7685155929130678, \"p_gt_2\": 0.20165145588874403, \"p_gt_5\": 0.11095364964193262}, \"mdd_word_lexical\": {\"mean\": 4.424650576242687, \"median\": 2.0, \"std\": 8.042143159977956, \"entropy\": 2.9684222780396397, \"p_gt_2\": 0.4501698952604477, \"p_gt_5\": 0.20277086909307457}, \"n_sentences\": 4417, \"n_arcs\": 110017}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.9947826245034856}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 3.9947826245034856, \"mdd_phoneme_mean\": 12.586182135488151}"
+        }
+      ]
+    },
+    {
+      "dataset": "ar_padt",
+      "examples": [
+        {
+          "input": "Language: ar, Family: Afroasiatic, Word Order: VSO, Phoneme Count: 47, Phon Density: 0.734",
+          "output": "{\"mdd_word\": {\"mean\": 4.153990248202529, \"median\": 1.0, \"std\": 10.208962246239988, \"entropy\": 2.193004751976777, \"p_gt_2\": 0.27991882684590874, \"p_gt_5\": 0.13795763202115643}, \"mdd_phoneme\": {\"mean\": 12.183268596824698, \"median\": 0.0, \"std\": 39.55386642318975, \"entropy\": 3.918921359097905, \"p_gt_2\": 0.3456745911499224, \"p_gt_5\": 0.27488682589093044}, \"mdd_word_functional\": {\"mean\": 5.584829712523908, \"median\": 1.0, \"std\": 14.93285778935478, \"entropy\": 1.437484200425463, \"p_gt_2\": 0.20061948671101087, \"p_gt_5\": 0.1362728025350424}, \"mdd_word_lexical\": {\"mean\": 3.4755258954435932, \"median\": 2.0, \"std\": 6.817305268192879, \"entropy\": 2.454824686359828, \"p_gt_2\": 0.31752037252619325, \"p_gt_5\": 0.13875653139128788}, \"n_sentences\": 6075, \"n_arcs\": 217806}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 4.153990248202529}",
+          "predict_our_method": "{\"phon_density\": 0.734375, \"phoneme_count\": 47, \"mdd_word_mean\": 4.153990248202529, \"mdd_phoneme_mean\": 12.183268596824698}"
+        }
+      ]
+    },
+    {
+      "dataset": "hy_armtdp",
+      "examples": [
+        {
+          "input": "Language: hy, Family: Indo-European, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.603497242705587, \"median\": 2.0, \"std\": 5.75238523872538, \"entropy\": 2.6543449781005624, \"p_gt_2\": 0.3665991670805792, \"p_gt_5\": 0.16319616908009527}, \"mdd_phoneme\": {\"mean\": 13.175524395369274, \"median\": 1.0, \"std\": 29.598661828058727, \"entropy\": 4.0908261948336015, \"p_gt_2\": 0.4655943147518435, \"p_gt_5\": 0.39391739578955415}, \"mdd_word_functional\": {\"mean\": 4.086987926942524, \"median\": 1.0, \"std\": 6.913862880643103, \"entropy\": 2.6005180352435047, \"p_gt_2\": 0.3668352079248788, \"p_gt_5\": 0.1865304578130912}, \"mdd_word_lexical\": {\"mean\": 3.319216923512519, \"median\": 2.0, \"std\": 4.921549088750718, \"entropy\": 2.664692815291678, \"p_gt_2\": 0.3664603810217207, \"p_gt_5\": 0.14947619625449987}, \"n_sentences\": 4352, \"n_arcs\": 78519}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.603497242705587}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.603497242705587, \"mdd_phoneme_mean\": 13.175524395369274}"
+        }
+      ]
+    },
+    {
+      "dataset": "as_aiw",
+      "examples": [
+        {
+          "input": "Language: as, Family: Indo-European, Word Order: SOV, Phoneme Count: 40, Phon Density: 0.625",
+          "output": "{\"mdd_word\": {\"mean\": 2.4853479853479854, \"median\": 1.0, \"std\": 2.7670162133713716, \"entropy\": 2.230905655724434, \"p_gt_2\": 0.2783882783882784, \"p_gt_5\": 0.10622710622710622}, \"mdd_phoneme\": {\"mean\": 6.5476190476190474, \"median\": 0.0, \"std\": 12.324910144986108, \"entropy\": 4.008726638948967, \"p_gt_2\": 0.41208791208791207, \"p_gt_5\": 0.2967032967032967}, \"mdd_word_functional\": {\"mean\": 2.330827067669173, \"median\": 1.0, \"std\": 3.452626339363607, \"entropy\": 1.6791221320142926, \"p_gt_2\": 0.15789473684210525, \"p_gt_5\": 0.09022556390977443}, \"mdd_word_lexical\": {\"mean\": 2.5351089588377724, \"median\": 1.0, \"std\": 2.5045918701596595, \"entropy\": 2.34783330752148, \"p_gt_2\": 0.3171912832929782, \"p_gt_5\": 0.11138014527845036}, \"n_sentences\": 51, \"n_arcs\": 546}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.4853479853479854}",
+          "predict_our_method": "{\"phon_density\": 0.625, \"phoneme_count\": 40, \"mdd_word_mean\": 2.4853479853479854, \"mdd_phoneme_mean\": 6.5476190476190474}"
+        }
+      ]
+    },
+    {
+      "dataset": "eu_bdt",
+      "examples": [
+        {
+          "input": "Language: eu, Family: Isolate, Word Order: SOV, Phoneme Count: 24, Phon Density: 0.375",
+          "output": "{\"mdd_word\": {\"mean\": 2.9048950841989996, \"median\": 2.0, \"std\": 3.3032389771531654, \"entropy\": 2.534224076782716, \"p_gt_2\": 0.3292639616443221, \"p_gt_5\": 0.13813667169788985}, \"mdd_phoneme\": {\"mean\": 10.8891799106218, \"median\": 2.0, \"std\": 19.417593290192368, \"entropy\": 4.1378184353337835, \"p_gt_2\": 0.48788067122436296, \"p_gt_5\": 0.40055935363579864}, \"mdd_word_functional\": {\"mean\": 3.3094239493280835, \"median\": 1.0, \"std\": 3.993751350822144, \"entropy\": 2.6375099507893633, \"p_gt_2\": 0.35230677052127024, \"p_gt_5\": 0.17914919113241462}, \"mdd_word_lexical\": {\"mean\": 2.691101963267891, \"median\": 2.0, \"std\": 2.8489062135170458, \"entropy\": 2.462510619561298, \"p_gt_2\": 0.3170858590427938, \"p_gt_5\": 0.11646159413733828}, \"n_sentences\": 5396, \"n_arcs\": 67578}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Isolate\", \"mdd_word_mean\": 2.9048950841989996}",
+          "predict_our_method": "{\"phon_density\": 0.375, \"phoneme_count\": 24, \"mdd_word_mean\": 2.9048950841989996, \"mdd_phoneme_mean\": 10.8891799106218}"
+        }
+      ]
+    },
+    {
+      "dataset": "be_hse",
+      "examples": [
+        {
+          "input": "Language: be, Family: Indo-European, Word Order: SOV, Phoneme Count: 45, Phon Density: 0.703",
+          "output": "{\"mdd_word\": {\"mean\": 2.89225735834585, \"median\": 2.0, \"std\": 3.8900989662797123, \"entropy\": 2.440571162574641, \"p_gt_2\": 0.31003723115272763, \"p_gt_5\": 0.1146495797513662}, \"mdd_phoneme\": {\"mean\": 9.396987152855454, \"median\": 1.0, \"std\": 20.686958782887544, \"entropy\": 4.05733242909266, \"p_gt_2\": 0.4360439103895689, \"p_gt_5\": 0.3583378607267265}, \"mdd_word_functional\": {\"mean\": 3.2573672006745364, \"median\": 2.0, \"std\": 4.847317140050366, \"entropy\": 2.4730120731038796, \"p_gt_2\": 0.30626053962900507, \"p_gt_5\": 0.13963954468802697}, \"mdd_word_lexical\": {\"mean\": 2.669407132931913, \"median\": 2.0, \"std\": 3.1459477082717124, \"entropy\": 2.4109951060068697, \"p_gt_2\": 0.31234239102465133, \"p_gt_5\": 0.09939658278009367}, \"n_sentences\": 22853, \"n_arcs\": 250328}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.89225735834585}",
+          "predict_our_method": "{\"phon_density\": 0.703125, \"phoneme_count\": 45, \"mdd_word_mean\": 2.89225735834585, \"mdd_phoneme_mean\": 9.396987152855454}"
+        }
+      ]
+    },
+    {
+      "dataset": "bor_bdt",
+      "examples": [
+        {
+          "input": "Language: bor, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.1482243444044165, \"median\": 1.0, \"std\": 2.199114110229901, \"entropy\": 2.0516955165849855, \"p_gt_2\": 0.2431026583176865, \"p_gt_5\": 0.0628329634986659}, \"mdd_phoneme\": {\"mean\": 5.11270224865467, \"median\": 0.0, \"std\": 10.208927397983743, \"entropy\": 4.032753917086885, \"p_gt_2\": 0.39488460259992275, \"p_gt_5\": 0.2854434871665873}, \"mdd_word_functional\": {\"mean\": 2.161069730787808, \"median\": 1.0, \"std\": 2.1777033078501167, \"entropy\": 2.0757935138344634, \"p_gt_2\": 0.24315529908228894, \"p_gt_5\": 0.06253654320359966}, \"mdd_word_lexical\": {\"mean\": 2.141203768027343, \"median\": 1.0, \"std\": 2.2106968886297627, \"entropy\": 2.0368285029754283, \"p_gt_2\": 0.24307388779281408, \"p_gt_5\": 0.06299497040597994}, \"n_sentences\": 17107, \"n_arcs\": 111311}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.1482243444044165}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.1482243444044165, \"mdd_phoneme_mean\": 5.11270224865467}"
+        }
+      ]
+    },
+    {
+      "dataset": "bg_btb",
+      "examples": [
+        {
+          "input": "Language: bg, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.9377106273120273, \"median\": 2.0, \"std\": 3.568955244752244, \"entropy\": 2.530253375055031, \"p_gt_2\": 0.325628741477445, \"p_gt_5\": 0.11980524824784067}, \"mdd_phoneme\": {\"mean\": 8.493939997747534, \"median\": 2.0, \"std\": 17.16788184129614, \"entropy\": 3.8815212704445963, \"p_gt_2\": 0.42675584125306465, \"p_gt_5\": 0.34868187370591447}, \"mdd_word_functional\": {\"mean\": 3.0326806452891515, \"median\": 1.0, \"std\": 4.291591260997129, \"entropy\": 2.3735866348240204, \"p_gt_2\": 0.27545681556938445, \"p_gt_5\": 0.13288279361052757}, \"mdd_word_lexical\": {\"mean\": 2.863954687475951, \"median\": 2.0, \"std\": 2.883319635724742, \"entropy\": 2.591363856618711, \"p_gt_2\": 0.3645934339936279, \"p_gt_5\": 0.10964892028751289}, \"n_sentences\": 8907, \"n_arcs\": 115429}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.9377106273120273}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.9377106273120273, \"mdd_phoneme_mean\": 8.493939997747534}"
+        }
+      ]
+    },
+    {
+      "dataset": "bxr_bdt",
+      "examples": [
+        {
+          "input": "Language: bxr, Family: Mongolic, Word Order: SOV, Phoneme Count: 26, Phon Density: 0.406",
+          "output": "{\"mdd_word\": {\"mean\": 2.1159420289855073, \"median\": 1.0, \"std\": 2.1266850566016338, \"entropy\": 1.9731723138788748, \"p_gt_2\": 0.21739130434782608, \"p_gt_5\": 0.07971014492753623}, \"mdd_phoneme\": {\"mean\": 4.8478260869565215, \"median\": 0.0, \"std\": 8.875060460225203, \"entropy\": 3.5486170444969156, \"p_gt_2\": 0.391304347826087, \"p_gt_5\": 0.2826086956521739}, \"mdd_word_functional\": {\"mean\": 1.7959183673469388, \"median\": 1.0, \"std\": 1.784051704164436, \"entropy\": 1.5024024642072011, \"p_gt_2\": 0.12244897959183673, \"p_gt_5\": 0.061224489795918366}, \"mdd_word_lexical\": {\"mean\": 2.292134831460674, \"median\": 1.0, \"std\": 2.274441515304269, \"entropy\": 2.0979424853780704, \"p_gt_2\": 0.2696629213483146, \"p_gt_5\": 0.0898876404494382}, \"n_sentences\": 20, \"n_arcs\": 138}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Mongolic\", \"mdd_word_mean\": 2.1159420289855073}",
+          "predict_our_method": "{\"phon_density\": 0.40625, \"phoneme_count\": 26, \"mdd_word_mean\": 2.1159420289855073, \"mdd_phoneme_mean\": 4.8478260869565215}"
+        }
+      ]
+    },
+    {
+      "dataset": "ca_ancora",
+      "examples": [
+        {
+          "input": "Language: ca, Family: Indo-European, Word Order: SVO, Phoneme Count: 32, Phon Density: 0.500",
+          "output": "{\"mdd_word\": {\"mean\": 3.6247142555275946, \"median\": 2.0, \"std\": 6.176150341918453, \"entropy\": 2.529633339156686, \"p_gt_2\": 0.33780999673434886, \"p_gt_5\": 0.13634813761837986}, \"mdd_phoneme\": {\"mean\": 9.963016501142977, \"median\": 2.0, \"std\": 25.97985082658639, \"entropy\": 3.5898099976264035, \"p_gt_2\": 0.4302135159536662, \"p_gt_5\": 0.29084705226962754}, \"mdd_word_functional\": {\"mean\": 3.3726753182642377, \"median\": 1.0, \"std\": 7.1116287783031265, \"entropy\": 1.9706669020915217, \"p_gt_2\": 0.20731556812895754, \"p_gt_5\": 0.09901079392805946}, \"mdd_word_lexical\": {\"mean\": 3.882744846488031, \"median\": 2.0, \"std\": 5.0286462779979, \"entropy\": 2.926291313959517, \"p_gt_2\": 0.4714066342051297, \"p_gt_5\": 0.17457309191280093}, \"n_sentences\": 13123, \"n_arcs\": 416456}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.6247142555275946}",
+          "predict_our_method": "{\"phon_density\": 0.5, \"phoneme_count\": 32, \"mdd_word_mean\": 3.6247142555275946, \"mdd_phoneme_mean\": 9.963016501142977}"
+        }
+      ]
+    },
+    {
+      "dataset": "ckb_mukri",
+      "examples": [
+        {
+          "input": "Language: ckb, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 1.9597315436241611, \"median\": 1.0, \"std\": 1.6062484030826139, \"entropy\": 1.8945851578626245, \"p_gt_2\": 0.22595078299776286, \"p_gt_5\": 0.053691275167785234}, \"mdd_phoneme\": {\"mean\": 3.017897091722595, \"median\": 0.0, \"std\": 5.607173581919573, \"entropy\": 3.789179980276077, \"p_gt_2\": 0.29977628635346754, \"p_gt_5\": 0.20134228187919462}, \"mdd_word_functional\": {\"mean\": 1.4049079754601228, \"median\": 1.0, \"std\": 1.0545724968159784, \"entropy\": 1.1138695784127244, \"p_gt_2\": 0.05521472392638037, \"p_gt_5\": 0.018404907975460124}, \"mdd_word_lexical\": {\"mean\": 2.278169014084507, \"median\": 1.0, \"std\": 1.773260552067503, \"entropy\": 2.201088743497242, \"p_gt_2\": 0.323943661971831, \"p_gt_5\": 0.07394366197183098}, \"n_sentences\": 92, \"n_arcs\": 447}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 1.9597315436241611}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 1.9597315436241611, \"mdd_phoneme_mean\": 3.017897091722595}"
+        }
+      ]
+    },
+    {
+      "dataset": "zh_gsdsimp",
+      "examples": [
+        {
+          "input": "Language: zh, Family: Sino-Tibetan, Word Order: SVO, Phoneme Count: 34, Phon Density: 0.531",
+          "output": "{\"mdd_word\": {\"mean\": 3.9825929801198514, \"median\": 2.0, \"std\": 5.639043663025524, \"entropy\": 2.81703473412764, \"p_gt_2\": 0.40500121542640327, \"p_gt_5\": 0.19674054345413614}, \"mdd_phoneme\": {\"mean\": 4.7198812052802355, \"median\": 1.0, \"std\": 8.969271077539922, \"entropy\": 3.7070687634786417, \"p_gt_2\": 0.3979411733620808, \"p_gt_5\": 0.2451356521555323}, \"mdd_word_functional\": {\"mean\": 4.0405292029687, \"median\": 2.0, \"std\": 6.278754044380527, \"entropy\": 2.6663127270848728, \"p_gt_2\": 0.3734430461439174, \"p_gt_5\": 0.19238464020651824}, \"mdd_word_lexical\": {\"mean\": 3.9543747151366557, \"median\": 2.0, \"std\": 5.299347750390225, \"entropy\": 2.8799944098027797, \"p_gt_2\": 0.4203718547157653, \"p_gt_5\": 0.1988621182831188}, \"n_sentences\": 3997, \"n_arcs\": 94617}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Sino-Tibetan\", \"mdd_word_mean\": 3.9825929801198514}",
+          "predict_our_method": "{\"phon_density\": 0.53125, \"phoneme_count\": 34, \"mdd_word_mean\": 3.9825929801198514, \"mdd_phoneme_mean\": 4.7198812052802355}"
+        }
+      ]
+    },
+    {
+      "dataset": "xcl_caval",
+      "examples": [
+        {
+          "input": "Language: xcl, Family: Indo-European, Word Order: SVO, Phoneme Count: 35, Phon Density: 0.547",
+          "output": "{\"mdd_word\": {\"mean\": 3.5835193427812926, \"median\": 2.0, \"std\": 5.323658814206208, \"entropy\": 2.650022671575456, \"p_gt_2\": 0.3584589172268963, \"p_gt_5\": 0.16137255160936695}, \"mdd_phoneme\": {\"mean\": 8.780328345198315, \"median\": 1.0, \"std\": 19.943608645425098, \"entropy\": 3.8518002198884074, \"p_gt_2\": 0.41578064533171316, \"p_gt_5\": 0.31950919921281684}, \"mdd_word_functional\": {\"mean\": 3.5532658438496743, \"median\": 1.0, \"std\": 6.184608442110015, \"entropy\": 2.3248033983787724, \"p_gt_2\": 0.2964637359589516, \"p_gt_5\": 0.14824573568159755}, \"mdd_word_lexical\": {\"mean\": 3.6110242574007767, \"median\": 2.0, \"std\": 4.396803278624483, \"entropy\": 2.863101462669532, \"p_gt_2\": 0.41482172575520704, \"p_gt_5\": 0.17330677290836655}, \"n_sentences\": 3795, \"n_arcs\": 75713}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.5835193427812926}",
+          "predict_our_method": "{\"phon_density\": 0.546875, \"phoneme_count\": 35, \"mdd_word_mean\": 3.5835193427812926, \"mdd_phoneme_mean\": 8.780328345198315}"
+        }
+      ]
+    },
+    {
+      "dataset": "lzh_kyoto",
+      "examples": [
+        {
+          "input": "Language: lzh, Family: Sino-Tibetan, Word Order: SVO, Phoneme Count: 34, Phon Density: 0.531",
+          "output": "{\"mdd_word\": {\"mean\": 1.7548866314831422, \"median\": 1.0, \"std\": 1.4788508352881775, \"entropy\": 1.7039098537811783, \"p_gt_2\": 0.1774756543568783, \"p_gt_5\": 0.02042000193364916}, \"mdd_phoneme\": {\"mean\": 0.7848081853369384, \"median\": 0.0, \"std\": 1.6090202736497274, \"entropy\": 1.952383220403841, \"p_gt_2\": 0.09234841690809499, \"p_gt_5\": 0.012572053435394448}, \"mdd_word_functional\": {\"mean\": 1.3865702214825246, \"median\": 1.0, \"std\": 0.7822158481592197, \"entropy\": 1.1736984980106504, \"p_gt_2\": 0.0652285238765843, \"p_gt_5\": 0.004128792728203815}, \"mdd_word_lexical\": {\"mean\": 1.7977127503191208, \"median\": 1.0, \"std\": 1.5337998214590383, \"entropy\": 1.754691431104703, \"p_gt_2\": 0.19052722854261334, \"p_gt_5\": 0.022314267957291772}, \"n_sentences\": 74609, \"n_arcs\": 299951}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Sino-Tibetan\", \"mdd_word_mean\": 1.7548866314831422}",
+          "predict_our_method": "{\"phon_density\": 0.53125, \"phoneme_count\": 34, \"mdd_word_mean\": 1.7548866314831422, \"mdd_phoneme_mean\": 0.7848081853369384}"
+        }
+      ]
+    },
+    {
+      "dataset": "cop_scriptorium",
+      "examples": [
+        {
+          "input": "Language: cop, Family: Afroasiatic, Word Order: VSO, Phoneme Count: 24, Phon Density: 0.375",
+          "output": "{\"mdd_word\": {\"mean\": 3.525046997677762, \"median\": 2.0, \"std\": 5.460873635822284, \"entropy\": 2.608032090147182, \"p_gt_2\": 0.3617991816874931, \"p_gt_5\": 0.1354086033395997}, \"mdd_phoneme\": {\"mean\": 5.8958863209112025, \"median\": 1.0, \"std\": 14.281430170057053, \"entropy\": 3.4318634021946828, \"p_gt_2\": 0.375677319473626, \"p_gt_5\": 0.2269711378967157}, \"mdd_word_functional\": {\"mean\": 3.4823914369696634, \"median\": 2.0, \"std\": 6.4364581852485445, \"entropy\": 2.2517739624872792, \"p_gt_2\": 0.2671510176917531, \"p_gt_5\": 0.10548499805889856}, \"mdd_word_lexical\": {\"mean\": 3.5674439115815004, \"median\": 2.0, \"std\": 4.275635772971734, \"entropy\": 2.8674752199302946, \"p_gt_2\": 0.4558734358635136, \"p_gt_5\": 0.16515076346397664}, \"n_sentences\": 1467, \"n_arcs\": 36172}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.525046997677762}",
+          "predict_our_method": "{\"phon_density\": 0.375, \"phoneme_count\": 24, \"mdd_word_mean\": 3.525046997677762, \"mdd_phoneme_mean\": 5.8958863209112025}"
+        }
+      ]
+    },
+    {
+      "dataset": "hr_set",
+      "examples": [
+        {
+          "input": "Language: hr, Family: Indo-European, Word Order: SVO, Phoneme Count: 31, Phon Density: 0.484",
+          "output": "{\"mdd_word\": {\"mean\": 3.4025955338728133, \"median\": 2.0, \"std\": 4.8570368191888225, \"entropy\": 2.598292798157046, \"p_gt_2\": 0.34918427057138746, \"p_gt_5\": 0.14280917892601908}, \"mdd_phoneme\": {\"mean\": 11.582885098976998, \"median\": 2.0, \"std\": 24.684371722135378, \"entropy\": 4.074774407935999, \"p_gt_2\": 0.4726023173430723, \"p_gt_5\": 0.4040687117573299}, \"mdd_word_functional\": {\"mean\": 4.066876223460322, \"median\": 2.0, \"std\": 6.388924142107868, \"entropy\": 2.5813971260107946, \"p_gt_2\": 0.34934497816593885, \"p_gt_5\": 0.1734302062942328}, \"mdd_word_lexical\": {\"mean\": 3.022356300166999, \"median\": 2.0, \"std\": 3.651364624041747, \"entropy\": 2.592207259400193, \"p_gt_2\": 0.349092280342617, \"p_gt_5\": 0.12528147389969294}, \"n_sentences\": 6914, \"n_arcs\": 145943}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4025955338728133}",
+          "predict_our_method": "{\"phon_density\": 0.484375, \"phoneme_count\": 31, \"mdd_word_mean\": 3.4025955338728133, \"mdd_phoneme_mean\": 11.582885098976998}"
+        }
+      ]
+    },
+    {
+      "dataset": "cs_fictree",
+      "examples": [
+        {
+          "input": "Language: cs, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.313702146958543, \"median\": 2.0, \"std\": 4.193532922410036, \"entropy\": 2.7089965763796333, \"p_gt_2\": 0.3947212841257886, \"p_gt_5\": 0.14094932659523635}, \"mdd_phoneme\": {\"mean\": 9.084153324100845, \"median\": 3.0, \"std\": 17.49942505706506, \"entropy\": 4.070323300331312, \"p_gt_2\": 0.5137151048373382, \"p_gt_5\": 0.4058002704957199}, \"mdd_word_functional\": {\"mean\": 3.882641152755541, \"median\": 2.0, \"std\": 5.263757477160948, \"entropy\": 2.8383211483162856, \"p_gt_2\": 0.4216546748712409, \"p_gt_5\": 0.18039775467294228}, \"mdd_word_lexical\": {\"mean\": 2.901976659779999, \"median\": 2.0, \"std\": 3.1396429342443444, \"entropy\": 2.6009237781821604, \"p_gt_2\": 0.37523033111843207, \"p_gt_5\": 0.11240158579485175}, \"n_sentences\": 10160, \"n_arcs\": 123477}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.313702146958543}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.313702146958543, \"mdd_phoneme_mean\": 9.084153324100845}"
+        }
+      ]
+    },
+    {
+      "dataset": "da_ddt",
+      "examples": [
+        {
+          "input": "Language: da, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.688",
+          "output": "{\"mdd_word\": {\"mean\": 3.462122508059741, \"median\": 2.0, \"std\": 4.678842605253762, \"entropy\": 2.7079401442332403, \"p_gt_2\": 0.3894466741232976, \"p_gt_5\": 0.1472465293769327}, \"mdd_phoneme\": {\"mean\": 10.734311467859728, \"median\": 3.0, \"std\": 21.541790696280632, \"entropy\": 4.053636987272602, \"p_gt_2\": 0.5299822356733995, \"p_gt_5\": 0.40572406079347323}, \"mdd_word_functional\": {\"mean\": 3.9045423602945726, \"median\": 2.0, \"std\": 5.8209470454467125, \"entropy\": 2.70987027825415, \"p_gt_2\": 0.38461538461538464, \"p_gt_5\": 0.1640881242651154}, \"mdd_word_lexical\": {\"mean\": 3.1347620028848135, \"median\": 2.0, \"std\": 3.5730123002773175, \"entropy\": 2.698172121597065, \"p_gt_2\": 0.3930214987293083, \"p_gt_5\": 0.1347848982301898}, \"n_sentences\": 4383, \"n_arcs\": 75995}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.462122508059741}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.462122508059741, \"mdd_phoneme_mean\": 10.734311467859728}"
+        }
+      ]
+    },
+    {
+      "dataset": "nl_lassysmall",
+      "examples": [
+        {
+          "input": "Language: nl, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.688",
+          "output": "{\"mdd_word\": {\"mean\": 3.6507668358953493, \"median\": 2.0, \"std\": 4.895695709871875, \"entropy\": 2.7839777384182223, \"p_gt_2\": 0.39316481222691974, \"p_gt_5\": 0.17202066123012152}, \"mdd_phoneme\": {\"mean\": 12.410434098105464, \"median\": 3.0, \"std\": 23.833456336221797, \"entropy\": 4.048422423076548, \"p_gt_2\": 0.5293334630556685, \"p_gt_5\": 0.4225292317489519}, \"mdd_word_functional\": {\"mean\": 3.597652070536953, \"median\": 2.0, \"std\": 5.631969907240994, \"entropy\": 2.5063340529262086, \"p_gt_2\": 0.30504259956409746, \"p_gt_5\": 0.1536754507628294}, \"mdd_word_lexical\": {\"mean\": 3.6935950281186094, \"median\": 2.0, \"std\": 4.208757455457725, \"entropy\": 2.954923718407115, \"p_gt_2\": 0.4642206671779141, \"p_gt_5\": 0.18681301124744376}, \"n_sentences\": 13817, \"n_arcs\": 226124}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.6507668358953493}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.6507668358953493, \"mdd_phoneme_mean\": 12.410434098105464}"
+        }
+      ]
+    },
+    {
+      "dataset": "egy_pc",
+      "examples": [
+        {
+          "input": "Language: egy, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.3382213018413838, \"median\": 1.0, \"std\": 2.7194435018607472, \"entropy\": 2.155528801742318, \"p_gt_2\": 0.2670845693177366, \"p_gt_5\": 0.0791403145463704}, \"mdd_phoneme\": {\"mean\": 3.8937146695024345, \"median\": 0.0, \"std\": 8.85839788467371, \"entropy\": 3.7600083056976206, \"p_gt_2\": 0.3289863995074719, \"p_gt_5\": 0.20199250013992276}, \"mdd_word_functional\": {\"mean\": 1.373373676248109, \"median\": 1.0, \"std\": 2.380534836326099, \"entropy\": 0.784569186874879, \"p_gt_2\": 0.039334341906202726, \"p_gt_5\": 0.018456883509833585}, \"mdd_word_lexical\": {\"mean\": 2.557203680813075, \"median\": 2.0, \"std\": 2.7437966058302905, \"entropy\": 2.368769001913774, \"p_gt_2\": 0.31877489355857713, \"p_gt_5\": 0.09291306139266585}, \"n_sentences\": 1619, \"n_arcs\": 17867}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.3382213018413838}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.3382213018413838, \"mdd_phoneme_mean\": 3.8937146695024345}"
+        }
+      ]
+    },
+    {
+      "dataset": "en_gumreddit",
+      "examples": [
+        {
+          "input": "Language: en, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.688",
+          "output": "{\"mdd_word\": {\"mean\": 3.4369664318276003, \"median\": 2.0, \"std\": 4.8726705824601355, \"entropy\": 2.649269387817556, \"p_gt_2\": 0.38002486531288854, \"p_gt_5\": 0.1326150020721094}, \"mdd_phoneme\": {\"mean\": 2.4369664318276003, \"median\": 1.0, \"std\": 4.8726705824601355, \"entropy\": 2.7777816326660023, \"p_gt_2\": 0.2440116038126813, \"p_gt_5\": 0.10783257355988396}, \"mdd_word_functional\": {\"mean\": 3.7853222199634073, \"median\": 2.0, \"std\": 6.149808649457339, \"entropy\": 2.559793672048827, \"p_gt_2\": 0.34966456596869283, \"p_gt_5\": 0.1423053466151657}, \"mdd_word_lexical\": {\"mean\": 3.19717324377274, \"median\": 2.0, \"std\": 3.72984241586379, \"entropy\": 2.695158801500378, \"p_gt_2\": 0.40092359361880775, \"p_gt_5\": 0.12594458438287154}, \"n_sentences\": 686, \"n_arcs\": 12065}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4369664318276003}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.4369664318276003, \"mdd_phoneme_mean\": 2.4369664318276003}"
+        }
+      ]
+    },
+    {
+      "dataset": "myv_jr",
+      "examples": [
+        {
+          "input": "Language: myv, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.534317505783849, \"median\": 2.0, \"std\": 2.6021186124410876, \"entropy\": 2.3686262978651786, \"p_gt_2\": 0.3086922992178032, \"p_gt_5\": 0.09827035364107084}, \"mdd_phoneme\": {\"mean\": 7.520105761815578, \"median\": 1.0, \"std\": 13.126420583706828, \"entropy\": 4.132386611687146, \"p_gt_2\": 0.452572435826815, \"p_gt_5\": 0.3687341632698028}, \"mdd_word_functional\": {\"mean\": 2.9855739717618173, \"median\": 2.0, \"std\": 3.308764055566069, \"entropy\": 2.5816956240351026, \"p_gt_2\": 0.35389809699201963, \"p_gt_5\": 0.1464088397790055}, \"mdd_word_lexical\": {\"mean\": 2.2816635160680527, \"median\": 1.0, \"std\": 2.062661347182592, \"entropy\": 2.224244602835134, \"p_gt_2\": 0.28338202440281834, \"p_gt_5\": 0.07131809589276508}, \"n_sentences\": 1217, \"n_arcs\": 9077}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.534317505783849}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.534317505783849, \"mdd_phoneme_mean\": 7.520105761815578}"
+        }
+      ]
+    },
+    {
+      "dataset": "et_edt",
+      "examples": [
+        {
+          "input": "Language: et, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.1965747859241205, \"median\": 2.0, \"std\": 3.9790372974822956, \"entropy\": 2.659037326614963, \"p_gt_2\": 0.37775798487405465, \"p_gt_5\": 0.1454215888493031}, \"mdd_phoneme\": {\"mean\": 12.374279642477655, \"median\": 3.0, \"std\": 23.07870122337238, \"entropy\": 4.179431734927559, \"p_gt_2\": 0.5100912557034815, \"p_gt_5\": 0.4314457153572098}, \"mdd_word_functional\": {\"mean\": 4.3001420182710035, \"median\": 2.0, \"std\": 5.3237434736816445, \"entropy\": 3.0552079706070816, \"p_gt_2\": 0.47595257999858986, \"p_gt_5\": 0.2275817612280048}, \"mdd_word_lexical\": {\"mean\": 2.7001227927883025, \"median\": 2.0, \"std\": 3.0677132097712785, \"entropy\": 2.4549359999235394, \"p_gt_2\": 0.33358405415569764, \"p_gt_5\": 0.10846092153495517}, \"n_sentences\": 24601, \"n_arcs\": 319980}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.1965747859241205}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.1965747859241205, \"mdd_phoneme_mean\": 12.374279642477655}"
+        }
+      ]
+    },
+    {
+      "dataset": "fo_farpahc",
+      "examples": [
+        {
+          "input": "Language: fo, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.6439249796140256, \"median\": 1.0, \"std\": 3.7676542266813158, \"entropy\": 2.2413771050230133, \"p_gt_2\": 0.2796955694482196, \"p_gt_5\": 0.0966748210564465}, \"mdd_phoneme\": {\"mean\": 5.746398477847241, \"median\": 0.0, \"std\": 13.293772864327616, \"entropy\": 3.950918595151212, \"p_gt_2\": 0.39739059527045395, \"p_gt_5\": 0.26660324363504573}, \"mdd_word_functional\": {\"mean\": 1.580525118875336, \"median\": 1.0, \"std\": 1.7307902204790098, \"entropy\": 1.3219331170349753, \"p_gt_2\": 0.12373371924746744, \"p_gt_5\": 0.02532561505065123}, \"mdd_word_lexical\": {\"mean\": 3.4735483870967743, \"median\": 2.0, \"std\": 4.6219263882045185, \"entropy\": 2.760025779806807, \"p_gt_2\": 0.4013709677419355, \"p_gt_5\": 0.15233870967741936}, \"n_sentences\": 1020, \"n_arcs\": 22074}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.6439249796140256}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.6439249796140256, \"mdd_phoneme_mean\": 5.746398477847241}"
+        }
+      ]
+    },
+    {
+      "dataset": "fi_ftb",
+      "examples": [
+        {
+          "input": "Language: fi, Family: Uralic, Word Order: SVO, Phoneme Count: 36, Phon Density: 0.562",
+          "output": "{\"mdd_word\": {\"mean\": 2.0147915334895945, \"median\": 1.0, \"std\": 1.9533576728564501, \"entropy\": 1.9459432158816232, \"p_gt_2\": 0.2279636337808083, \"p_gt_5\": 0.04984373890191065}, \"mdd_phoneme\": {\"mean\": 5.825902052702607, \"median\": 0.0, \"std\": 11.553601074506144, \"entropy\": 4.121276473159764, \"p_gt_2\": 0.3769355067831522, \"p_gt_5\": 0.30544605440727324}, \"mdd_word_functional\": {\"mean\": 1.558563291489244, \"median\": 1.0, \"std\": 1.4340124546481023, \"entropy\": 1.3645383333167331, \"p_gt_2\": 0.12685948128076094, \"p_gt_5\": 0.021733119504506994}, \"mdd_word_lexical\": {\"mean\": 2.23057306515314, \"median\": 1.0, \"std\": 2.121945267498102, \"entropy\": 2.16704066994413, \"p_gt_2\": 0.27578270080820233, \"p_gt_5\": 0.06313917296576256}, \"n_sentences\": 14981, \"n_arcs\": 112632}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Uralic\", \"mdd_word_mean\": 2.0147915334895945}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 2.0147915334895945, \"mdd_phoneme_mean\": 5.825902052702607}"
+        }
+      ]
+    },
+    {
+      "dataset": "fr_parisstories",
+      "examples": [
+        {
+          "input": "Language: fr, Family: Indo-European, Word Order: SVO, Phoneme Count: 36, Phon Density: 0.562",
+          "output": "{\"mdd_word\": {\"mean\": 3.4254064163429723, \"median\": 2.0, \"std\": 4.383047713568373, \"entropy\": 2.76238032807036, \"p_gt_2\": 0.3995108617465113, \"p_gt_5\": 0.15671606003932287}, \"mdd_phoneme\": {\"mean\": 7.518630412890231, \"median\": 2.0, \"std\": 14.774398044637339, \"entropy\": 3.877856056300442, \"p_gt_2\": 0.48736392845154175, \"p_gt_5\": 0.3307917326044214}, \"mdd_word_functional\": {\"mean\": 3.5327264346623646, \"median\": 2.0, \"std\": 5.27816041616042, \"entropy\": 2.583047178098936, \"p_gt_2\": 0.3437427978796958, \"p_gt_5\": 0.16259506798801568}, \"mdd_word_lexical\": {\"mean\": 3.348911704312115, \"median\": 2.0, \"std\": 3.6101365742318303, \"entropy\": 2.8399904733909445, \"p_gt_2\": 0.43926078028747434, \"p_gt_5\": 0.15252566735112935}, \"n_sentences\": 1387, \"n_arcs\": 20853}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4254064163429723}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 3.4254064163429723, \"mdd_phoneme_mean\": 7.518630412890231}"
+        }
+      ]
+    },
+    {
+      "dataset": "gl_treegal",
+      "examples": [
+        {
+          "input": "Language: gl, Family: Indo-European, Word Order: VSO, Phoneme Count: 33, Phon Density: 0.516",
+          "output": "{\"mdd_word\": {\"mean\": 3.3327716365597198, \"median\": 2.0, \"std\": 5.462315482533906, \"entropy\": 2.512512612846534, \"p_gt_2\": 0.3339174979778916, \"p_gt_5\": 0.12449447290374764}, \"mdd_phoneme\": {\"mean\": 8.804192504718253, \"median\": 1.0, \"std\": 23.610770152404765, \"entropy\": 3.7586779632925933, \"p_gt_2\": 0.4256538150444864, \"p_gt_5\": 0.2919924507953626}, \"mdd_word_functional\": {\"mean\": 3.0902376796025246, \"median\": 1.0, \"std\": 6.280850918542143, \"entropy\": 2.0883453113520227, \"p_gt_2\": 0.21941721498590036, \"p_gt_5\": 0.0985631798039479}, \"mdd_word_lexical\": {\"mean\": 3.5772093652727026, \"median\": 2.0, \"std\": 4.475511964340768, \"entropy\": 2.8217281570829273, \"p_gt_2\": 0.44931655163080253, \"p_gt_5\": 0.15062931384490458}, \"n_sentences\": 600, \"n_arcs\": 14836}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.3327716365597198}",
+          "predict_our_method": "{\"phon_density\": 0.515625, \"phoneme_count\": 33, \"mdd_word_mean\": 3.3327716365597198, \"mdd_phoneme_mean\": 8.804192504718253}"
+        }
+      ]
+    },
+    {
+      "dataset": "ka_glc",
+      "examples": [
+        {
+          "input": "Language: ka, Family: Turkic, Word Order: SOV, Phoneme Count: 33, Phon Density: 0.516",
+          "output": "{\"mdd_word\": {\"mean\": 3.2444931621254827, \"median\": 2.0, \"std\": 4.184003772470204, \"entropy\": 2.584720522829027, \"p_gt_2\": 0.3403799979120994, \"p_gt_5\": 0.15638375613320807}, \"mdd_phoneme\": {\"mean\": 13.443287399519782, \"median\": 1.0, \"std\": 25.718004336228947, \"entropy\": 4.138043930877807, \"p_gt_2\": 0.44824616348261825, \"p_gt_5\": 0.41259526046560185}, \"mdd_word_functional\": {\"mean\": 3.6191307106598987, \"median\": 1.0, \"std\": 5.303787388805837, \"entropy\": 2.462679946590484, \"p_gt_2\": 0.3055996192893401, \"p_gt_5\": 0.171875}, \"mdd_word_lexical\": {\"mean\": 3.0607592967169754, \"median\": 2.0, \"std\": 3.491822305252183, \"entropy\": 2.622209301365135, \"p_gt_2\": 0.3574373735802085, \"p_gt_5\": 0.14878637000155592}, \"n_sentences\": 2214, \"n_arcs\": 38316}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Turkic\", \"mdd_word_mean\": 3.2444931621254827}",
+          "predict_our_method": "{\"phon_density\": 0.515625, \"phoneme_count\": 33, \"mdd_word_mean\": 3.2444931621254827, \"mdd_phoneme_mean\": 13.443287399519782}"
+        }
+      ]
+    },
+    {
+      "dataset": "de_gsd",
+      "examples": [
+        {
+          "input": "Language: de, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.688",
+          "output": "{\"mdd_word\": {\"mean\": 3.765062168952329, \"median\": 2.0, \"std\": 4.934381247205138, \"entropy\": 2.827512593843898, \"p_gt_2\": 0.39056424125074013, \"p_gt_5\": 0.19165159783008753}, \"mdd_phoneme\": {\"mean\": 14.214686914915747, \"median\": 3.0, \"std\": 26.106221503253998, \"entropy\": 3.962882927867857, \"p_gt_2\": 0.5589524891584389, \"p_gt_5\": 0.4284696996367477}, \"mdd_word_functional\": {\"mean\": 3.528873642081189, \"median\": 2.0, \"std\": 5.296135568670351, \"entropy\": 2.508229277823614, \"p_gt_2\": 0.29726943534833755, \"p_gt_5\": 0.1635826532910581}, \"mdd_word_lexical\": {\"mean\": 3.9677246710770833, \"median\": 2.0, \"std\": 4.5916858378899965, \"entropy\": 3.043643525984367, \"p_gt_2\": 0.47061621943061027, \"p_gt_5\": 0.21573626700364232}, \"n_sentences\": 13813, \"n_arcs\": 249964}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.765062168952329}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.765062168952329, \"mdd_phoneme_mean\": 14.214686914915747}"
+        }
+      ]
+    },
+    {
+      "dataset": "got_proiel",
+      "examples": [
+        {
+          "input": "Language: got, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.4390745013749724, \"median\": 1.0, \"std\": 2.758337787677731, \"entropy\": 2.2608579292414377, \"p_gt_2\": 0.2818219173752252, \"p_gt_5\": 0.08569080507001296}, \"mdd_phoneme\": {\"mean\": 7.067231406264817, \"median\": 0.0, \"std\": 15.195839909380915, \"entropy\": 3.92525665126837, \"p_gt_2\": 0.4244397382811265, \"p_gt_5\": 0.3128615229004014}, \"mdd_word_functional\": {\"mean\": 1.8249400479616307, \"median\": 1.0, \"std\": 1.9458418373644983, \"entropy\": 1.662908987239047, \"p_gt_2\": 0.1682653876898481, \"p_gt_5\": 0.04606314948041567}, \"mdd_word_lexical\": {\"mean\": 2.723241943686717, \"median\": 2.0, \"std\": 3.0202158132946497, \"entropy\": 2.4798877523554705, \"p_gt_2\": 0.33436589763743124, \"p_gt_5\": 0.10402700078598179}, \"n_sentences\": 3387, \"n_arcs\": 31637}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.4390745013749724}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.4390745013749724, \"mdd_phoneme_mean\": 7.067231406264817}"
+        }
+      ]
+    },
+    {
+      "dataset": "el_messinian",
+      "examples": [
+        {
+          "input": "Language: el, Family: Indo-European, Word Order: SVO, Phoneme Count: 25, Phon Density: 0.391",
+          "output": "{\"mdd_word\": {\"mean\": 2.6122448979591835, \"median\": 2.0, \"std\": 2.5629020352950134, \"entropy\": 2.4442310781333783, \"p_gt_2\": 0.3242630385487528, \"p_gt_5\": 0.08843537414965986}, \"mdd_phoneme\": {\"mean\": 5.9523809523809526, \"median\": 2.0, \"std\": 10.153024191183501, \"entropy\": 3.7496087139264875, \"p_gt_2\": 0.48299319727891155, \"p_gt_5\": 0.31065759637188206}, \"mdd_word_functional\": {\"mean\": 2.790243902439024, \"median\": 2.0, \"std\": 2.940035247677274, \"entropy\": 2.5092511450081507, \"p_gt_2\": 0.33658536585365856, \"p_gt_5\": 0.1024390243902439}, \"mdd_word_lexical\": {\"mean\": 2.457627118644068, \"median\": 2.0, \"std\": 2.1712453186687246, \"entropy\": 2.3470080988975868, \"p_gt_2\": 0.3135593220338983, \"p_gt_5\": 0.07627118644067797}, \"n_sentences\": 60, \"n_arcs\": 441}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.6122448979591835}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 2.6122448979591835, \"mdd_phoneme_mean\": 5.9523809523809526}"
+        }
+      ]
+    },
+    {
+      "dataset": "ht_adolphe",
+      "examples": [
+        {
+          "input": "Language: ht, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.09472431125052, \"median\": 2.0, \"std\": 4.297556850092817, \"entropy\": 2.4912894867469446, \"p_gt_2\": 0.3280677223083028, \"p_gt_5\": 0.11677563206228034}, \"mdd_phoneme\": {\"mean\": 6.879275159668946, \"median\": 2.0, \"std\": 14.941091947431222, \"entropy\": 3.793376671030127, \"p_gt_2\": 0.4479422546389025, \"p_gt_5\": 0.29261932655606365}, \"mdd_word_functional\": {\"mean\": 3.701676359904208, \"median\": 2.0, \"std\": 5.7194012264035, \"entropy\": 2.489289451381595, \"p_gt_2\": 0.30756072528224426, \"p_gt_5\": 0.1515077464444553}, \"mdd_word_lexical\": {\"mean\": 2.7121468839530514, \"median\": 2.0, \"std\": 3.0187705420558983, \"entropy\": 2.4695828133843545, \"p_gt_2\": 0.3409938079541604, \"p_gt_5\": 0.09488309047780413}, \"n_sentences\": 2605, \"n_arcs\": 52922}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.09472431125052}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.09472431125052, \"mdd_phoneme_mean\": 6.879275159668946}"
+        }
+      ]
+    },
+    {
+      "dataset": "he_iahltknesset",
+      "examples": [
+        {
+          "input": "Language: he, Family: Afroasiatic, Word Order: SOV, Phoneme Count: 25, Phon Density: 0.391",
+          "output": "{\"mdd_word\": {\"mean\": 3.4832873647462725, \"median\": 2.0, \"std\": 5.900158872263525, \"entropy\": 2.490443248734198, \"p_gt_2\": 0.31637317491851025, \"p_gt_5\": 0.13451115782976836}, \"mdd_phoneme\": {\"mean\": 6.433814878392193, \"median\": 1.0, \"std\": 16.74871067948057, \"entropy\": 3.4624839968458225, \"p_gt_2\": 0.3531351862209964, \"p_gt_5\": 0.23426620633787876}, \"mdd_word_functional\": {\"mean\": 3.5282047021683143, \"median\": 1.0, \"std\": 7.272452575441327, \"entropy\": 2.0510197806112864, \"p_gt_2\": 0.2378915012046191, \"p_gt_5\": 0.12087729500706156}, \"mdd_word_lexical\": {\"mean\": 3.444352428617722, \"median\": 2.0, \"std\": 4.374871069401445, \"entropy\": 2.7411902571291704, \"p_gt_2\": 0.38440211716415223, \"p_gt_5\": 0.14632916861700213}, \"n_sentences\": 2362, \"n_arcs\": 51847}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.4832873647462725}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 3.4832873647462725, \"mdd_phoneme_mean\": 6.433814878392193}"
+        }
+      ]
+    },
+    {
+      "dataset": "hi_hdtb",
+      "examples": [
+        {
+          "input": "Language: hi, Family: Indo-European, Word Order: SOV, Phoneme Count: 40, Phon Density: 0.625",
+          "output": "{\"mdd_word\": {\"mean\": 3.541301433047869, \"median\": 2.0, \"std\": 4.968333836994318, \"entropy\": 2.5691629511782215, \"p_gt_2\": 0.31268230557495585, \"p_gt_5\": 0.17384435538989584}, \"mdd_phoneme\": {\"mean\": 9.777730055163193, \"median\": 2.0, \"std\": 20.033572355080906, \"entropy\": 3.6268299540466136, \"p_gt_2\": 0.39488181183263554, \"p_gt_5\": 0.30976541637566246}, \"mdd_word_functional\": {\"mean\": 2.873953454729571, \"median\": 1.0, \"std\": 4.915005873394818, \"entropy\": 1.8611546411189634, \"p_gt_2\": 0.18597312887651218, \"p_gt_5\": 0.1118786278729137}, \"mdd_word_lexical\": {\"mean\": 4.0109832070200895, \"median\": 2.0, \"std\": 4.951893016117604, \"entropy\": 2.945799051154794, \"p_gt_2\": 0.40186065453804987, \"p_gt_5\": 0.217456044900063}, \"n_sentences\": 13306, \"n_arcs\": 267751}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.541301433047869}",
+          "predict_our_method": "{\"phon_density\": 0.625, \"phoneme_count\": 40, \"mdd_word_mean\": 3.541301433047869, \"mdd_phoneme_mean\": 9.777730055163193}"
+        }
+      ]
+    },
+    {
+      "dataset": "hu_szeged",
+      "examples": [
+        {
+          "input": "Language: hu, Family: Uralic, Word Order: SOV, Phoneme Count: 36, Phon Density: 0.562",
+          "output": "{\"mdd_word\": {\"mean\": 3.752908184461986, \"median\": 2.0, \"std\": 5.117219321711876, \"entropy\": 2.7678342460758523, \"p_gt_2\": 0.3950457000415455, \"p_gt_5\": 0.1876817615288741}, \"mdd_phoneme\": {\"mean\": 14.892189447444952, \"median\": 3.0, \"std\": 28.196389164720728, \"entropy\": 4.202181326916275, \"p_gt_2\": 0.5142812629829664, \"p_gt_5\": 0.4524823431657665}, \"mdd_word_functional\": {\"mean\": 4.501980198019802, \"median\": 2.0, \"std\": 6.413249548432579, \"entropy\": 2.9007339426094245, \"p_gt_2\": 0.42786421499292787, \"p_gt_5\": 0.22376237623762377}, \"mdd_word_lexical\": {\"mean\": 3.3183161004431314, \"median\": 2.0, \"std\": 4.12328725311935, \"entropy\": 2.6877783131319712, \"p_gt_2\": 0.3760052519284425, \"p_gt_5\": 0.16674872804858035}, \"n_sentences\": 910, \"n_arcs\": 19256}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Uralic\", \"mdd_word_mean\": 3.752908184461986}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 3.752908184461986, \"mdd_phoneme_mean\": 14.892189447444952}"
+        }
+      ]
+    },
+    {
+      "dataset": "is_icepahc",
+      "examples": [
+        {
+          "input": "Language: is, Family: Indo-European, Word Order: SVO, Phoneme Count: 38, Phon Density: 0.594",
+          "output": "{\"mdd_word\": {\"mean\": 2.822030845267514, \"median\": 1.0, \"std\": 4.850249049146698, \"entropy\": 2.3037616447845313, \"p_gt_2\": 0.29627832196980974, \"p_gt_5\": 0.10039747521362431}, \"mdd_phoneme\": {\"mean\": 7.261720308452675, \"median\": 0.0, \"std\": 20.040615764530077, \"entropy\": 4.028226956419726, \"p_gt_2\": 0.42021466638878135, \"p_gt_5\": 0.30357281090898264}, \"mdd_word_functional\": {\"mean\": 1.6549568670959858, \"median\": 1.0, \"std\": 1.798751610160024, \"entropy\": 1.4724823138533008, \"p_gt_2\": 0.1321000458261981, \"p_gt_5\": 0.027696710965324844}, \"mdd_word_lexical\": {\"mean\": 3.5084284140396336, \"median\": 2.0, \"std\": 5.846846815189559, \"entropy\": 2.679148407483268, \"p_gt_2\": 0.3928373848037941, \"p_gt_5\": 0.1431553712521337}, \"n_sentences\": 34007, \"n_arcs\": 671740}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.822030845267514}",
+          "predict_our_method": "{\"phon_density\": 0.59375, \"phoneme_count\": 38, \"mdd_word_mean\": 2.822030845267514, \"mdd_phoneme_mean\": 7.261720308452675}"
+        }
+      ]
+    },
+    {
+      "dataset": "id_csui",
+      "examples": [
+        {
+          "input": "Language: id, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.7942616418080384, \"median\": 2.0, \"std\": 5.796928116485273, \"entropy\": 2.5579344335347245, \"p_gt_2\": 0.3390641011044062, \"p_gt_5\": 0.16867812820220882}, \"mdd_phoneme\": {\"mean\": 14.370545371740864, \"median\": 2.0, \"std\": 30.386883619869305, \"entropy\": 4.071710031306722, \"p_gt_2\": 0.49237162700671755, \"p_gt_5\": 0.3913810770807241}, \"mdd_word_functional\": {\"mean\": 5.219961977186312, \"median\": 1.0, \"std\": 8.261488187415, \"entropy\": 2.4200085481556712, \"p_gt_2\": 0.33688212927756656, \"p_gt_5\": 0.23593155893536122}, \"mdd_word_lexical\": {\"mean\": 3.1848691695108076, \"median\": 2.0, \"std\": 4.189816295678078, \"entropy\": 2.571028900559679, \"p_gt_2\": 0.3399967495530635, \"p_gt_5\": 0.13993174061433447}, \"n_sentences\": 656, \"n_arcs\": 17566}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.7942616418080384}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.7942616418080384, \"mdd_phoneme_mean\": 14.370545371740864}"
+        }
+      ]
+    },
+    {
+      "dataset": "ga_twittirish",
+      "examples": [
+        {
+          "input": "Language: ga, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.733150023472604, \"median\": 2.0, \"std\": 4.7644622845959335, \"entropy\": 2.80168788223433, \"p_gt_2\": 0.3824022533699953, \"p_gt_5\": 0.18871973710683387}, \"mdd_phoneme\": {\"mean\": 11.408490376232312, \"median\": 2.0, \"std\": 21.491952514300817, \"entropy\": 3.915606772103012, \"p_gt_2\": 0.44296157199383007, \"p_gt_5\": 0.3690564013144658}, \"mdd_word_functional\": {\"mean\": 2.8200118413262287, \"median\": 1.0, \"std\": 4.253508304801009, \"entropy\": 2.011633731608628, \"p_gt_2\": 0.21176238405368067, \"p_gt_5\": 0.1286757450167752}, \"mdd_word_lexical\": {\"mean\": 4.203169443315725, \"median\": 2.0, \"std\": 4.941836231464912, \"entropy\": 3.0943002231667505, \"p_gt_2\": 0.47023567655424625, \"p_gt_5\": 0.21962616822429906}, \"n_sentences\": 866, \"n_arcs\": 14911}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.733150023472604}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.733150023472604, \"mdd_phoneme_mean\": 11.408490376232312}"
+        }
+      ]
+    },
+    {
+      "dataset": "it_parlamint",
+      "examples": [
+        {
+          "input": "Language: it, Family: Indo-European, Word Order: SVO, Phoneme Count: 29, Phon Density: 0.453",
+          "output": "{\"mdd_word\": {\"mean\": 3.8202061855670104, \"median\": 2.0, \"std\": 6.765744825979696, \"entropy\": 2.548632014924888, \"p_gt_2\": 0.35525773195876287, \"p_gt_5\": 0.13814432989690723}, \"mdd_phoneme\": {\"mean\": 11.607525773195876, \"median\": 2.0, \"std\": 30.663842252941055, \"entropy\": 3.7003605374021706, \"p_gt_2\": 0.4479381443298969, \"p_gt_5\": 0.3224742268041237}, \"mdd_word_functional\": {\"mean\": 3.5035087719298246, \"median\": 1.0, \"std\": 7.7128842970543525, \"entropy\": 2.0164403716666053, \"p_gt_2\": 0.21598440545808967, \"p_gt_5\": 0.10116959064327485}, \"mdd_word_lexical\": {\"mean\": 4.175711159737418, \"median\": 3.0, \"std\": 5.490232104772412, \"entropy\": 2.9449375094930086, \"p_gt_2\": 0.5115973741794311, \"p_gt_5\": 0.17964989059080963}, \"n_sentences\": 326, \"n_arcs\": 9700}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.8202061855670104}",
+          "predict_our_method": "{\"phon_density\": 0.453125, \"phoneme_count\": 29, \"mdd_word_mean\": 3.8202061855670104, \"mdd_phoneme_mean\": 11.607525773195876}"
+        }
+      ]
+    },
+    {
+      "dataset": "ja_bccwjluw",
+      "examples": [
+        {
+          "input": "Language: ja, Family: Austronesian, Word Order: SVO, Phoneme Count: 17, Phon Density: 0.266",
+          "output": "{\"mdd_word\": {\"mean\": 2.8435843415442146, \"median\": 2.0, \"std\": 4.361170316113051, \"entropy\": 2.289413999116213, \"p_gt_2\": 0.253581704343085, \"p_gt_5\": 0.09948767182550618}, \"mdd_phoneme\": {\"mean\": 1.8435843415442146, \"median\": 1.0, \"std\": 4.361170316113051, \"entropy\": 2.4078905335888017, \"p_gt_2\": 0.17618429591174561, \"p_gt_5\": 0.07988348904672588}, \"mdd_word_functional\": {\"mean\": 1.6769752160190408, \"median\": 1.0, \"std\": 2.3885032317890205, \"entropy\": 1.428223129756343, \"p_gt_2\": 0.12366637346717028, \"p_gt_5\": 0.0180110725927459}, \"mdd_word_lexical\": {\"mean\": 4.4070827756936115, \"median\": 2.0, \"std\": 5.70928741991374, \"entropy\": 2.8369833796676804, \"p_gt_2\": 0.42769522013189193, \"p_gt_5\": 0.2086832305889369}, \"n_sentences\": 40801, \"n_arcs\": 674958}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Austronesian\", \"mdd_word_mean\": 2.8435843415442146}",
+          "predict_our_method": "{\"phon_density\": 0.265625, \"phoneme_count\": 17, \"mdd_word_mean\": 2.8435843415442146, \"mdd_phoneme_mean\": 1.8435843415442146}"
+        }
+      ]
+    },
+    {
+      "dataset": "kk_ktb",
+      "examples": [
+        {
+          "input": "Language: kk, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.9819277108433737, \"median\": 1.0, \"std\": 3.6758293737788925, \"entropy\": 2.4688058116738265, \"p_gt_2\": 0.3172690763052209, \"p_gt_5\": 0.1285140562248996}, \"mdd_phoneme\": {\"mean\": 8.740963855421686, \"median\": 0.0, \"std\": 16.95988559964101, \"entropy\": 3.9875964083703965, \"p_gt_2\": 0.43373493975903615, \"p_gt_5\": 0.3333333333333333}, \"mdd_word_functional\": {\"mean\": 2.2222222222222223, \"median\": 1.0, \"std\": 1.8387965737150407, \"entropy\": 2.165245057661453, \"p_gt_2\": 0.2916666666666667, \"p_gt_5\": 0.06944444444444445}, \"mdd_word_lexical\": {\"mean\": 3.290960451977401, \"median\": 1.0, \"std\": 4.159609075995317, \"entropy\": 2.545146552614279, \"p_gt_2\": 0.327683615819209, \"p_gt_5\": 0.15254237288135594}, \"n_sentences\": 31, \"n_arcs\": 498}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.9819277108433737}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.9819277108433737, \"mdd_phoneme_mean\": 8.740963855421686}"
+        }
+      ]
+    },
+    {
+      "dataset": "naq_kdt",
+      "examples": [
+        {
+          "input": "Language: naq, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.8858011596662423, \"median\": 2.0, \"std\": 2.8670459612098633, \"entropy\": 2.6210026733149494, \"p_gt_2\": 0.3818413237165889, \"p_gt_5\": 0.1280582661575449}, \"mdd_phoneme\": {\"mean\": 6.192122754914439, \"median\": 2.0, \"std\": 10.333462218146748, \"entropy\": 3.887807470489739, \"p_gt_2\": 0.4434309150049498, \"p_gt_5\": 0.3254136614340263}, \"mdd_word_functional\": {\"mean\": 2.52518756698821, \"median\": 1.0, \"std\": 2.766775413126909, \"entropy\": 2.317737619608908, \"p_gt_2\": 0.29836548767416937, \"p_gt_5\": 0.10088424437299036}, \"mdd_word_lexical\": {\"mean\": 3.2888589398023362, \"median\": 2.0, \"std\": 2.9229342517204175, \"entropy\": 2.877898546164583, \"p_gt_2\": 0.4751422581611261, \"p_gt_5\": 0.15843066786463014}, \"n_sentences\": 2002, \"n_arcs\": 14142}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.8858011596662423}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.8858011596662423, \"mdd_phoneme_mean\": 6.192122754914439}"
+        }
+      ]
+    },
+    {
+      "dataset": "koi_uh",
+      "examples": [
+        {
+          "input": "Language: koi, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.3271028037383177, \"median\": 2.0, \"std\": 1.975436546735697, \"entropy\": 2.2611913371005814, \"p_gt_2\": 0.3037383177570093, \"p_gt_5\": 0.07476635514018691}, \"mdd_phoneme\": {\"mean\": 4.981308411214953, \"median\": 1.0, \"std\": 7.576379068089663, \"entropy\": 3.8237745623007577, \"p_gt_2\": 0.4532710280373832, \"p_gt_5\": 0.3130841121495327}, \"mdd_word_functional\": {\"mean\": 2.977272727272727, \"median\": 2.0, \"std\": 2.3835481226299082, \"entropy\": 2.6707897967998653, \"p_gt_2\": 0.4318181818181818, \"p_gt_5\": 0.13636363636363635}, \"mdd_word_lexical\": {\"mean\": 1.873015873015873, \"median\": 1.0, \"std\": 1.4691760296496987, \"entropy\": 1.8263031073640486, \"p_gt_2\": 0.21428571428571427, \"p_gt_5\": 0.031746031746031744}, \"n_sentences\": 34, \"n_arcs\": 214}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.3271028037383177}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.3271028037383177, \"mdd_phoneme_mean\": 4.981308411214953}"
+        }
+      ]
+    },
+    {
+      "dataset": "kpv_lattice",
+      "examples": [
+        {
+          "input": "Language: kpv, Family: Uralic, Word Order: SOV, Phoneme Count: 32, Phon Density: 0.500",
+          "output": "{\"mdd_word\": {\"mean\": 2.5652173913043477, \"median\": 2.0, \"std\": 2.0919324736903318, \"entropy\": 2.4299053661686396, \"p_gt_2\": 0.34782608695652173, \"p_gt_5\": 0.10144927536231885}, \"mdd_phoneme\": {\"mean\": 6.253623188405797, \"median\": 2.0, \"std\": 8.230432741016102, \"entropy\": 3.9641142598672277, \"p_gt_2\": 0.4782608695652174, \"p_gt_5\": 0.39855072463768115}, \"mdd_word_functional\": {\"mean\": 3.0166666666666666, \"median\": 2.0, \"std\": 2.4392052439723524, \"entropy\": 2.6644669547196984, \"p_gt_2\": 0.4166666666666667, \"p_gt_5\": 0.15}, \"mdd_word_lexical\": {\"mean\": 2.217948717948718, \"median\": 2.0, \"std\": 1.699528108694277, \"entropy\": 2.114987244380238, \"p_gt_2\": 0.2948717948717949, \"p_gt_5\": 0.0641025641025641}, \"n_sentences\": 20, \"n_arcs\": 138}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Uralic\", \"mdd_word_mean\": 2.5652173913043477}",
+          "predict_our_method": "{\"phon_density\": 0.5, \"phoneme_count\": 32, \"mdd_word_mean\": 2.5652173913043477, \"mdd_phoneme_mean\": 6.253623188405797}"
+        }
+      ]
+    },
+    {
+      "dataset": "ko_kaist",
+      "examples": [
+        {
+          "input": "Language: ko, Family: Koreanic, Word Order: SOV, Phoneme Count: 28, Phon Density: 0.438",
+          "output": "{\"mdd_word\": {\"mean\": 2.4292119545341504, \"median\": 1.0, \"std\": 2.8965627940635685, \"entropy\": 2.1217992843098936, \"p_gt_2\": 0.2451725449465323, \"p_gt_5\": 0.1073596746587867}, \"mdd_phoneme\": {\"mean\": 4.098706827191738, \"median\": 0.0, \"std\": 8.557462640863319, \"entropy\": 3.9149778562896427, \"p_gt_2\": 0.32106233268479645, \"p_gt_5\": 0.21055749791541714}, \"mdd_word_functional\": {\"mean\": 3.0723329166973015, \"median\": 1.0, \"std\": 3.8655919575160267, \"entropy\": 2.3274935042008766, \"p_gt_2\": 0.2937725167267113, \"p_gt_5\": 0.17635467980295566}, \"mdd_word_lexical\": {\"mean\": 2.216315940632134, \"median\": 1.0, \"std\": 2.45736592592261, \"entropy\": 2.0278381608907323, \"p_gt_2\": 0.22908421805861823, \"p_gt_5\": 0.08451986311705634}, \"n_sentences\": 23010, \"n_arcs\": 273436}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Koreanic\", \"mdd_word_mean\": 2.4292119545341504}",
+          "predict_our_method": "{\"phon_density\": 0.4375, \"phoneme_count\": 28, \"mdd_word_mean\": 2.4292119545341504, \"mdd_phoneme_mean\": 4.098706827191738}"
+        }
+      ]
+    },
+    {
+      "dataset": "ky_ktmu",
+      "examples": [
+        {
+          "input": "Language: ky, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 1.9253326092859082, \"median\": 1.0, \"std\": 1.963311773965176, \"entropy\": 1.6524899799928245, \"p_gt_2\": 0.1824599511267988, \"p_gt_5\": 0.08525658430627206}, \"mdd_phoneme\": {\"mean\": 5.549551995655715, \"median\": 0.0, \"std\": 12.470477836678908, \"entropy\": 4.037143505869946, \"p_gt_2\": 0.25739885962530545, \"p_gt_5\": 0.21051678884966965}, \"mdd_word_functional\": {\"mean\": 1.0203784570596797, \"median\": 1.0, \"std\": 0.21029323212061946, \"entropy\": 0.11936592149436923, \"p_gt_2\": 0.0024260067928190197, \"p_gt_5\": 0.00048520135856380397}, \"mdd_word_lexical\": {\"mean\": 2.1328437917222964, \"median\": 1.0, \"std\": 2.120727189706438, \"entropy\": 1.8992362102627551, \"p_gt_2\": 0.2237427681352915, \"p_gt_5\": 0.10469514908767245}, \"n_sentences\": 1308, \"n_arcs\": 11049}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 1.9253326092859082}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 1.9253326092859082, \"mdd_phoneme_mean\": 5.549551995655715}"
+        }
+      ]
+    },
+    {
+      "dataset": "la_perseus",
+      "examples": [
+        {
+          "input": "Language: la, Family: Indo-European, Word Order: SVO, Phoneme Count: 27, Phon Density: 0.422",
+          "output": "{\"mdd_word\": {\"mean\": 3.4190841949778434, \"median\": 2.0, \"std\": 4.053646430421244, \"entropy\": 2.7802004787007575, \"p_gt_2\": 0.39887740029542096, \"p_gt_5\": 0.16957163958641064}, \"mdd_phoneme\": {\"mean\": 12.3802658788774, \"median\": 4.0, \"std\": 21.103947013420527, \"entropy\": 4.179414801596094, \"p_gt_2\": 0.5405022156573117, \"p_gt_5\": 0.4605612998522895}, \"mdd_word_functional\": {\"mean\": 3.525576556268424, \"median\": 1.0, \"std\": 4.590533482265807, \"entropy\": 2.6458932451619033, \"p_gt_2\": 0.3568579850875672, \"p_gt_5\": 0.1815501994104387}, \"mdd_word_lexical\": {\"mean\": 3.364043735436458, \"median\": 2.0, \"std\": 3.7449285100409995, \"entropy\": 2.8247116657245424, \"p_gt_2\": 0.42059508872557805, \"p_gt_5\": 0.16338053414590428}, \"n_sentences\": 1334, \"n_arcs\": 16925}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4190841949778434}",
+          "predict_our_method": "{\"phon_density\": 0.421875, \"phoneme_count\": 27, \"mdd_word_mean\": 3.4190841949778434, \"mdd_phoneme_mean\": 12.3802658788774}"
+        }
+      ]
+    },
+    {
+      "dataset": "lv_lvtb",
+      "examples": [
+        {
+          "input": "Language: lv, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.3945527883654663, \"median\": 2.0, \"std\": 6.431480948203461, \"entropy\": 2.649088730626617, \"p_gt_2\": 0.37509199981908414, \"p_gt_5\": 0.14245478131797193}, \"mdd_phoneme\": {\"mean\": 11.995756701081795, \"median\": 3.0, \"std\": 30.41939509657695, \"entropy\": 4.146321404890282, \"p_gt_2\": 0.5192531464966058, \"p_gt_5\": 0.4243915676769172}, \"mdd_word_functional\": {\"mean\": 4.295686255357078, \"median\": 2.0, \"std\": 6.472613925483562, \"entropy\": 2.928810258657394, \"p_gt_2\": 0.44313256248397453, \"p_gt_5\": 0.1992771761028559}, \"mdd_word_lexical\": {\"mean\": 2.9370141222273194, \"median\": 2.0, \"std\": 6.3618239237716905, \"entropy\": 2.493536293284956, \"p_gt_2\": 0.3405452989969375, \"p_gt_5\": 0.11360395769531202}, \"n_sentences\": 15059, \"n_arcs\": 243207}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.3945527883654663}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.3945527883654663, \"mdd_phoneme_mean\": 11.995756701081795}"
+        }
+      ]
+    },
+    {
+      "dataset": "lij_glt",
+      "examples": [
+        {
+          "input": "Language: lij, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.7427184466019416, \"median\": 2.0, \"std\": 2.4008130476277665, \"entropy\": 2.5421670631661284, \"p_gt_2\": 0.36893203883495146, \"p_gt_5\": 0.10194174757281553}, \"mdd_phoneme\": {\"mean\": 4.912621359223301, \"median\": 2.0, \"std\": 7.920241729316468, \"entropy\": 3.5181448828472863, \"p_gt_2\": 0.46116504854368934, \"p_gt_5\": 0.27184466019417475}, \"mdd_word_functional\": {\"mean\": 2.5514018691588785, \"median\": 1.0, \"std\": 2.728299750777022, \"entropy\": 2.1855406970250644, \"p_gt_2\": 0.2803738317757009, \"p_gt_5\": 0.12149532710280374}, \"mdd_word_lexical\": {\"mean\": 2.9494949494949494, \"median\": 2.0, \"std\": 1.9662492488391063, \"entropy\": 2.52326722601392, \"p_gt_2\": 0.46464646464646464, \"p_gt_5\": 0.08080808080808081}, \"n_sentences\": 20, \"n_arcs\": 206}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.7427184466019416}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.7427184466019416, \"mdd_phoneme_mean\": 4.912621359223301}"
+        }
+      ]
+    },
+    {
+      "dataset": "lt_alksnis",
+      "examples": [
+        {
+          "input": "Language: lt, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.715849889624724, \"median\": 2.0, \"std\": 5.9662265424868695, \"entropy\": 2.6675156417192682, \"p_gt_2\": 0.37677704194260486, \"p_gt_5\": 0.1620309050772627}, \"mdd_phoneme\": {\"mean\": 14.893995584988962, \"median\": 2.0, \"std\": 33.392007400087316, \"entropy\": 4.16150356331157, \"p_gt_2\": 0.49176600441501106, \"p_gt_5\": 0.4305298013245033}, \"mdd_word_functional\": {\"mean\": 4.789409397901998, \"median\": 2.0, \"std\": 7.867744613200932, \"entropy\": 2.8596121898150995, \"p_gt_2\": 0.4301623796522489, \"p_gt_5\": 0.21418307228050007}, \"mdd_word_lexical\": {\"mean\": 3.2397234083232425, \"median\": 2.0, \"std\": 4.815748470506218, \"entropy\": 2.5773955193354015, \"p_gt_2\": 0.35310050347332866, \"p_gt_5\": 0.13890128098910204}, \"n_sentences\": 2341, \"n_arcs\": 45300}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.715849889624724}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.715849889624724, \"mdd_phoneme_mean\": 14.893995584988962}"
+        }
+      ]
+    },
+    {
+      "dataset": "olo_kkpp",
+      "examples": [
+        {
+          "input": "Language: olo, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 2.256, \"median\": 1.0, \"std\": 2.0780914320597152, \"entropy\": 2.1250701077411804, \"p_gt_2\": 0.28, \"p_gt_5\": 0.08}, \"mdd_phoneme\": {\"mean\": 5.808, \"median\": 0.0, \"std\": 10.597883562296767, \"entropy\": 3.575434630606842, \"p_gt_2\": 0.416, \"p_gt_5\": 0.304}, \"mdd_word_functional\": {\"mean\": 2.673469387755102, \"median\": 1.0, \"std\": 2.590309689955859, \"entropy\": 2.2885397909553022, \"p_gt_2\": 0.3673469387755102, \"p_gt_5\": 0.14285714285714285}, \"mdd_word_lexical\": {\"mean\": 1.986842105263158, \"median\": 1.0, \"std\": 1.6099478665360532, \"entropy\": 1.8963711685053872, \"p_gt_2\": 0.2236842105263158, \"p_gt_5\": 0.039473684210526314}, \"n_sentences\": 19, \"n_arcs\": 125}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.256}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.256, \"mdd_phoneme_mean\": 5.808}"
+        }
+      ]
+    },
+    {
+      "dataset": "nds_lsdc",
+      "examples": [
+        {
+          "input": "Language: nds, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 4.159143829482357, \"median\": 2.0, \"std\": 6.396016536200171, \"entropy\": 2.9413442644744534, \"p_gt_2\": 0.4551316496507254, \"p_gt_5\": 0.20195235536449938}, \"mdd_phoneme\": {\"mean\": 11.786584273687982, \"median\": 4.0, \"std\": 24.581425935331087, \"entropy\": 4.05965214960988, \"p_gt_2\": 0.5744223535733477, \"p_gt_5\": 0.44259358767687623}, \"mdd_word_functional\": {\"mean\": 4.311601339373646, \"median\": 2.0, \"std\": 7.508501473844708, \"entropy\": 2.814215602493865, \"p_gt_2\": 0.39964545991727396, \"p_gt_5\": 0.19381524522355723}, \"mdd_word_lexical\": {\"mean\": 4.032024963048119, \"median\": 3.0, \"std\": 5.289217133943291, \"entropy\": 3.021264212568293, \"p_gt_2\": 0.5013959599277386, \"p_gt_5\": 0.20873706684184595}, \"n_sentences\": 500, \"n_arcs\": 11166}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 4.159143829482357}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 4.159143829482357, \"mdd_phoneme_mean\": 11.786584273687982}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "method_name": "Phonological Density and Dependency Distance Minimization",
+    "description": "Computes word-space and phoneme-space dependency distances across UD treebanks",
+    "n_treebanks": 55,
+    "n_successful": 55,
+    "n_languages": 55,
+    "n_families": 10,
+    "runtime_seconds": 600,
+    "baseline_comparison": {
+      "SVO": {
+        "n": 41,
+        "mean": 3.0704112250046447,
+        "std": 0.627020094305298,
+        "median": 3.2912835601324018
+      },
+      "SOV": {
+        "n": 11,
+        "mean": 3.037240415600176,
+        "std": 0.5807105536737617,
+        "median": 2.9048950841989996
+      },
+      "VSO": {
+        "n": 3,
+        "mean": 3.670602960813337,
+        "std": 0.3507039642684216,
+        "median": 3.525046997677762
+      },
+      "anova_f": 1.3584783601134198,
+      "anova_p": 0.2660214378500177,
+      "kruskal_h": 2.2305525959627914,
+      "kruskal_p": 0.3278246890854276
+    },
+    "regression_results": {
+      "model": "SimpleOLS",
+      "n_languages": 55,
+      "r_squared": 0.049867992873755984,
+      "phon_density_coefficient": 1.497678659368229,
+      "intercept": 2.3425697417813556,
+      "spearman_r": 0.1898685285441185,
+      "spearman_p": 0.1650071176072114
+    },
+    "figures": [
+      "figures/fig1_density_vs_mdd.pdf",
+      "figures/fig2_word_vs_phoneme_mdd.pdf",
+      "figures/fig3_functional_vs_lexical.pdf"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "af_afribooms",
+      "examples": [
+        {
+          "input": "Language: af, Family: Indo-European, Word Order: SVO, Phoneme Count: 39, Phon Density: 0.609",
+          "output": "{\"mdd_word\": {\"mean\": 3.355403371925191, \"median\": 2.0, \"std\": 4.440366426233689, \"entropy\": 2.6657048105995536, \"p_gt_2\": 0.3554340816263858, \"p_gt_5\": 0.15391702238737218}, \"mdd_phoneme\": {\"mean\": 1...",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.355403371925191}",
+          "predict_our_method": "{\"phon_density\": 0.609375, \"phoneme_count\": 39, \"mdd_word_mean\": 3.355403371925191, \"mdd_phoneme_mean\": 11.510886589073488}"
+        }
+      ]
+    },
+    {
+      "dataset": "sq_staf",
+      "examples": [
+        {
+          "input": "Language: sq, Family: Indo-European, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.469",
+          "output": "{\"mdd_word\": {\"mean\": 3.2912835601324018, \"median\": 2.0, \"std\": 4.968355301555212, \"entropy\": 2.545196354596954, \"p_gt_2\": 0.34056638470025746, \"p_gt_5\": 0.12945936005884517}, \"mdd_phoneme\": {\"mean\": ...",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.2912835601324018}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.2912835601324018, \"mdd_phoneme_mean\": 8.029054799558661}"
+        }
+      ]
+    },
+    {
+      "dataset": "grc_perseus",
+      "examples": [
+        {
+          "input": "Language: grc, Family: Indo-European, Word Order: SVO, Phoneme Count: 35, Phon Density: 0.547",
+          "output": "{\"mdd_word\": {\"mean\": 3.494053995782211, \"median\": 2.0, \"std\": 4.438173093421067, \"entropy\": 2.842911597984281, \"p_gt_2\": 0.42791017322579994, \"p_gt_5\": 0.16826686610204894}, \"mdd_phoneme\": {\"mean\": 1...",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.494053995782211}",
+          "predict_our_method": "{\"phon_density\": 0.546875, \"phoneme_count\": 35, \"mdd_word_mean\": 3.494053995782211, \"mdd_phoneme_mean\": 11.647983074943236}"
+        }
+      ]
+    }
+  ]
+}

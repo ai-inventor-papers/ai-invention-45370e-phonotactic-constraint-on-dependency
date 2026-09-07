@@ -1,0 +1,21 @@
+[project]
+name = "phon-density-dd"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets==5.0.1",
+    "conllu==6.0.0",
+    "loguru==0.7.3",
+    "pandas==3.0.5",
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+    "scikit-learn==1.9.0",
+    "statsmodels==0.15.0",
+    "epitran==1.35.2",
+    "matplotlib==3.11.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
