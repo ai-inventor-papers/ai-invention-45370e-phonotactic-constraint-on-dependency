@@ -1,0 +1,20 @@
+{
+  "type": "bar",
+  "title": "Functional vs. Lexical Dependency Distances",
+  "xlabel": "Dependency Type",
+  "ylabel": "Mean Dependency Distance (words)",
+  "aspect": "4:3",
+  "categories": ["Functional", "Lexical"],
+  "series": [
+    {
+      "label": "Mean Dependency Distance",
+      "values": [2.7, 3.4],
+      "errors": [0.8, 1.0]
+    }
+  ],
+  "reference_line": {
+    "value": 3.10,
+    "label": "Overall mean"
+  },
+  "annotation": "z=-0.90, p=0.37"
+}
