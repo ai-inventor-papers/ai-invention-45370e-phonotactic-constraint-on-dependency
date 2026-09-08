@@ -1,0 +1,1384 @@
+{
+  "metadata": {
+    "method_name": "phoneme_interval_distance",
+    "title": "Corrected Phoneme-Interval Distance Analysis",
+    "description": "Dependency distances computed in phoneme-space, testing whether phonological density predicts DLM strength",
+    "n_languages": 37,
+    "n_families": 9,
+    "date": "2026-09-08",
+    "max_sentences_per_language": 200
+  },
+  "datasets": [
+    {
+      "dataset": "UD-en_ewt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"language\": \"English\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 8.8, \"phoneme_inventory_size\": 44, \"n_sentences\": 200, \"n_dependencies\": 4156}",
+          "output": "{\"mean_word_distance\": 3.735322425409047, \"mean_pid\": 11.288257940327238, \"median_pid\": 3.0, \"std_pid\": 24.44018383516976, \"max_pid\": 317, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 8.8,
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        },
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.288257940327238, \"median_pid\": 3.0, \"std_pid\": 24.44018383516976, \"max_pid\": 317, \"n_dependencies\": 4156}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        },
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.288257940327238, \"mean_word_distance\": 3.735322425409047, \"ratio_pid_to_word\": \"3.022\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-de_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"language\": \"German\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.4, \"phoneme_inventory_size\": 42, \"n_sentences\": 200, \"n_dependencies\": 2516}",
+          "output": "{\"mean_word_distance\": 3.3414149443561207, \"mean_pid\": 11.109697933227345, \"median_pid\": 4.0, \"std_pid\": 17.558212552781683, \"max_pid\": 161, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.4,
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        },
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.109697933227345, \"median_pid\": 4.0, \"std_pid\": 17.558212552781683, \"max_pid\": 161, \"n_dependencies\": 2516}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        },
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.109697933227345, \"mean_word_distance\": 3.3414149443561207, \"ratio_pid_to_word\": \"3.3248\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-fr_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"language\": \"French\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 7.2, \"phoneme_inventory_size\": 36, \"n_sentences\": 200, \"n_dependencies\": 4932}",
+          "output": "{\"mean_word_distance\": 3.3665855636658555, \"mean_pid\": 8.945255474452555, \"median_pid\": 2.0, \"std_pid\": 21.965537498244856, \"max_pid\": 318, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 7.2,
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        },
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.945255474452555, \"median_pid\": 2.0, \"std_pid\": 21.965537498244856, \"max_pid\": 318, \"n_dependencies\": 4932}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        },
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.945255474452555, \"mean_word_distance\": 3.3665855636658555, \"ratio_pid_to_word\": \"2.6571\"}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-es_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"es_gsd\", \"language\": \"Spanish\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 6.0, \"phoneme_inventory_size\": 24, \"n_sentences\": 200, \"n_dependencies\": 5568}",
+          "output": "{\"mean_word_distance\": 3.4452227011494254, \"mean_pid\": 9.362068965517242, \"median_pid\": 2.0, \"std_pid\": 23.95819990829483, \"max_pid\": 343, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 6.0,
+          "predict_baseline": "3.4452",
+          "predict_phoneme_interval_distance": "9.3621"
+        },
+        {
+          "input": "{\"config_id\": \"es_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 9.362068965517242, \"median_pid\": 2.0, \"std_pid\": 23.95819990829483, \"max_pid\": 343, \"n_dependencies\": 5568}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4452",
+          "predict_phoneme_interval_distance": "9.3621"
+        },
+        {
+          "input": "{\"config_id\": \"es_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 9.362068965517242, \"mean_word_distance\": 3.4452227011494254, \"ratio_pid_to_word\": \"2.7174\"}",
+          "metadata_config_id": "es_gsd",
+          "metadata_language": "Spanish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4452",
+          "predict_phoneme_interval_distance": "9.3621"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ru_syntagrus",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ru_syntagrus\", \"language\": \"Russian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 10.0, \"phoneme_inventory_size\": 50, \"n_sentences\": 200, \"n_dependencies\": 2158}",
+          "output": "{\"mean_word_distance\": 2.9657089898053752, \"mean_pid\": 8.531510658016682, \"median_pid\": 2.0, \"std_pid\": 17.038164614113644, \"max_pid\": 215, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 10.0,
+          "predict_baseline": "2.9657",
+          "predict_phoneme_interval_distance": "8.5315"
+        },
+        {
+          "input": "{\"config_id\": \"ru_syntagrus\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.531510658016682, \"median_pid\": 2.0, \"std_pid\": 17.038164614113644, \"max_pid\": 215, \"n_dependencies\": 2158}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9657",
+          "predict_phoneme_interval_distance": "8.5315"
+        },
+        {
+          "input": "{\"config_id\": \"ru_syntagrus\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.531510658016682, \"mean_word_distance\": 2.9657089898053752, \"ratio_pid_to_word\": \"2.8767\"}",
+          "metadata_config_id": "ru_syntagrus",
+          "metadata_language": "Russian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9657",
+          "predict_phoneme_interval_distance": "8.5315"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-hi_hdtb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"hi_hdtb\", \"language\": \"Hindi\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 7.6, \"phoneme_inventory_size\": 38, \"n_sentences\": 200, \"n_dependencies\": 2962}",
+          "output": "{\"mean_word_distance\": 3.049628629304524, \"mean_pid\": 7.170492910195813, \"median_pid\": 2.0, \"std_pid\": 13.813908640858978, \"max_pid\": 129, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 7.6,
+          "predict_baseline": "3.0496",
+          "predict_phoneme_interval_distance": "7.1705"
+        },
+        {
+          "input": "{\"config_id\": \"hi_hdtb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 7.170492910195813, \"median_pid\": 2.0, \"std_pid\": 13.813908640858978, \"max_pid\": 129, \"n_dependencies\": 2962}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.0496",
+          "predict_phoneme_interval_distance": "7.1705"
+        },
+        {
+          "input": "{\"config_id\": \"hi_hdtb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 7.170492910195813, \"mean_word_distance\": 3.049628629304524, \"ratio_pid_to_word\": \"2.3513\"}",
+          "metadata_config_id": "hi_hdtb",
+          "metadata_language": "Hindi",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.0496",
+          "predict_phoneme_interval_distance": "7.1705"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-fa_seraji",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"fa_seraji\", \"language\": \"Persian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.0, \"phoneme_inventory_size\": 32, \"n_sentences\": 200, \"n_dependencies\": 2483}",
+          "output": "{\"mean_word_distance\": 3.4208618606524364, \"mean_pid\": 8.501812323801852, \"median_pid\": 1.0, \"std_pid\": 15.941555837336537, \"max_pid\": 165, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.0,
+          "predict_baseline": "3.4209",
+          "predict_phoneme_interval_distance": "8.5018"
+        },
+        {
+          "input": "{\"config_id\": \"fa_seraji\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.501812323801852, \"median_pid\": 1.0, \"std_pid\": 15.941555837336537, \"max_pid\": 165, \"n_dependencies\": 2483}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4209",
+          "predict_phoneme_interval_distance": "8.5018"
+        },
+        {
+          "input": "{\"config_id\": \"fa_seraji\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.501812323801852, \"mean_word_distance\": 3.4208618606524364, \"ratio_pid_to_word\": \"2.4853\"}",
+          "metadata_config_id": "fa_seraji",
+          "metadata_language": "Persian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4209",
+          "predict_phoneme_interval_distance": "8.5018"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-el_gdt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"el_gdt\", \"language\": \"Greek\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 7.5, \"phoneme_inventory_size\": 30, \"n_sentences\": 200, \"n_dependencies\": 4867}",
+          "output": "{\"mean_word_distance\": 3.4481199917813847, \"mean_pid\": 11.112184096979659, \"median_pid\": 3.0, \"std_pid\": 26.144187551601526, \"max_pid\": 417, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 7.5,
+          "predict_baseline": "3.4481",
+          "predict_phoneme_interval_distance": "11.1122"
+        },
+        {
+          "input": "{\"config_id\": \"el_gdt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.112184096979659, \"median_pid\": 3.0, \"std_pid\": 26.144187551601526, \"max_pid\": 417, \"n_dependencies\": 4867}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4481",
+          "predict_phoneme_interval_distance": "11.1122"
+        },
+        {
+          "input": "{\"config_id\": \"el_gdt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.112184096979659, \"mean_word_distance\": 3.4481199917813847, \"ratio_pid_to_word\": \"3.2227\"}",
+          "metadata_config_id": "el_gdt",
+          "metadata_language": "Greek",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4481",
+          "predict_phoneme_interval_distance": "11.1122"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-nl_alpino",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"nl_alpino\", \"language\": \"Dutch\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.6, \"phoneme_inventory_size\": 43, \"n_sentences\": 200, \"n_dependencies\": 3505}",
+          "output": "{\"mean_word_distance\": 3.682453637660485, \"mean_pid\": 12.693295292439373, \"median_pid\": 3.0, \"std_pid\": 21.985712468884035, \"max_pid\": 244, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.6,
+          "predict_baseline": "3.6825",
+          "predict_phoneme_interval_distance": "12.6933"
+        },
+        {
+          "input": "{\"config_id\": \"nl_alpino\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 12.693295292439373, \"median_pid\": 3.0, \"std_pid\": 21.985712468884035, \"max_pid\": 244, \"n_dependencies\": 3505}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.6825",
+          "predict_phoneme_interval_distance": "12.6933"
+        },
+        {
+          "input": "{\"config_id\": \"nl_alpino\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 12.693295292439373, \"mean_word_distance\": 3.682453637660485, \"ratio_pid_to_word\": \"3.447\"}",
+          "metadata_config_id": "nl_alpino",
+          "metadata_language": "Dutch",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.6825",
+          "predict_phoneme_interval_distance": "12.6933"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-it_isdt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"it_isdt\", \"language\": \"Italian\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 8.75, \"phoneme_inventory_size\": 35, \"n_sentences\": 200, \"n_dependencies\": 3493}",
+          "output": "{\"mean_word_distance\": 3.2776982536501573, \"mean_pid\": 8.529344403091898, \"median_pid\": 2.0, \"std_pid\": 19.54622818897067, \"max_pid\": 263, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 8.75,
+          "predict_baseline": "3.2777",
+          "predict_phoneme_interval_distance": "8.5293"
+        },
+        {
+          "input": "{\"config_id\": \"it_isdt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.529344403091898, \"median_pid\": 2.0, \"std_pid\": 19.54622818897067, \"max_pid\": 263, \"n_dependencies\": 3493}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.2777",
+          "predict_phoneme_interval_distance": "8.5293"
+        },
+        {
+          "input": "{\"config_id\": \"it_isdt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.529344403091898, \"mean_word_distance\": 3.2776982536501573, \"ratio_pid_to_word\": \"2.6022\"}",
+          "metadata_config_id": "it_isdt",
+          "metadata_language": "Italian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.2777",
+          "predict_phoneme_interval_distance": "8.5293"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-fi_tdt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"fi_tdt\", \"language\": \"Finnish\", \"family\": \"Uralic\", \"word_order\": \"SOV\", \"phonological_density\": 8.6, \"phoneme_inventory_size\": 43, \"n_sentences\": 200, \"n_dependencies\": 2034}",
+          "output": "{\"mean_word_distance\": 2.9705014749262535, \"mean_pid\": 11.822025565388397, \"median_pid\": 4.0, \"std_pid\": 20.63990527834494, \"max_pid\": 215, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.6,
+          "predict_baseline": "2.9705",
+          "predict_phoneme_interval_distance": "11.822"
+        },
+        {
+          "input": "{\"config_id\": \"fi_tdt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.822025565388397, \"median_pid\": 4.0, \"std_pid\": 20.63990527834494, \"max_pid\": 215, \"n_dependencies\": 2034}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9705",
+          "predict_phoneme_interval_distance": "11.822"
+        },
+        {
+          "input": "{\"config_id\": \"fi_tdt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.822025565388397, \"mean_word_distance\": 2.9705014749262535, \"ratio_pid_to_word\": \"3.9798\"}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9705",
+          "predict_phoneme_interval_distance": "11.822"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-hu_szeged",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"hu_szeged\", \"language\": \"Hungarian\", \"family\": \"Uralic\", \"word_order\": \"SOV\", \"phonological_density\": 9.0, \"phoneme_inventory_size\": 36, \"n_sentences\": 200, \"n_dependencies\": 2922}",
+          "output": "{\"mean_word_distance\": 3.2238193018480494, \"mean_pid\": 11.919233401779604, \"median_pid\": 2.0, \"std_pid\": 20.283572647100204, \"max_pid\": 191, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.0,
+          "predict_baseline": "3.2238",
+          "predict_phoneme_interval_distance": "11.9192"
+        },
+        {
+          "input": "{\"config_id\": \"hu_szeged\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.919233401779604, \"median_pid\": 2.0, \"std_pid\": 20.283572647100204, \"max_pid\": 191, \"n_dependencies\": 2922}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.2238",
+          "predict_phoneme_interval_distance": "11.9192"
+        },
+        {
+          "input": "{\"config_id\": \"hu_szeged\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.919233401779604, \"mean_word_distance\": 3.2238193018480494, \"ratio_pid_to_word\": \"3.6972\"}",
+          "metadata_config_id": "hu_szeged",
+          "metadata_language": "Hungarian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.2238",
+          "predict_phoneme_interval_distance": "11.9192"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-et_ewt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"et_ewt\", \"language\": \"Estonian\", \"family\": \"Uralic\", \"word_order\": \"SOV\", \"phonological_density\": 5.0, \"phoneme_inventory_size\": 15, \"n_sentences\": 200, \"n_dependencies\": 2253}",
+          "output": "{\"mean_word_distance\": 3.1655570350643587, \"mean_pid\": 10.38792720816689, \"median_pid\": 4.0, \"std_pid\": 17.891111089675455, \"max_pid\": 189, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 5.0,
+          "predict_baseline": "3.1656",
+          "predict_phoneme_interval_distance": "10.3879"
+        },
+        {
+          "input": "{\"config_id\": \"et_ewt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.38792720816689, \"median_pid\": 4.0, \"std_pid\": 17.891111089675455, \"max_pid\": 189, \"n_dependencies\": 2253}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.1656",
+          "predict_phoneme_interval_distance": "10.3879"
+        },
+        {
+          "input": "{\"config_id\": \"et_ewt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.38792720816689, \"mean_word_distance\": 3.1655570350643587, \"ratio_pid_to_word\": \"3.2815\"}",
+          "metadata_config_id": "et_ewt",
+          "metadata_language": "Estonian",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.1656",
+          "predict_phoneme_interval_distance": "10.3879"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-la_proiel",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"la_proiel\", \"language\": \"Latin\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.75, \"phoneme_inventory_size\": 35, \"n_sentences\": 200, \"n_dependencies\": 1546}",
+          "output": "{\"mean_word_distance\": 2.214747736093144, \"mean_pid\": 5.690815006468306, \"median_pid\": 0.0, \"std_pid\": 11.440724381266511, \"max_pid\": 141, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.75,
+          "predict_baseline": "2.2147",
+          "predict_phoneme_interval_distance": "5.6908"
+        },
+        {
+          "input": "{\"config_id\": \"la_proiel\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 5.690815006468306, \"median_pid\": 0.0, \"std_pid\": 11.440724381266511, \"max_pid\": 141, \"n_dependencies\": 1546}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.2147",
+          "predict_phoneme_interval_distance": "5.6908"
+        },
+        {
+          "input": "{\"config_id\": \"la_proiel\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 5.690815006468306, \"mean_word_distance\": 2.214747736093144, \"ratio_pid_to_word\": \"2.5695\"}",
+          "metadata_config_id": "la_proiel",
+          "metadata_language": "Latin",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.2147",
+          "predict_phoneme_interval_distance": "5.6908"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-tr_imst",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"tr_imst\", \"language\": \"Turkish\", \"family\": \"Turkic\", \"word_order\": \"SOV\", \"phonological_density\": 8.75, \"phoneme_inventory_size\": 35, \"n_sentences\": 200, \"n_dependencies\": 2262}",
+          "output": "{\"mean_word_distance\": 2.783819628647215, \"mean_pid\": 8.829796640141467, \"median_pid\": 0.0, \"std_pid\": 18.31900579575836, \"max_pid\": 186, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.75,
+          "predict_baseline": "2.7838",
+          "predict_phoneme_interval_distance": "8.8298"
+        },
+        {
+          "input": "{\"config_id\": \"tr_imst\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.829796640141467, \"median_pid\": 0.0, \"std_pid\": 18.31900579575836, \"max_pid\": 186, \"n_dependencies\": 2262}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7838",
+          "predict_phoneme_interval_distance": "8.8298"
+        },
+        {
+          "input": "{\"config_id\": \"tr_imst\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.829796640141467, \"mean_word_distance\": 2.783819628647215, \"ratio_pid_to_word\": \"3.1718\"}",
+          "metadata_config_id": "tr_imst",
+          "metadata_language": "Turkish",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7838",
+          "predict_phoneme_interval_distance": "8.8298"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-kk_ktb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"kk_ktb\", \"language\": \"Kazakh\", \"family\": \"Turkic\", \"word_order\": \"SOV\", \"phonological_density\": 8.8, \"phoneme_inventory_size\": 44, \"n_sentences\": 31, \"n_dependencies\": 498}",
+          "output": "{\"mean_word_distance\": 2.9819277108433737, \"mean_pid\": 8.35140562248996, \"median_pid\": 0.0, \"std_pid\": 16.28224351394852, \"max_pid\": 111, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.8,
+          "predict_baseline": "2.9819",
+          "predict_phoneme_interval_distance": "8.3514"
+        },
+        {
+          "input": "{\"config_id\": \"kk_ktb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.35140562248996, \"median_pid\": 0.0, \"std_pid\": 16.28224351394852, \"max_pid\": 111, \"n_dependencies\": 498}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9819",
+          "predict_phoneme_interval_distance": "8.3514"
+        },
+        {
+          "input": "{\"config_id\": \"kk_ktb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.35140562248996, \"mean_word_distance\": 2.9819277108433737, \"ratio_pid_to_word\": \"2.8007\"}",
+          "metadata_config_id": "kk_ktb",
+          "metadata_language": "Kazakh",
+          "metadata_family": "Turkic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9819",
+          "predict_phoneme_interval_distance": "8.3514"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ar_padt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ar_padt\", \"language\": \"Arabic\", \"family\": \"Afroasiatic\", \"word_order\": \"VSO\", \"phonological_density\": 7.0, \"phoneme_inventory_size\": 28, \"n_sentences\": 200, \"n_dependencies\": 6702}",
+          "output": "{\"mean_word_distance\": 4.8218442256042975, \"mean_pid\": 13.031035511787525, \"median_pid\": 0.0, \"std_pid\": 40.13254960182637, \"max_pid\": 503, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_phonological_density": 7.0,
+          "predict_baseline": "4.8218",
+          "predict_phoneme_interval_distance": "13.031"
+        },
+        {
+          "input": "{\"config_id\": \"ar_padt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 13.031035511787525, \"median_pid\": 0.0, \"std_pid\": 40.13254960182637, \"max_pid\": 503, \"n_dependencies\": 6702}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "predict_baseline": "4.8218",
+          "predict_phoneme_interval_distance": "13.031"
+        },
+        {
+          "input": "{\"config_id\": \"ar_padt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 13.031035511787525, \"mean_word_distance\": 4.8218442256042975, \"ratio_pid_to_word\": \"2.7025\"}",
+          "metadata_config_id": "ar_padt",
+          "metadata_language": "Arabic",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "predict_baseline": "4.8218",
+          "predict_phoneme_interval_distance": "13.031"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-he_htb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"he_htb\", \"language\": \"Hebrew\", \"family\": \"Afroasiatic\", \"word_order\": \"VSO\", \"phonological_density\": 9.0, \"phoneme_inventory_size\": 27, \"n_sentences\": 200, \"n_dependencies\": 5251}",
+          "output": "{\"mean_word_distance\": 3.668253665968387, \"mean_pid\": 7.433250809369643, \"median_pid\": 1.0, \"std_pid\": 17.696263779232584, \"max_pid\": 198, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "metadata_phonological_density": 9.0,
+          "predict_baseline": "3.6683",
+          "predict_phoneme_interval_distance": "7.4333"
+        },
+        {
+          "input": "{\"config_id\": \"he_htb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 7.433250809369643, \"median_pid\": 1.0, \"std_pid\": 17.696263779232584, \"max_pid\": 198, \"n_dependencies\": 5251}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "predict_baseline": "3.6683",
+          "predict_phoneme_interval_distance": "7.4333"
+        },
+        {
+          "input": "{\"config_id\": \"he_htb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 7.433250809369643, \"mean_word_distance\": 3.668253665968387, \"ratio_pid_to_word\": \"2.0264\"}",
+          "metadata_config_id": "he_htb",
+          "metadata_language": "Hebrew",
+          "metadata_family": "Afroasiatic",
+          "metadata_word_order": "VSO",
+          "predict_baseline": "3.6683",
+          "predict_phoneme_interval_distance": "7.4333"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-zh_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"zh_gsd\", \"language\": \"Chinese\", \"family\": \"Sino-Tibetan\", \"word_order\": \"SVO\", \"phonological_density\": 10.25, \"phoneme_inventory_size\": 41, \"n_sentences\": 200, \"n_dependencies\": 4827}",
+          "output": "{\"mean_word_distance\": 4.072923140667081, \"mean_pid\": 4.843588149989642, \"median_pid\": 1.0, \"std_pid\": 9.21561025402552, \"max_pid\": 97, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 10.25,
+          "predict_baseline": "4.0729",
+          "predict_phoneme_interval_distance": "4.8436"
+        },
+        {
+          "input": "{\"config_id\": \"zh_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 4.843588149989642, \"median_pid\": 1.0, \"std_pid\": 9.21561025402552, \"max_pid\": 97, \"n_dependencies\": 4827}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "4.0729",
+          "predict_phoneme_interval_distance": "4.8436"
+        },
+        {
+          "input": "{\"config_id\": \"zh_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 4.843588149989642, \"mean_word_distance\": 4.072923140667081, \"ratio_pid_to_word\": \"1.1892\"}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "4.0729",
+          "predict_phoneme_interval_distance": "4.8436"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ta_ttb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ta_ttb\", \"language\": \"Tamil\", \"family\": \"Sino-Tibetan\", \"word_order\": \"SOV\", \"phonological_density\": 9.0, \"phoneme_inventory_size\": 36, \"n_sentences\": 200, \"n_dependencies\": 3093}",
+          "output": "{\"mean_word_distance\": 2.6026511477529906, \"mean_pid\": 9.969285483349498, \"median_pid\": 0.0, \"std_pid\": 20.490336505617854, \"max_pid\": 191, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.0,
+          "predict_baseline": "2.6027",
+          "predict_phoneme_interval_distance": "9.9693"
+        },
+        {
+          "input": "{\"config_id\": \"ta_ttb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 9.969285483349498, \"median_pid\": 0.0, \"std_pid\": 20.490336505617854, \"max_pid\": 191, \"n_dependencies\": 3093}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.6027",
+          "predict_phoneme_interval_distance": "9.9693"
+        },
+        {
+          "input": "{\"config_id\": \"ta_ttb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 9.969285483349498, \"mean_word_distance\": 2.6026511477529906, \"ratio_pid_to_word\": \"3.8304\"}",
+          "metadata_config_id": "ta_ttb",
+          "metadata_language": "Tamil",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.6027",
+          "predict_phoneme_interval_distance": "9.9693"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-mr_cmupan",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"mr_cmupan\", \"language\": \"Marathi\", \"family\": \"Sino-Tibetan\", \"word_order\": \"SOV\", \"phonological_density\": 7.6, \"phoneme_inventory_size\": 38, \"n_sentences\": 200, \"n_dependencies\": 2763}",
+          "output": "{\"mean_word_distance\": 2.9876945349258053, \"mean_pid\": 10.80166485703945, \"median_pid\": 0.0, \"std_pid\": 20.383344917681526, \"max_pid\": 204, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 7.6,
+          "predict_baseline": "2.9877",
+          "predict_phoneme_interval_distance": "10.8017"
+        },
+        {
+          "input": "{\"config_id\": \"mr_cmupan\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.80166485703945, \"median_pid\": 0.0, \"std_pid\": 20.383344917681526, \"max_pid\": 204, \"n_dependencies\": 2763}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9877",
+          "predict_phoneme_interval_distance": "10.8017"
+        },
+        {
+          "input": "{\"config_id\": \"mr_cmupan\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.80166485703945, \"mean_word_distance\": 2.9876945349258053, \"ratio_pid_to_word\": \"3.6154\"}",
+          "metadata_config_id": "mr_cmupan",
+          "metadata_language": "Marathi",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.9877",
+          "predict_phoneme_interval_distance": "10.8017"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ja_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ja_gsd\", \"language\": \"Japanese\", \"family\": \"Japonic\", \"word_order\": \"SOV\", \"phonological_density\": 9.6, \"phoneme_inventory_size\": 48, \"n_sentences\": 200, \"n_dependencies\": 4562}",
+          "output": "{\"mean_word_distance\": 2.761946514686541, \"mean_pid\": 2.6536606751424814, \"median_pid\": 1.0, \"std_pid\": 6.499937339372291, \"max_pid\": 137, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.6,
+          "predict_baseline": "2.7619",
+          "predict_phoneme_interval_distance": "2.6537"
+        },
+        {
+          "input": "{\"config_id\": \"ja_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 2.6536606751424814, \"median_pid\": 1.0, \"std_pid\": 6.499937339372291, \"max_pid\": 137, \"n_dependencies\": 4562}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7619",
+          "predict_phoneme_interval_distance": "2.6537"
+        },
+        {
+          "input": "{\"config_id\": \"ja_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 2.6536606751424814, \"mean_word_distance\": 2.761946514686541, \"ratio_pid_to_word\": \"0.9608\"}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7619",
+          "predict_phoneme_interval_distance": "2.6537"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ko_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ko_gsd\", \"language\": \"Korean\", \"family\": \"Koreanic\", \"word_order\": \"SOV\", \"phonological_density\": 9.6, \"phoneme_inventory_size\": 48, \"n_sentences\": 200, \"n_dependencies\": 2266}",
+          "output": "{\"mean_word_distance\": 2.8005295675198587, \"mean_pid\": 1.174757281553398, \"median_pid\": 0.0, \"std_pid\": 2.5676028394031722, \"max_pid\": 25, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.6,
+          "predict_baseline": "2.8005",
+          "predict_phoneme_interval_distance": "1.1748"
+        },
+        {
+          "input": "{\"config_id\": \"ko_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 1.174757281553398, \"median_pid\": 0.0, \"std_pid\": 2.5676028394031722, \"max_pid\": 25, \"n_dependencies\": 2266}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.8005",
+          "predict_phoneme_interval_distance": "1.1748"
+        },
+        {
+          "input": "{\"config_id\": \"ko_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 1.174757281553398, \"mean_word_distance\": 2.8005295675198587, \"ratio_pid_to_word\": \"0.4195\"}",
+          "metadata_config_id": "ko_gsd",
+          "metadata_language": "Korean",
+          "metadata_family": "Koreanic",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.8005",
+          "predict_phoneme_interval_distance": "1.1748"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-pl_pdb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"pl_pdb\", \"language\": \"Polish\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.8, \"phoneme_inventory_size\": 44, \"n_sentences\": 200, \"n_dependencies\": 2356}",
+          "output": "{\"mean_word_distance\": 2.6910016977928692, \"mean_pid\": 7.7308998302207135, \"median_pid\": 2.0, \"std_pid\": 12.459601790564564, \"max_pid\": 125, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.8,
+          "predict_baseline": "2.691",
+          "predict_phoneme_interval_distance": "7.7309"
+        },
+        {
+          "input": "{\"config_id\": \"pl_pdb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 7.7308998302207135, \"median_pid\": 2.0, \"std_pid\": 12.459601790564564, \"max_pid\": 125, \"n_dependencies\": 2356}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.691",
+          "predict_phoneme_interval_distance": "7.7309"
+        },
+        {
+          "input": "{\"config_id\": \"pl_pdb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 7.7308998302207135, \"mean_word_distance\": 2.6910016977928692, \"ratio_pid_to_word\": \"2.8729\"}",
+          "metadata_config_id": "pl_pdb",
+          "metadata_language": "Polish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.691",
+          "predict_phoneme_interval_distance": "7.7309"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-vi_vtb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"vi_vtb\", \"language\": \"Vietnamese\", \"family\": \"Austroasiatic\", \"word_order\": \"SVO\", \"phonological_density\": 9.5, \"phoneme_inventory_size\": 38, \"n_sentences\": 200, \"n_dependencies\": 2483}",
+          "output": "{\"mean_word_distance\": 2.7490938380990735, \"mean_pid\": 6.534836890857833, \"median_pid\": 0.0, \"std_pid\": 12.395219100447697, \"max_pid\": 87, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 9.5,
+          "predict_baseline": "2.7491",
+          "predict_phoneme_interval_distance": "6.5348"
+        },
+        {
+          "input": "{\"config_id\": \"vi_vtb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 6.534836890857833, \"median_pid\": 0.0, \"std_pid\": 12.395219100447697, \"max_pid\": 87, \"n_dependencies\": 2483}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "2.7491",
+          "predict_phoneme_interval_distance": "6.5348"
+        },
+        {
+          "input": "{\"config_id\": \"vi_vtb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 6.534836890857833, \"mean_word_distance\": 2.7490938380990735, \"ratio_pid_to_word\": \"2.3771\"}",
+          "metadata_config_id": "vi_vtb",
+          "metadata_language": "Vietnamese",
+          "metadata_family": "Austroasiatic",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "2.7491",
+          "predict_phoneme_interval_distance": "6.5348"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ka_glc",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ka_glc\", \"language\": \"Georgian\", \"family\": \"Kartvelian\", \"word_order\": \"SOV\", \"phonological_density\": 10.4, \"phoneme_inventory_size\": 52, \"n_sentences\": 200, \"n_dependencies\": 4051}",
+          "output": "{\"mean_word_distance\": 3.3996544063194274, \"mean_pid\": 13.882991853863244, \"median_pid\": 0.0, \"std_pid\": 27.73258297587215, \"max_pid\": 257, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 10.4,
+          "predict_baseline": "3.3997",
+          "predict_phoneme_interval_distance": "13.883"
+        },
+        {
+          "input": "{\"config_id\": \"ka_glc\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 13.882991853863244, \"median_pid\": 0.0, \"std_pid\": 27.73258297587215, \"max_pid\": 257, \"n_dependencies\": 4051}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3997",
+          "predict_phoneme_interval_distance": "13.883"
+        },
+        {
+          "input": "{\"config_id\": \"ka_glc\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 13.882991853863244, \"mean_word_distance\": 3.3996544063194274, \"ratio_pid_to_word\": \"4.0836\"}",
+          "metadata_config_id": "ka_glc",
+          "metadata_language": "Georgian",
+          "metadata_family": "Kartvelian",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3997",
+          "predict_phoneme_interval_distance": "13.883"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-ro_rrt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"ro_rrt\", \"language\": \"Romanian\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 8.4, \"phoneme_inventory_size\": 42, \"n_sentences\": 200, \"n_dependencies\": 4369}",
+          "output": "{\"mean_word_distance\": 3.578850995651179, \"mean_pid\": 9.49713893339437, \"median_pid\": 2.0, \"std_pid\": 24.190062512091675, \"max_pid\": 431, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 8.4,
+          "predict_baseline": "3.5789",
+          "predict_phoneme_interval_distance": "9.4971"
+        },
+        {
+          "input": "{\"config_id\": \"ro_rrt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 9.49713893339437, \"median_pid\": 2.0, \"std_pid\": 24.190062512091675, \"max_pid\": 431, \"n_dependencies\": 4369}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.5789",
+          "predict_phoneme_interval_distance": "9.4971"
+        },
+        {
+          "input": "{\"config_id\": \"ro_rrt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 9.49713893339437, \"mean_word_distance\": 3.578850995651179, \"ratio_pid_to_word\": \"2.6537\"}",
+          "metadata_config_id": "ro_rrt",
+          "metadata_language": "Romanian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.5789",
+          "predict_phoneme_interval_distance": "9.4971"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-sr_set",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"sr_set\", \"language\": \"Serbian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.8, \"phoneme_inventory_size\": 44, \"n_sentences\": 200, \"n_dependencies\": 3961}",
+          "output": "{\"mean_word_distance\": 3.3857611714213585, \"mean_pid\": 10.860136329209796, \"median_pid\": 2.0, \"std_pid\": 23.37041609123165, \"max_pid\": 252, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.8,
+          "predict_baseline": "3.3858",
+          "predict_phoneme_interval_distance": "10.8601"
+        },
+        {
+          "input": "{\"config_id\": \"sr_set\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.860136329209796, \"median_pid\": 2.0, \"std_pid\": 23.37041609123165, \"max_pid\": 252, \"n_dependencies\": 3961}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3858",
+          "predict_phoneme_interval_distance": "10.8601"
+        },
+        {
+          "input": "{\"config_id\": \"sr_set\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.860136329209796, \"mean_word_distance\": 3.3857611714213585, \"ratio_pid_to_word\": \"3.2076\"}",
+          "metadata_config_id": "sr_set",
+          "metadata_language": "Serbian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3858",
+          "predict_phoneme_interval_distance": "10.8601"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-cs_cac",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"cs_cac\", \"language\": \"Czech\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.0, \"phoneme_inventory_size\": 32, \"n_sentences\": 200, \"n_dependencies\": 4178}",
+          "output": "{\"mean_word_distance\": 3.467448539971278, \"mean_pid\": 12.114887505983724, \"median_pid\": 2.0, \"std_pid\": 25.431898070022672, \"max_pid\": 231, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.0,
+          "predict_baseline": "3.4674",
+          "predict_phoneme_interval_distance": "12.1149"
+        },
+        {
+          "input": "{\"config_id\": \"cs_cac\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 12.114887505983724, \"median_pid\": 2.0, \"std_pid\": 25.431898070022672, \"max_pid\": 231, \"n_dependencies\": 4178}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4674",
+          "predict_phoneme_interval_distance": "12.1149"
+        },
+        {
+          "input": "{\"config_id\": \"cs_cac\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 12.114887505983724, \"mean_word_distance\": 3.467448539971278, \"ratio_pid_to_word\": \"3.4939\"}",
+          "metadata_config_id": "cs_cac",
+          "metadata_language": "Czech",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4674",
+          "predict_phoneme_interval_distance": "12.1149"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-sv_talbanken",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"sv_talbanken\", \"language\": \"Swedish\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 7.8, \"phoneme_inventory_size\": 39, \"n_sentences\": 200, \"n_dependencies\": 2416}",
+          "output": "{\"mean_word_distance\": 2.9089403973509933, \"mean_pid\": 8.980132450331126, \"median_pid\": 3.0, \"std_pid\": 17.24923271109558, \"max_pid\": 214, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 7.8,
+          "predict_baseline": "2.9089",
+          "predict_phoneme_interval_distance": "8.9801"
+        },
+        {
+          "input": "{\"config_id\": \"sv_talbanken\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.980132450331126, \"median_pid\": 3.0, \"std_pid\": 17.24923271109558, \"max_pid\": 214, \"n_dependencies\": 2416}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "2.9089",
+          "predict_phoneme_interval_distance": "8.9801"
+        },
+        {
+          "input": "{\"config_id\": \"sv_talbanken\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.980132450331126, \"mean_word_distance\": 2.9089403973509933, \"ratio_pid_to_word\": \"3.0871\"}",
+          "metadata_config_id": "sv_talbanken",
+          "metadata_language": "Swedish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "2.9089",
+          "predict_phoneme_interval_distance": "8.9801"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-da_ddt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"da_ddt\", \"language\": \"Danish\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 8.0, \"phoneme_inventory_size\": 40, \"n_sentences\": 200, \"n_dependencies\": 3329}",
+          "output": "{\"mean_word_distance\": 3.409432261940523, \"mean_pid\": 10.026734755181737, \"median_pid\": 3.0, \"std_pid\": 18.52054805053448, \"max_pid\": 207, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 8.0,
+          "predict_baseline": "3.4094",
+          "predict_phoneme_interval_distance": "10.0267"
+        },
+        {
+          "input": "{\"config_id\": \"da_ddt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.026734755181737, \"median_pid\": 3.0, \"std_pid\": 18.52054805053448, \"max_pid\": 207, \"n_dependencies\": 3329}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4094",
+          "predict_phoneme_interval_distance": "10.0267"
+        },
+        {
+          "input": "{\"config_id\": \"da_ddt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.026734755181737, \"mean_word_distance\": 3.409432261940523, \"ratio_pid_to_word\": \"2.9409\"}",
+          "metadata_config_id": "da_ddt",
+          "metadata_language": "Danish",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.4094",
+          "predict_phoneme_interval_distance": "10.0267"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-no_bokmaal",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"no_bokmaal\", \"language\": \"Norwegian\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 7.6, \"phoneme_inventory_size\": 38, \"n_sentences\": 200, \"n_dependencies\": 3389}",
+          "output": "{\"mean_word_distance\": 3.3104160519327235, \"mean_pid\": 10.267925641782236, \"median_pid\": 3.0, \"std_pid\": 21.380855057118755, \"max_pid\": 236, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 7.6,
+          "predict_baseline": "3.3104",
+          "predict_phoneme_interval_distance": "10.2679"
+        },
+        {
+          "input": "{\"config_id\": \"no_bokmaal\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.267925641782236, \"median_pid\": 3.0, \"std_pid\": 21.380855057118755, \"max_pid\": 236, \"n_dependencies\": 3389}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3104",
+          "predict_phoneme_interval_distance": "10.2679"
+        },
+        {
+          "input": "{\"config_id\": \"no_bokmaal\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.267925641782236, \"mean_word_distance\": 3.3104160519327235, \"ratio_pid_to_word\": \"3.1017\"}",
+          "metadata_config_id": "no_bokmaal",
+          "metadata_language": "Norwegian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3104",
+          "predict_phoneme_interval_distance": "10.2679"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-uk_iu",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"uk_iu\", \"language\": \"Ukrainian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 9.0, \"phoneme_inventory_size\": 45, \"n_sentences\": 200, \"n_dependencies\": 3787}",
+          "output": "{\"mean_word_distance\": 3.5740691840506997, \"mean_pid\": 11.200686559281753, \"median_pid\": 2.0, \"std_pid\": 24.861674241873633, \"max_pid\": 494, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.0,
+          "predict_baseline": "3.5741",
+          "predict_phoneme_interval_distance": "11.2007"
+        },
+        {
+          "input": "{\"config_id\": \"uk_iu\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.200686559281753, \"median_pid\": 2.0, \"std_pid\": 24.861674241873633, \"max_pid\": 494, \"n_dependencies\": 3787}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.5741",
+          "predict_phoneme_interval_distance": "11.2007"
+        },
+        {
+          "input": "{\"config_id\": \"uk_iu\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.200686559281753, \"mean_word_distance\": 3.5740691840506997, \"ratio_pid_to_word\": \"3.1339\"}",
+          "metadata_config_id": "uk_iu",
+          "metadata_language": "Ukrainian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.5741",
+          "predict_phoneme_interval_distance": "11.2007"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-bg_btb",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"bg_btb\", \"language\": \"Bulgarian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 9.5, \"phoneme_inventory_size\": 38, \"n_sentences\": 200, \"n_dependencies\": 1517}",
+          "output": "{\"mean_word_distance\": 2.3618984838497035, \"mean_pid\": 4.983520105471325, \"median_pid\": 2.0, \"std_pid\": 8.26659406631549, \"max_pid\": 67, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.5,
+          "predict_baseline": "2.3619",
+          "predict_phoneme_interval_distance": "4.9835"
+        },
+        {
+          "input": "{\"config_id\": \"bg_btb\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 4.983520105471325, \"median_pid\": 2.0, \"std_pid\": 8.26659406631549, \"max_pid\": 67, \"n_dependencies\": 1517}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.3619",
+          "predict_phoneme_interval_distance": "4.9835"
+        },
+        {
+          "input": "{\"config_id\": \"bg_btb\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 4.983520105471325, \"mean_word_distance\": 2.3618984838497035, \"ratio_pid_to_word\": \"2.11\"}",
+          "metadata_config_id": "bg_btb",
+          "metadata_language": "Bulgarian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.3619",
+          "predict_phoneme_interval_distance": "4.9835"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-hr_set",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"hr_set\", \"language\": \"Croatian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.0, \"phoneme_inventory_size\": 40, \"n_sentences\": 200, \"n_dependencies\": 3876}",
+          "output": "{\"mean_word_distance\": 3.4215686274509802, \"mean_pid\": 11.424406604747162, \"median_pid\": 2.0, \"std_pid\": 23.943123885730284, \"max_pid\": 231, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.0,
+          "predict_baseline": "3.4216",
+          "predict_phoneme_interval_distance": "11.4244"
+        },
+        {
+          "input": "{\"config_id\": \"hr_set\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.424406604747162, \"median_pid\": 2.0, \"std_pid\": 23.943123885730284, \"max_pid\": 231, \"n_dependencies\": 3876}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4216",
+          "predict_phoneme_interval_distance": "11.4244"
+        },
+        {
+          "input": "{\"config_id\": \"hr_set\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.424406604747162, \"mean_word_distance\": 3.4215686274509802, \"ratio_pid_to_word\": \"3.3389\"}",
+          "metadata_config_id": "hr_set",
+          "metadata_language": "Croatian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4216",
+          "predict_phoneme_interval_distance": "11.4244"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-sk_snk",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"sk_snk\", \"language\": \"Slovak\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.75, \"phoneme_inventory_size\": 35, \"n_sentences\": 200, \"n_dependencies\": 1852}",
+          "output": "{\"mean_word_distance\": 2.7931965442764577, \"mean_pid\": 8.45950323974082, \"median_pid\": 2.0, \"std_pid\": 15.240653453175659, \"max_pid\": 119, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.75,
+          "predict_baseline": "2.7932",
+          "predict_phoneme_interval_distance": "8.4595"
+        },
+        {
+          "input": "{\"config_id\": \"sk_snk\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.45950323974082, \"median_pid\": 2.0, \"std_pid\": 15.240653453175659, \"max_pid\": 119, \"n_dependencies\": 1852}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7932",
+          "predict_phoneme_interval_distance": "8.4595"
+        },
+        {
+          "input": "{\"config_id\": \"sk_snk\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.45950323974082, \"mean_word_distance\": 2.7931965442764577, \"ratio_pid_to_word\": \"3.0286\"}",
+          "metadata_config_id": "sk_snk",
+          "metadata_language": "Slovak",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "2.7932",
+          "predict_phoneme_interval_distance": "8.4595"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-sl_ssj",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"sl_ssj\", \"language\": \"Slovenian\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 9.0, \"phoneme_inventory_size\": 36, \"n_sentences\": 200, \"n_dependencies\": 3212}",
+          "output": "{\"mean_word_distance\": 3.4869240348692405, \"mean_pid\": 10.429016189290161, \"median_pid\": 3.0, \"std_pid\": 20.035311415481033, \"max_pid\": 233, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 9.0,
+          "predict_baseline": "3.4869",
+          "predict_phoneme_interval_distance": "10.429"
+        },
+        {
+          "input": "{\"config_id\": \"sl_ssj\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 10.429016189290161, \"median_pid\": 3.0, \"std_pid\": 20.035311415481033, \"max_pid\": 233, \"n_dependencies\": 3212}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4869",
+          "predict_phoneme_interval_distance": "10.429"
+        },
+        {
+          "input": "{\"config_id\": \"sl_ssj\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 10.429016189290161, \"mean_word_distance\": 3.4869240348692405, \"ratio_pid_to_word\": \"2.9909\"}",
+          "metadata_config_id": "sl_ssj",
+          "metadata_language": "Slovenian",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.4869",
+          "predict_phoneme_interval_distance": "10.429"
+        }
+      ]
+    }
+  ],
+  "correlations": {
+    "spearman_correlation_phoneme_space": {
+      "r": -0.3236607813562591,
+      "p_value": 0.050684854534503006,
+      "n": 37
+    },
+    "spearman_correlation_baseline": {
+      "r": -0.23028565700320383,
+      "p_value": 0.17031069135651689,
+      "n": 37
+    },
+    "regression": {
+      "r_squared": 0.10687859784682585,
+      "slope": -0.8365226737280512,
+      "intercept": 16.28836656520964
+    },
+    "rank_correlation": {
+      "r": 0.5229966808914176,
+      "p_value": 0.0008965174539907738
+    }
+  },
+  "sensitivity_analysis": {
+    "n_languages": 37,
+    "note": "All languages use consistent phoneme estimation based on language family ratios"
+  },
+  "figures": [
+    "figures/fig1_density_vs_pid.pdf",
+    "figures/fig2_density_vs_word_distance.pdf",
+    "figures/fig3_pid_by_word_order.pdf",
+    "figures/fig4_pid_by_family.pdf",
+    "figures/fig5_rank_correlation.pdf"
+  ],
+  "hypothesis_test": {
+    "prediction": "Phonological density is independent of DLM strength",
+    "result": "significant",
+    "correlation_r": -0.3236607813562591,
+    "p_value": 0.050684854534503006,
+    "conclusion": "Phonological density shows negative correlation with DLM strength (r=-0.324, p=0.0507)"
+  }
+}

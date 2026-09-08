@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gen_art_experiment_1"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "epitran==1.35.2",
+    "datasets==5.0.1",
+    "scipy==1.18.1",
+    "scikit-learn==1.9.0",
+    "matplotlib==3.11.1",
+    "seaborn==0.13.2",
+    "loguru==0.7.3",
+    "statsmodels==0.15.0",
+    "numpy==2.5.3",
+    "pandas==3.0.5",
+    "psutil==7.2.2",
+]
+
+[tool.uv]
+package = false

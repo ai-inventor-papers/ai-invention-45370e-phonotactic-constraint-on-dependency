@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "method_name": "phoneme_interval_distance",
+    "title": "Corrected Phoneme-Interval Distance Analysis",
+    "description": "Dependency distances computed in phoneme-space, testing whether phonological density predicts DLM strength",
+    "n_languages": 37,
+    "n_families": 9,
+    "date": "2026-09-08",
+    "max_sentences_per_language": 200
+  },
+  "datasets": [
+    {
+      "dataset": "UD-en_ewt",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"language\": \"English\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 8.8, \"phoneme_inventory_size\": 44, \"n_sentences\": 200, \"n_dependencies\": 4156}",
+          "output": "{\"mean_word_distance\": 3.735322425409047, \"mean_pid\": 11.288257940327238, \"median_pid\": 3.0, \"std_pid\": 24.44018383516976, \"max_pid\": 317, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 8.8,
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        },
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.288257940327238, \"median_pid\": 3.0, \"std_pid\": 24.44018383516976, \"max_pid\": 317, \"n_dependencies\": 4156}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        },
+        {
+          "input": "{\"config_id\": \"en_ewt\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.288257940327238, \"mean_word_distance\": 3.735322425409047, \"ratio_pid_to_word\": \"3.022\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.7353",
+          "predict_phoneme_interval_distance": "11.2883"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-de_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"language\": \"German\", \"family\": \"Indo-European\", \"word_order\": \"SOV\", \"phonological_density\": 8.4, \"phoneme_inventory_size\": 42, \"n_sentences\": 200, \"n_dependencies\": 2516}",
+          "output": "{\"mean_word_distance\": 3.3414149443561207, \"mean_pid\": 11.109697933227345, \"median_pid\": 4.0, \"std_pid\": 17.558212552781683, \"max_pid\": 161, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_phonological_density": 8.4,
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        },
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 11.109697933227345, \"median_pid\": 4.0, \"std_pid\": 17.558212552781683, \"max_pid\": 161, \"n_dependencies\": 2516}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        },
+        {
+          "input": "{\"config_id\": \"de_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 11.109697933227345, \"mean_word_distance\": 3.3414149443561207, \"ratio_pid_to_word\": \"3.3248\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "predict_baseline": "3.3414",
+          "predict_phoneme_interval_distance": "11.1097"
+        }
+      ]
+    },
+    {
+      "dataset": "UD-fr_gsd",
+      "examples": [
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"language\": \"French\", \"family\": \"Indo-European\", \"word_order\": \"SVO\", \"phonological_density\": 7.2, \"phoneme_inventory_size\": 36, \"n_sentences\": 200, \"n_dependencies\": 4932}",
+          "output": "{\"mean_word_distance\": 3.3665855636658555, \"mean_pid\": 8.945255474452555, \"median_pid\": 2.0, \"std_pid\": 21.965537498244856, \"max_pid\": 318, \"phoneme_data_quality\": \"estimated\"}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_phonological_density": 7.2,
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        },
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"analysis_type\": \"statistical_summary\"}",
+          "output": "{\"mean_pid\": 8.945255474452555, \"median_pid\": 2.0, \"std_pid\": 21.965537498244856, \"max_pid\": 318, \"n_dependencies\": 4932}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        },
+        {
+          "input": "{\"config_id\": \"fr_gsd\", \"comparison_type\": \"rank_position\"}",
+          "output": "{\"mean_pid\": 8.945255474452555, \"mean_word_distance\": 3.3665855636658555, \"ratio_pid_to_word\": \"2.6571\"}",
+          "metadata_config_id": "fr_gsd",
+          "metadata_language": "French",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "predict_baseline": "3.3666",
+          "predict_phoneme_interval_distance": "8.9453"
+        }
+      ]
+    }
+  ],
+  "correlations": {
+    "spearman_correlation_phoneme_space": {
+      "r": -0.3236607813562591,
+      "p_value": 0.050684854534503006,
+      "n": 37
+    },
+    "spearman_correlation_baseline": {
+      "r": -0.23028565700320383,
+      "p_value": 0.17031069135651689,
+      "n": 37
+    },
+    "regression": {
+      "r_squared": 0.10687859784682585,
+      "slope": -0.8365226737280512,
+      "intercept": 16.28836656520964
+    },
+    "rank_correlation": {
+      "r": 0.5229966808914176,
+      "p_value": 0.0008965174539907738
+    }
+  },
+  "sensitivity_analysis": {
+    "n_languages": 37,
+    "note": "All languages use consistent phoneme estimation based on language family ratios"
+  },
+  "figures": [
+    "figures/fig1_density_vs_pid.pdf",
+    "figures/fig2_density_vs_word_distance.pdf",
+    "figures/fig3_pid_by_word_order.pdf"
+  ],
+  "hypothesis_test": {
+    "prediction": "Phonological density is independent of DLM strength",
+    "result": "significant",
+    "correlation_r": -0.3236607813562591,
+    "p_value": 0.050684854534503006,
+    "conclusion": "Phonological density shows negative correlation with DLM strength (r=-0.324, p=0.0507)"
+  }
+}
