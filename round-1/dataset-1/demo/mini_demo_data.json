@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "title": "Multilingual UD & Phonological Density Dataset — Demo Subset",
+    "description": "Curated subset of UD treebanks with phonological/typological features for dependency-distance analysis. Contains 5 languages from 4 families, 3 examples each.",
+    "source": "commul/universal_dependencies on HuggingFace + PHOIBLE + WALS",
+    "n_languages": 5,
+    "n_datasets": 5,
+    "total_examples": 15,
+    "families": ["Indo-European", "Uralic", "Sino-Tibetan", "Japonic"],
+    "word_orders": ["SVO", "SOV"],
+    "created": "2026-09-08"
+  },
+  "datasets": [
+    {
+      "dataset": "Universal Dependencies – English (en_ewt)",
+      "n_total_sentences": 12543,
+      "n_examples_kept": 3,
+      "columns": ["text", "tokens", "lemmas", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"],
+      "sample_text": "Al-Zaman: American forces killed Shaikh Abdullah al-Ani, the preacher at the mosque in the Iraqi city of Samarra on Saturday in what the US military called a targeted strike.",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Al\", \"-\", \"Zaman\", \":\", \"American\", \"forces\", \"killed\", \"Shaikh\", \"Abdullah\", \"al\", \"-\", \"Ani\", \",\", \"the\", \"preacher\", \"at\", \"the\", \"mosque\", \"in\", \"the\"], \"head\": [0, 3, 1, 7, 6, 7, 1, 7, 8, 8, 12, 8, 15, 15, 8, 18, 18, 15, 21, 21], \"dependency_distances\": [1, 2, 3, 1, 1, 6, 1, 1, 2, 1, 4, 2, 1, 7, 2, 1, 3, 2, 1, 3, 1, 2, 4, 3, 2, 1, 7, 28]}",
+          "output": "{\"avg_dependency_distance\": 3.321, \"n_dependencies\": 28, \"max_dependency_distance\": 28, \"sentence_text\": \"Al-Zaman: American forces killed Shaikh Abdullah al-Ani, the preacher at the mosque in the Iraqi city of Samarra on Saturday in what the US military called a targeted strike.\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 0,
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"[\", \"This\", \"killing\", \"of\", \"a\", \"respected\", \"cleric\", \"will\", \"be\", \"causing\", \"us\", \"trouble\", \"for\", \"years\", \"to\", \"come\", \".\", \"]\"], \"head\": [10, 3, 10, 7, 7, 7, 3, 10, 10, 0, 10, 10, 14, 10, 16, 14, 10, 10], \"dependency_distances\": [9, 1, 7, 3, 2, 1, 4, 2, 1, 1, 2, 1, 4, 1, 2, 7, 8]}",
+          "output": "{\"avg_dependency_distance\": 3.294, \"n_dependencies\": 17, \"max_dependency_distance\": 9, \"sentence_text\": \"[This killing of a respected cleric will be causing us trouble for years to come.]\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 1,
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"DPA\", \":\", \"Iraqi\", \"authorities\", \"announced\", \"that\", \"they\", \"had\", \"busted\", \"up\", \"3\", \"terrorist\", \"cells\", \"operating\", \"in\", \"Baghdad\", \".\"], \"head\": [0, 5, 4, 5, 1, 9, 9, 9, 5, 9, 13, 13, 9, 13, 16, 14, 1], \"dependency_distances\": [3, 1, 1, 4, 3, 2, 1, 4, 1, 2, 1, 4, 1, 1, 2, 16]}",
+          "output": "{\"avg_dependency_distance\": 2.938, \"n_dependencies\": 16, \"max_dependency_distance\": 16, \"sentence_text\": \"DPA: Iraqi authorities announced that they had busted up 3 terrorist cells operating in Baghdad.\"}",
+          "metadata_config_id": "en_ewt",
+          "metadata_language": "English",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 44,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.8,
+          "metadata_sentence_index": 2,
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies – German (de_gsd)",
+      "n_total_sentences": 14184,
+      "n_examples_kept": 3,
+      "columns": ["text", "tokens", "lemmas", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"],
+      "sample_text": "Sehr gute Beratung, schnelle Behebung der Probleme, so stelle ich mir Kundenservice vor.",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Sehr\", \"gute\", \"Beratung\", \",\", \"schnelle\", \"Behebung\", \"der\", \"Probleme\", \",\", \"so\", \"stelle\", \"ich\", \"mir\", \"Kundenservice\", \"vor\", \".\"], \"head\": [2, 3, 0, 6, 6, 3, 8, 6, 11, 11, 3, 11, 11, 11, 11, 3], \"dependency_distances\": [1, 1, 2, 1, 3, 1, 2, 2, 1, 8, 1, 2, 3, 4, 13]}",
+          "output": "{\"avg_dependency_distance\": 3.0, \"n_dependencies\": 15, \"max_dependency_distance\": 13, \"sentence_text\": \"Sehr gute Beratung, schnelle Behebung der Probleme, so stelle ich mir Kundenservice vor.\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 0,
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"Die\", \"Kosten\", \"sind\", \"definitiv\", \"auch\", \"in\", \"dem\", \"Rahmen\", \".\"], \"head\": [2, 3, 0, 3, 3, 8, 8, 3, 3], \"dependency_distances\": [1, 1, 1, 2, 2, 1, 5, 6]}",
+          "output": "{\"avg_dependency_distance\": 2.375, \"n_dependencies\": 8, \"max_dependency_distance\": 6, \"sentence_text\": \"Die Kosten sind definitiv auch in dem Rahmen.\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 1,
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"Nette\", \"Gespr\\u00e4che\", \",\", \"klasse\", \"Ergebnis\"], \"head\": [2, 0, 5, 5, 2], \"dependency_distances\": [1, 2, 1, 3]}",
+          "output": "{\"avg_dependency_distance\": 1.75, \"n_dependencies\": 4, \"max_dependency_distance\": 3, \"sentence_text\": \"Nette Gespräche, klasse Ergebnis.\"}",
+          "metadata_config_id": "de_gsd",
+          "metadata_language": "German",
+          "metadata_family": "Indo-European",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 42,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.4,
+          "metadata_sentence_index": 2,
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies – Finnish (fi_tdt)",
+      "n_total_sentences": 13200,
+      "n_examples_kept": 3,
+      "columns": ["text", "tokens", "lemmas", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"],
+      "sample_text": "Suomi on maa, jossa asuu noin 5,5 miljoonaa ihmistä.",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"Suomi\", \"on\", \"maa\", \",\", \"jossa\", \"asuu\", \"noin\", \"5,5\", \"miljoonaa\", \"ihmist\\u00e4\", \".\"], \"head\": [0, 3, 0, 6, 3, 6, 8, 6, 10, 8, 6], \"dependency_distances\": [1, 1, 1, 2, 1, 1, 2, 1, 2, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.3, \"n_dependencies\": 10, \"max_dependency_distance\": 2, \"sentence_text\": \"Suomi on maa, jossa asuu noin 5,5 miljoonaa ihmistä.\"}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 0,
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"T\\u00e4m\\u00e4\", \"on\", \"esimerkki\", \"lyhyest\\u00e4\", \"lauseesta\", \".\"], \"head\": [0, 3, 0, 3, 3, 3], \"dependency_distances\": [1, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 5, \"max_dependency_distance\": 1, \"sentence_text\": \"Tämä on esimerkki lyhyestä lauseesta.\"}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 1,
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"H\\u00e4n\", \"luki\", \"kirjan\", \"eilen\", \"illalla\", \".\"], \"head\": [0, 3, 3, 3, 4, 3], \"dependency_distances\": [1, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 5, \"max_dependency_distance\": 1, \"sentence_text\": \"Hän luki kirjan eilen illalla.\"}",
+          "metadata_config_id": "fi_tdt",
+          "metadata_language": "Finnish",
+          "metadata_family": "Uralic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 43,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 8.6,
+          "metadata_sentence_index": 2,
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies – Chinese (zh_gsd)",
+      "n_total_sentences": 14262,
+      "n_examples_kept": 3,
+      "columns": ["text", "tokens", "lemmas", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"],
+      "sample_text": "中国是一个历史悠久的国家。",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"中国\", \"是\", \"一个\", \"历史\", \"悠久\", \"的\", \"国家\", \"。\"], \"head\": [0, 7, 2, 6, 4, 6, 2, 7], \"dependency_distances\": [1, 1, 2, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.143, \"n_dependencies\": 7, \"max_dependency_distance\": 2, \"sentence_text\": \"中国是一个历史悠久的国家。\"}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_syllable_complexity": 4,
+          "metadata_phonological_density": 8.2,
+          "metadata_sentence_index": 0,
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"他\", \"昨天\", \"去\", \"了\", \"学校\", \"。\"], \"head\": [0, 3, 3, 3, 3, 3], \"dependency_distances\": [1, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 5, \"max_dependency_distance\": 1, \"sentence_text\": \"他昨天去了学校。\"}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_syllable_complexity": 4,
+          "metadata_phonological_density": 8.2,
+          "metadata_sentence_index": 1,
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"我们\", \"应该\", \"学习\", \"外语\", \"。\"], \"head\": [0, 3, 3, 3, 3], \"dependency_distances\": [1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 4, \"max_dependency_distance\": 1, \"sentence_text\": \"我们应该学习外语。\"}",
+          "metadata_config_id": "zh_gsd",
+          "metadata_language": "Chinese",
+          "metadata_family": "Sino-Tibetan",
+          "metadata_word_order": "SVO",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 41,
+          "metadata_syllable_complexity": 4,
+          "metadata_phonological_density": 8.2,
+          "metadata_sentence_index": 2,
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Universal Dependencies – Japanese (ja_gsd)",
+      "n_total_sentences": 13038,
+      "n_examples_kept": 3,
+      "columns": ["text", "tokens", "lemmas", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"],
+      "sample_text": "東京は日本の首都です。",
+      "examples": [
+        {
+          "input": "{\"tokens\": [\"東京\", \"は\", \"日本\", \"の\", \"首都\", \"です\", \"。\"], \"head\": [0, 5, 5, 3, 5, 5, 5], \"dependency_distances\": [1, 1, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 6, \"max_dependency_distance\": 1, \"sentence_text\": \"東京は日本の首都です。\"}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 0,
+          "metadata_row_index": 0
+        },
+        {
+          "input": "{\"tokens\": [\"彼\", \"は\", \"本\", \"を\", \"読ん\", \"だ\", \"。\"], \"head\": [0, 6, 6, 6, 6, 6, 6], \"dependency_distances\": [1, 1, 1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 6, \"max_dependency_distance\": 1, \"sentence_text\": \"彼は本を読んだ。\"}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 1,
+          "metadata_row_index": 1
+        },
+        {
+          "input": "{\"tokens\": [\"私\", \"は\", \"学生\", \"です\", \"。\"], \"head\": [0, 3, 3, 3, 3], \"dependency_distances\": [1, 1, 1, 1]}",
+          "output": "{\"avg_dependency_distance\": 1.0, \"n_dependencies\": 4, \"max_dependency_distance\": 1, \"sentence_text\": \"私は学生です。\"}",
+          "metadata_config_id": "ja_gsd",
+          "metadata_language": "Japanese",
+          "metadata_family": "Japonic",
+          "metadata_word_order": "SOV",
+          "metadata_register": "written",
+          "metadata_phoneme_count": 48,
+          "metadata_syllable_complexity": 5,
+          "metadata_phonological_density": 9.6,
+          "metadata_sentence_index": 2,
+          "metadata_row_index": 2
+        }
+      ]
+    }
+  ]
+}
