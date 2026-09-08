@@ -1,0 +1,393 @@
+{
+  "ols_results": {
+    "ols_word": {
+      "model": "OLS",
+      "n_languages": 55,
+      "r_squared": 0.053591613055658405,
+      "adj_r_squared": 0.017191290480875976,
+      "coef_phon_density": 1.4776545892463426,
+      "se_phon_density": 0.9058672200673225,
+      "p_phon_density": 0.1088897964563814,
+      "ci_lower_phon_density": -0.340100973711863,
+      "ci_upper_phon_density": 3.295410152204548,
+      "coef_wo_sov_vso": 0.0871843164346513,
+      "p_wo_sov_vso": 0.6529203759666267,
+      "aic": 106.75808179027962,
+      "bic": 112.78008134597704
+    },
+    "ols_phoneme": {
+      "model": "OLS",
+      "n_languages": 55,
+      "r_squared": 0.058327352189547876,
+      "adj_r_squared": 0.02210917342760732,
+      "coef_phon_density": 8.796618889720861,
+      "se_phon_density": 5.1953645623797,
+      "p_phon_density": 0.09640716535642282,
+      "ci_lower_phon_density": -1.6286428105090778,
+      "ci_upper_phon_density": 19.2218805899508,
+      "coef_wo_sov_vso": 0.5655393772756889,
+      "p_wo_sov_vso": 0.6111069653845591,
+      "aic": 298.88730892761674,
+      "bic": 304.90930848331413
+    },
+    "spearman": {
+      "r": 0.1898685285441185,
+      "p": 0.1650071176072114
+    }
+  },
+  "mixed_results": {
+    "mixed_word": {
+      "model": "MixedLM",
+      "n_languages": 55,
+      "n_families": 10,
+      "coef_phon_density": 0.8433469468082913,
+      "se_phon_density": 0.9796376701622472,
+      "p_phon_density": 0.38930612315552093,
+      "ci_lower_phon_density": -1.076707604608442,
+      "ci_upper_phon_density": 2.763401498225025,
+      "sigma2_u": 0.056314368723254814,
+      "sigma2_e": 0.345415688823319,
+      "icc": 0.1401796247638904,
+      "aic": NaN,
+      "bic": NaN,
+      "loglikelihood": -50.08507369807698
+    },
+    "mixed_phoneme": {
+      "model": "MixedLM",
+      "n_languages": 55,
+      "n_families": 10,
+      "coef_phon_density": 7.271793956254052,
+      "se_phon_density": 6.801309452081225,
+      "p_phon_density": 0.2849905616683148,
+      "ci_lower_phon_density": -6.058527617536998,
+      "ci_upper_phon_density": 20.6021155300451,
+      "sigma2_u": 1.2171953847840091,
+      "sigma2_e": 12.41178634016957,
+      "icc": 0.08930934161834125,
+      "aic": NaN,
+      "bic": NaN,
+      "loglikelihood": -140.90079742847684
+    },
+    "variance_decomposition_word": {
+      "var_fixed": 0.015789223946360415,
+      "var_random": 0.056314368723254814,
+      "var_residual": 0.345415688823319,
+      "r2_marginal": 0.03781675397098425,
+      "r2_conditional": 0.17269524035343373
+    },
+    "variance_decomposition_phoneme": {
+      "var_fixed": 0.5454043893186777,
+      "var_random": 1.2171953847840091,
+      "var_residual": 12.41178634016957,
+      "r2_marginal": 0.038478166526697576,
+      "r2_conditional": 0.12435104842585858
+    },
+    "lrt_word": {
+      "chi2_statistic": 2.6583780745940544,
+      "p_value": 0.1030057203708975,
+      "significant": false
+    }
+  },
+  "sensitivity_results": {
+    "anova_no_vso": {
+      "n_languages": 52,
+      "f_statistic": 0.024063513099772938,
+      "p_value": 0.8773479535109755,
+      "eta_squared": 0.00048103875234908243,
+      "groups": {
+        "SVO": 41,
+        "SOV": 11
+      }
+    },
+    "complete_phonology": {
+      "n_languages": 55,
+      "n_with_phoneme_count": 55,
+      "spearman_r": 0.1898685285441185,
+      "spearman_p": 0.1650071176072114,
+      "ols_coef": 1.4976786593682285,
+      "ols_se": 0.8979698115412509,
+      "ols_p": 0.10124419884207332,
+      "ols_r_squared": 0.04986799287375565
+    },
+    "outlier_robust": {
+      "n_outliers_removed": 4,
+      "n_remaining": 51,
+      "coef_before": 1.4776545892463426,
+      "p_before": 0.1088897964563814,
+      "coef_after": 1.42307235064118,
+      "p_after": 0.14769760583174155,
+      "coef_change": -0.05458223860516265,
+      "significant_before": false,
+      "significant_after": false,
+      "outlier_datasets": [
+        "hbo_ptnk",
+        "ar_padt",
+        "as_aiw",
+        "bxr_bdt"
+      ]
+    }
+  },
+  "family_results": {
+    "Indo-European": {
+      "n_languages": 20,
+      "mdd_word_mean": 3.351031810043903,
+      "mdd_word_sem": 0.08196174417567123,
+      "mdd_word_ci95": [
+        3.179483907942963,
+        3.522579712144843
+      ],
+      "phon_density_mean": 0.56328125,
+      "phon_density_sem": 0.022052702787792488,
+      "phon_density_ci95": [
+        0.5171244126004331,
+        0.6094380873995668
+      ],
+      "datasets": [
+        "af_afribooms",
+        "sq_staf",
+        "grc_perseus",
+        "hy_armtdp",
+        "as_aiw",
+        "be_hse",
+        "ca_ancora",
+        "xcl_caval",
+        "hr_set",
+        "da_ddt",
+        "nl_lassysmall",
+        "en_gumreddit",
+        "fr_parisstories",
+        "gl_treegal",
+        "de_gsd",
+        "el_messinian",
+        "hi_hdtb",
+        "is_icepahc",
+        "it_parlamint",
+        "la_perseus"
+      ]
+    },
+    "Afroasiatic": {
+      "n_languages": 4,
+      "mdd_word_mean": 3.7892768087825126,
+      "mdd_word_sem": 0.1680018517077466,
+      "mdd_word_ci95": [
+        3.254619936534373,
+        4.323933681030653
+      ],
+      "phon_density_mean": 0.47265625,
+      "phon_density_sem": 0.08731728504843222,
+      "phon_density_ci95": [
+        0.1947736788102125,
+        0.7505388211897874
+      ],
+      "datasets": [
+        "hbo_ptnk",
+        "ar_padt",
+        "cop_scriptorium",
+        "he_iahltknesset"
+      ]
+    },
+    "Isolate": {
+      "n_languages": 1,
+      "mdd_word_mean": 2.9048950841989996,
+      "mdd_word_sem": null,
+      "mdd_word_ci95": [
+        2.9048950841989996,
+        2.9048950841989996
+      ],
+      "phon_density_mean": 0.375,
+      "phon_density_sem": null,
+      "phon_density_ci95": [
+        0.375,
+        0.375
+      ],
+      "datasets": [
+        "eu_bdt"
+      ]
+    },
+    "Unknown": {
+      "n_languages": 21,
+      "mdd_word_mean": 2.882002235760809,
+      "mdd_word_sem": 0.13957686937201896,
+      "mdd_word_ci95": [
+        2.5908499881669753,
+        3.173154483354643
+      ],
+      "phon_density_mean": 0.46875,
+      "phon_density_sem": 0.0,
+      "phon_density_ci95": [
+        0.46875,
+        0.46875
+      ],
+      "datasets": [
+        "bor_bdt",
+        "bg_btb",
+        "ckb_mukri",
+        "cs_fictree",
+        "egy_pc",
+        "myv_jr",
+        "et_edt",
+        "fo_farpahc",
+        "got_proiel",
+        "ht_adolphe",
+        "id_csui",
+        "ga_twittirish",
+        "kk_ktb",
+        "naq_kdt",
+        "koi_uh",
+        "ky_ktmu",
+        "lv_lvtb",
+        "lij_glt",
+        "lt_alksnis",
+        "olo_kkpp",
+        "nds_lsdc"
+      ]
+    },
+    "Mongolic": {
+      "n_languages": 1,
+      "mdd_word_mean": 2.1159420289855073,
+      "mdd_word_sem": null,
+      "mdd_word_ci95": [
+        2.1159420289855073,
+        2.1159420289855073
+      ],
+      "phon_density_mean": 0.40625,
+      "phon_density_sem": null,
+      "phon_density_ci95": [
+        0.40625,
+        0.40625
+      ],
+      "datasets": [
+        "bxr_bdt"
+      ]
+    },
+    "Sino-Tibetan": {
+      "n_languages": 2,
+      "mdd_word_mean": 2.868739805801497,
+      "mdd_word_sem": 1.1138531743183544,
+      "mdd_word_ci95": [
+        -11.284106673125596,
+        17.02158628472859
+      ],
+      "phon_density_mean": 0.53125,
+      "phon_density_sem": 0.0,
+      "phon_density_ci95": [
+        0.53125,
+        0.53125
+      ],
+      "datasets": [
+        "zh_gsdsimp",
+        "lzh_kyoto"
+      ]
+    },
+    "Uralic": {
+      "n_languages": 3,
+      "mdd_word_mean": 2.7776390364186425,
+      "mdd_word_sem": 0.5128692457087765,
+      "mdd_word_ci95": [
+        0.5709407763652279,
+        4.984337296472058
+      ],
+      "phon_density_mean": 0.5416666666666666,
+      "phon_density_sem": 0.020833333333333332,
+      "phon_density_ci95": [
+        0.4520280681302195,
+        0.6313052652031137
+      ],
+      "datasets": [
+        "fi_ftb",
+        "hu_szeged",
+        "kpv_lattice"
+      ]
+    },
+    "Turkic": {
+      "n_languages": 1,
+      "mdd_word_mean": 3.2444931621254827,
+      "mdd_word_sem": null,
+      "mdd_word_ci95": [
+        3.2444931621254827,
+        3.2444931621254827
+      ],
+      "phon_density_mean": 0.515625,
+      "phon_density_sem": null,
+      "phon_density_ci95": [
+        0.515625,
+        0.515625
+      ],
+      "datasets": [
+        "ka_glc"
+      ]
+    },
+    "Austronesian": {
+      "n_languages": 1,
+      "mdd_word_mean": 2.8435843415442146,
+      "mdd_word_sem": null,
+      "mdd_word_ci95": [
+        2.8435843415442146,
+        2.8435843415442146
+      ],
+      "phon_density_mean": 0.265625,
+      "phon_density_sem": null,
+      "phon_density_ci95": [
+        0.265625,
+        0.265625
+      ],
+      "datasets": [
+        "ja_bccwjluw"
+      ]
+    },
+    "Koreanic": {
+      "n_languages": 1,
+      "mdd_word_mean": 2.4292119545341504,
+      "mdd_word_sem": null,
+      "mdd_word_ci95": [
+        2.4292119545341504,
+        2.4292119545341504
+      ],
+      "phon_density_mean": 0.4375,
+      "phon_density_sem": null,
+      "phon_density_ci95": [
+        0.4375,
+        0.4375
+      ],
+      "datasets": [
+        "ko_kaist"
+      ]
+    }
+  },
+  "func_lex_results": {
+    "functional_ols": {
+      "coef_phon_density": 2.2610078103722695,
+      "se_phon_density": 1.474630262293665,
+      "p_phon_density": 0.1312712206067495,
+      "r_squared": 0.06091204677682771,
+      "ci_lower": -0.6980542941065919,
+      "ci_upper": 5.2200699148511305
+    },
+    "lexical_ols": {
+      "coef_phon_density": 0.6465118404740794,
+      "se_phon_density": 1.0220871597950298,
+      "p_phon_density": 0.5298052799414941,
+      "r_squared": 0.007673712413632239,
+      "ci_lower": -1.404456093223192,
+      "ci_upper": 2.697479774171351
+    },
+    "functional_mixed": {
+      "coef_phon_density": 2.0914994901322426,
+      "p_phon_density": 0.14943396195689634,
+      "sigma2_u": 0.00416813215610653,
+      "icc": 0.0040908636147892604
+    },
+    "lexical_mixed": {
+      "coef_phon_density": -0.2668045625093912,
+      "p_phon_density": 0.8030925864086085,
+      "sigma2_u": 0.15140654712257665,
+      "icc": 0.2784884871704016
+    },
+    "comparison": {
+      "coef_diff": -1.61449596989819,
+      "z_statistic": -0.8998356950344853,
+      "p_value": 0.3682076954140041,
+      "lexical_stronger": false
+    }
+  }
+}

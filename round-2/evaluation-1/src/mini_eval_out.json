@@ -1,0 +1,927 @@
+{
+  "metadata": {
+    "evaluation_name": "Mixed-Effects Evaluation of Phonology-Syntax Independence",
+    "description": "Reproduces OLS baseline, fits mixed-effects models, performs sensitivity analyses",
+    "n_languages": 55,
+    "n_families": 10,
+    "methods": [
+      "OLS",
+      "MixedLM",
+      "Sensitivity Analysis",
+      "Per-family breakdown",
+      "Functional-lexical decomposition"
+    ]
+  },
+  "metrics_agg": {
+    "n_languages": 55,
+    "n_families": 10,
+    "n_indo_european": 20,
+    "ie_proportion": 0.36363636363636365,
+    "phon_density_mean": 0.5034090909090909,
+    "phon_density_std": 0.0935419619351485,
+    "mdd_word_mean": 3.0965147941678617,
+    "mdd_word_std": 0.6273561671580996,
+    "ols_word_r_squared": 0.053591613055658405,
+    "ols_word_phon_coef": 1.4776545892463426,
+    "ols_word_phon_p": 0.1088897964563814,
+    "spearman_r": 0.1898685285441185,
+    "spearman_p": 0.1650071176072114,
+    "mixed_word_phon_coef": 0.8433469468082913,
+    "mixed_word_phon_p": 0.38930612315552093,
+    "mixed_word_icc": 0.1401796247638904,
+    "mixed_word_sigma2_u": 0.056314368723254814,
+    "mixed_word_r2_marginal": 0.03781675397098425,
+    "mixed_word_r2_conditional": 0.17269524035343373,
+    "lrt_chi2": 2.6583780745940544,
+    "lrt_p": 0.1030057203708975,
+    "complete_phonology_n": 55,
+    "complete_phonology_spearman_r": 0.1898685285441185,
+    "complete_phonology_spearman_p": 0.1650071176072114,
+    "outliers_removed": 4,
+    "outlier_robust_coef_change": -0.05458223860516265,
+    "func_lex_coef_diff": -1.61449596989819,
+    "func_lex_comparison_p": 0.3682076954140041
+  },
+  "datasets": [
+    {
+      "dataset": "af_afribooms",
+      "examples": [
+        {
+          "input": "Language: af, Family: Indo-European, Word Order: SVO, Phoneme Count: 39, Phon Density: 0.609375",
+          "output": "{\"mdd_word\": 3.355403371925191, \"mdd_phoneme\": 11.510886589073488, \"mdd_functional\": 2.2479775574112737, \"mdd_lexical\": 4.34029590948651}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.355403371925191}",
+          "predict_our_method": "{\"phon_density\": 0.609375, \"phoneme_count\": 39, \"mdd_word_mean\": 3.355403371925191, \"mdd_phoneme_mean\": 11.510886589073488}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "sq_staf",
+      "examples": [
+        {
+          "input": "Language: sq, Family: Indo-European, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.2912835601324018, \"mdd_phoneme\": 8.029054799558661, \"mdd_functional\": 3.25516693163752, \"mdd_lexical\": 3.3223819301848048}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.2912835601324018}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.2912835601324018, \"mdd_phoneme_mean\": 8.029054799558661}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "grc_perseus",
+      "examples": [
+        {
+          "input": "Language: grc, Family: Indo-European, Word Order: SVO, Phoneme Count: 35, Phon Density: 0.546875",
+          "output": "{\"mdd_word\": 3.494053995782211, \"mdd_phoneme\": 11.647983074943236, \"mdd_functional\": 3.9135385357934225, \"mdd_lexical\": 3.308125401116319}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.494053995782211}",
+          "predict_our_method": "{\"phon_density\": 0.546875, \"phoneme_count\": 35, \"mdd_word_mean\": 3.494053995782211, \"mdd_phoneme_mean\": 11.647983074943236}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "hbo_ptnk",
+      "examples": [
+        {
+          "input": "Language: hbo, Family: Afroasiatic, Word Order: SOV, Phoneme Count: 25, Phon Density: 0.390625",
+          "output": "{\"mdd_word\": 3.9947826245034856, \"mdd_phoneme\": 12.586182135488151, \"mdd_functional\": 3.5310356555750806, \"mdd_lexical\": 4.424650576242687}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.9947826245034856}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 3.9947826245034856, \"mdd_phoneme_mean\": 12.586182135488151}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ar_padt",
+      "examples": [
+        {
+          "input": "Language: ar, Family: Afroasiatic, Word Order: VSO, Phoneme Count: 47, Phon Density: 0.734375",
+          "output": "{\"mdd_word\": 4.153990248202529, \"mdd_phoneme\": 12.183268596824698, \"mdd_functional\": 5.584829712523908, \"mdd_lexical\": 3.4755258954435932}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 4.153990248202529}",
+          "predict_our_method": "{\"phon_density\": 0.734375, \"phoneme_count\": 47, \"mdd_word_mean\": 4.153990248202529, \"mdd_phoneme_mean\": 12.183268596824698}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "hy_armtdp",
+      "examples": [
+        {
+          "input": "Language: hy, Family: Indo-European, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.603497242705587, \"mdd_phoneme\": 13.175524395369274, \"mdd_functional\": 4.086987926942524, \"mdd_lexical\": 3.319216923512519}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.603497242705587}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.603497242705587, \"mdd_phoneme_mean\": 13.175524395369274}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "as_aiw",
+      "examples": [
+        {
+          "input": "Language: as, Family: Indo-European, Word Order: SOV, Phoneme Count: 40, Phon Density: 0.625",
+          "output": "{\"mdd_word\": 2.4853479853479854, \"mdd_phoneme\": 6.5476190476190474, \"mdd_functional\": 2.330827067669173, \"mdd_lexical\": 2.5351089588377724}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.4853479853479854}",
+          "predict_our_method": "{\"phon_density\": 0.625, \"phoneme_count\": 40, \"mdd_word_mean\": 2.4853479853479854, \"mdd_phoneme_mean\": 6.5476190476190474}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "eu_bdt",
+      "examples": [
+        {
+          "input": "Language: eu, Family: Isolate, Word Order: SOV, Phoneme Count: 24, Phon Density: 0.375",
+          "output": "{\"mdd_word\": 2.9048950841989996, \"mdd_phoneme\": 10.8891799106218, \"mdd_functional\": 3.3094239493280835, \"mdd_lexical\": 2.691101963267891}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Isolate\", \"mdd_word_mean\": 2.9048950841989996}",
+          "predict_our_method": "{\"phon_density\": 0.375, \"phoneme_count\": 24, \"mdd_word_mean\": 2.9048950841989996, \"mdd_phoneme_mean\": 10.8891799106218}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "be_hse",
+      "examples": [
+        {
+          "input": "Language: be, Family: Indo-European, Word Order: SOV, Phoneme Count: 45, Phon Density: 0.703125",
+          "output": "{\"mdd_word\": 2.89225735834585, \"mdd_phoneme\": 9.396987152855454, \"mdd_functional\": 3.2573672006745364, \"mdd_lexical\": 2.669407132931913}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.89225735834585}",
+          "predict_our_method": "{\"phon_density\": 0.703125, \"phoneme_count\": 45, \"mdd_word_mean\": 2.89225735834585, \"mdd_phoneme_mean\": 9.396987152855454}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "bor_bdt",
+      "examples": [
+        {
+          "input": "Language: bor, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.1482243444044165, \"mdd_phoneme\": 5.11270224865467, \"mdd_functional\": 2.161069730787808, \"mdd_lexical\": 2.141203768027343}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.1482243444044165}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.1482243444044165, \"mdd_phoneme_mean\": 5.11270224865467}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "bg_btb",
+      "examples": [
+        {
+          "input": "Language: bg, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.9377106273120273, \"mdd_phoneme\": 8.493939997747534, \"mdd_functional\": 3.0326806452891515, \"mdd_lexical\": 2.863954687475951}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.9377106273120273}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.9377106273120273, \"mdd_phoneme_mean\": 8.493939997747534}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "bxr_bdt",
+      "examples": [
+        {
+          "input": "Language: bxr, Family: Mongolic, Word Order: SOV, Phoneme Count: 26, Phon Density: 0.40625",
+          "output": "{\"mdd_word\": 2.1159420289855073, \"mdd_phoneme\": 4.8478260869565215, \"mdd_functional\": 1.7959183673469388, \"mdd_lexical\": 2.292134831460674}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Mongolic\", \"mdd_word_mean\": 2.1159420289855073}",
+          "predict_our_method": "{\"phon_density\": 0.40625, \"phoneme_count\": 26, \"mdd_word_mean\": 2.1159420289855073, \"mdd_phoneme_mean\": 4.8478260869565215}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ca_ancora",
+      "examples": [
+        {
+          "input": "Language: ca, Family: Indo-European, Word Order: SVO, Phoneme Count: 32, Phon Density: 0.5",
+          "output": "{\"mdd_word\": 3.6247142555275946, \"mdd_phoneme\": 9.963016501142977, \"mdd_functional\": 3.3726753182642377, \"mdd_lexical\": 3.882744846488031}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.6247142555275946}",
+          "predict_our_method": "{\"phon_density\": 0.5, \"phoneme_count\": 32, \"mdd_word_mean\": 3.6247142555275946, \"mdd_phoneme_mean\": 9.963016501142977}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ckb_mukri",
+      "examples": [
+        {
+          "input": "Language: ckb, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 1.9597315436241611, \"mdd_phoneme\": 3.017897091722595, \"mdd_functional\": 1.4049079754601228, \"mdd_lexical\": 2.278169014084507}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 1.9597315436241611}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 1.9597315436241611, \"mdd_phoneme_mean\": 3.017897091722595}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "zh_gsdsimp",
+      "examples": [
+        {
+          "input": "Language: zh, Family: Sino-Tibetan, Word Order: SVO, Phoneme Count: 34, Phon Density: 0.53125",
+          "output": "{\"mdd_word\": 3.9825929801198514, \"mdd_phoneme\": 4.7198812052802355, \"mdd_functional\": 4.0405292029687, \"mdd_lexical\": 3.9543747151366557}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Sino-Tibetan\", \"mdd_word_mean\": 3.9825929801198514}",
+          "predict_our_method": "{\"phon_density\": 0.53125, \"phoneme_count\": 34, \"mdd_word_mean\": 3.9825929801198514, \"mdd_phoneme_mean\": 4.7198812052802355}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "xcl_caval",
+      "examples": [
+        {
+          "input": "Language: xcl, Family: Indo-European, Word Order: SVO, Phoneme Count: 35, Phon Density: 0.546875",
+          "output": "{\"mdd_word\": 3.5835193427812926, \"mdd_phoneme\": 8.780328345198315, \"mdd_functional\": 3.5532658438496743, \"mdd_lexical\": 3.6110242574007767}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.5835193427812926}",
+          "predict_our_method": "{\"phon_density\": 0.546875, \"phoneme_count\": 35, \"mdd_word_mean\": 3.5835193427812926, \"mdd_phoneme_mean\": 8.780328345198315}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "lzh_kyoto",
+      "examples": [
+        {
+          "input": "Language: lzh, Family: Sino-Tibetan, Word Order: SVO, Phoneme Count: 34, Phon Density: 0.53125",
+          "output": "{\"mdd_word\": 1.7548866314831422, \"mdd_phoneme\": 0.7848081853369384, \"mdd_functional\": 1.3865702214825246, \"mdd_lexical\": 1.7977127503191208}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Sino-Tibetan\", \"mdd_word_mean\": 1.7548866314831422}",
+          "predict_our_method": "{\"phon_density\": 0.53125, \"phoneme_count\": 34, \"mdd_word_mean\": 1.7548866314831422, \"mdd_phoneme_mean\": 0.7848081853369384}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "cop_scriptorium",
+      "examples": [
+        {
+          "input": "Language: cop, Family: Afroasiatic, Word Order: VSO, Phoneme Count: 24, Phon Density: 0.375",
+          "output": "{\"mdd_word\": 3.525046997677762, \"mdd_phoneme\": 5.8958863209112025, \"mdd_functional\": 3.4823914369696634, \"mdd_lexical\": 3.5674439115815004}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.525046997677762}",
+          "predict_our_method": "{\"phon_density\": 0.375, \"phoneme_count\": 24, \"mdd_word_mean\": 3.525046997677762, \"mdd_phoneme_mean\": 5.8958863209112025}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "hr_set",
+      "examples": [
+        {
+          "input": "Language: hr, Family: Indo-European, Word Order: SVO, Phoneme Count: 31, Phon Density: 0.484375",
+          "output": "{\"mdd_word\": 3.4025955338728133, \"mdd_phoneme\": 11.582885098976998, \"mdd_functional\": 4.066876223460322, \"mdd_lexical\": 3.022356300166999}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4025955338728133}",
+          "predict_our_method": "{\"phon_density\": 0.484375, \"phoneme_count\": 31, \"mdd_word_mean\": 3.4025955338728133, \"mdd_phoneme_mean\": 11.582885098976998}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "cs_fictree",
+      "examples": [
+        {
+          "input": "Language: cs, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.313702146958543, \"mdd_phoneme\": 9.084153324100845, \"mdd_functional\": 3.882641152755541, \"mdd_lexical\": 2.901976659779999}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.313702146958543}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.313702146958543, \"mdd_phoneme_mean\": 9.084153324100845}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "da_ddt",
+      "examples": [
+        {
+          "input": "Language: da, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.6875",
+          "output": "{\"mdd_word\": 3.462122508059741, \"mdd_phoneme\": 10.734311467859728, \"mdd_functional\": 3.9045423602945726, \"mdd_lexical\": 3.1347620028848135}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.462122508059741}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.462122508059741, \"mdd_phoneme_mean\": 10.734311467859728}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "nl_lassysmall",
+      "examples": [
+        {
+          "input": "Language: nl, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.6875",
+          "output": "{\"mdd_word\": 3.6507668358953493, \"mdd_phoneme\": 12.410434098105464, \"mdd_functional\": 3.597652070536953, \"mdd_lexical\": 3.6935950281186094}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.6507668358953493}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.6507668358953493, \"mdd_phoneme_mean\": 12.410434098105464}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "egy_pc",
+      "examples": [
+        {
+          "input": "Language: egy, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.3382213018413838, \"mdd_phoneme\": 3.8937146695024345, \"mdd_functional\": 1.373373676248109, \"mdd_lexical\": 2.557203680813075}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.3382213018413838}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.3382213018413838, \"mdd_phoneme_mean\": 3.8937146695024345}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "en_gumreddit",
+      "examples": [
+        {
+          "input": "Language: en, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.6875",
+          "output": "{\"mdd_word\": 3.4369664318276003, \"mdd_phoneme\": 2.4369664318276003, \"mdd_functional\": 3.7853222199634073, \"mdd_lexical\": 3.19717324377274}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4369664318276003}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.4369664318276003, \"mdd_phoneme_mean\": 2.4369664318276003}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "myv_jr",
+      "examples": [
+        {
+          "input": "Language: myv, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.534317505783849, \"mdd_phoneme\": 7.520105761815578, \"mdd_functional\": 2.9855739717618173, \"mdd_lexical\": 2.2816635160680527}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.534317505783849}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.534317505783849, \"mdd_phoneme_mean\": 7.520105761815578}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "et_edt",
+      "examples": [
+        {
+          "input": "Language: et, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.1965747859241205, \"mdd_phoneme\": 12.374279642477655, \"mdd_functional\": 4.3001420182710035, \"mdd_lexical\": 2.7001227927883025}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.1965747859241205}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.1965747859241205, \"mdd_phoneme_mean\": 12.374279642477655}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "fo_farpahc",
+      "examples": [
+        {
+          "input": "Language: fo, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.6439249796140256, \"mdd_phoneme\": 5.746398477847241, \"mdd_functional\": 1.580525118875336, \"mdd_lexical\": 3.4735483870967743}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.6439249796140256}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.6439249796140256, \"mdd_phoneme_mean\": 5.746398477847241}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "fi_ftb",
+      "examples": [
+        {
+          "input": "Language: fi, Family: Uralic, Word Order: SVO, Phoneme Count: 36, Phon Density: 0.5625",
+          "output": "{\"mdd_word\": 2.0147915334895945, \"mdd_phoneme\": 5.825902052702607, \"mdd_functional\": 1.558563291489244, \"mdd_lexical\": 2.23057306515314}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Uralic\", \"mdd_word_mean\": 2.0147915334895945}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 2.0147915334895945, \"mdd_phoneme_mean\": 5.825902052702607}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "fr_parisstories",
+      "examples": [
+        {
+          "input": "Language: fr, Family: Indo-European, Word Order: SVO, Phoneme Count: 36, Phon Density: 0.5625",
+          "output": "{\"mdd_word\": 3.4254064163429723, \"mdd_phoneme\": 7.518630412890231, \"mdd_functional\": 3.5327264346623646, \"mdd_lexical\": 3.348911704312115}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4254064163429723}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 3.4254064163429723, \"mdd_phoneme_mean\": 7.518630412890231}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "gl_treegal",
+      "examples": [
+        {
+          "input": "Language: gl, Family: Indo-European, Word Order: VSO, Phoneme Count: 33, Phon Density: 0.515625",
+          "output": "{\"mdd_word\": 3.3327716365597198, \"mdd_phoneme\": 8.804192504718253, \"mdd_functional\": 3.0902376796025246, \"mdd_lexical\": 3.5772093652727026}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.3327716365597198}",
+          "predict_our_method": "{\"phon_density\": 0.515625, \"phoneme_count\": 33, \"mdd_word_mean\": 3.3327716365597198, \"mdd_phoneme_mean\": 8.804192504718253}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ka_glc",
+      "examples": [
+        {
+          "input": "Language: ka, Family: Turkic, Word Order: SOV, Phoneme Count: 33, Phon Density: 0.515625",
+          "output": "{\"mdd_word\": 3.2444931621254827, \"mdd_phoneme\": 13.443287399519782, \"mdd_functional\": 3.6191307106598987, \"mdd_lexical\": 3.0607592967169754}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Turkic\", \"mdd_word_mean\": 3.2444931621254827}",
+          "predict_our_method": "{\"phon_density\": 0.515625, \"phoneme_count\": 33, \"mdd_word_mean\": 3.2444931621254827, \"mdd_phoneme_mean\": 13.443287399519782}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "de_gsd",
+      "examples": [
+        {
+          "input": "Language: de, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.6875",
+          "output": "{\"mdd_word\": 3.765062168952329, \"mdd_phoneme\": 14.214686914915747, \"mdd_functional\": 3.528873642081189, \"mdd_lexical\": 3.9677246710770833}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.765062168952329}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.765062168952329, \"mdd_phoneme_mean\": 14.214686914915747}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "got_proiel",
+      "examples": [
+        {
+          "input": "Language: got, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.4390745013749724, \"mdd_phoneme\": 7.067231406264817, \"mdd_functional\": 1.8249400479616307, \"mdd_lexical\": 2.723241943686717}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.4390745013749724}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.4390745013749724, \"mdd_phoneme_mean\": 7.067231406264817}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "el_messinian",
+      "examples": [
+        {
+          "input": "Language: el, Family: Indo-European, Word Order: SVO, Phoneme Count: 25, Phon Density: 0.390625",
+          "output": "{\"mdd_word\": 2.6122448979591835, \"mdd_phoneme\": 5.9523809523809526, \"mdd_functional\": 2.790243902439024, \"mdd_lexical\": 2.457627118644068}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.6122448979591835}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 2.6122448979591835, \"mdd_phoneme_mean\": 5.9523809523809526}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ht_adolphe",
+      "examples": [
+        {
+          "input": "Language: ht, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.09472431125052, \"mdd_phoneme\": 6.879275159668946, \"mdd_functional\": 3.701676359904208, \"mdd_lexical\": 2.7121468839530514}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.09472431125052}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.09472431125052, \"mdd_phoneme_mean\": 6.879275159668946}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "he_iahltknesset",
+      "examples": [
+        {
+          "input": "Language: he, Family: Afroasiatic, Word Order: SOV, Phoneme Count: 25, Phon Density: 0.390625",
+          "output": "{\"mdd_word\": 3.4832873647462725, \"mdd_phoneme\": 6.433814878392193, \"mdd_functional\": 3.5282047021683143, \"mdd_lexical\": 3.444352428617722}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 3.4832873647462725}",
+          "predict_our_method": "{\"phon_density\": 0.390625, \"phoneme_count\": 25, \"mdd_word_mean\": 3.4832873647462725, \"mdd_phoneme_mean\": 6.433814878392193}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "hi_hdtb",
+      "examples": [
+        {
+          "input": "Language: hi, Family: Indo-European, Word Order: SOV, Phoneme Count: 40, Phon Density: 0.625",
+          "output": "{\"mdd_word\": 3.541301433047869, \"mdd_phoneme\": 9.777730055163193, \"mdd_functional\": 2.873953454729571, \"mdd_lexical\": 4.0109832070200895}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.541301433047869}",
+          "predict_our_method": "{\"phon_density\": 0.625, \"phoneme_count\": 40, \"mdd_word_mean\": 3.541301433047869, \"mdd_phoneme_mean\": 9.777730055163193}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "hu_szeged",
+      "examples": [
+        {
+          "input": "Language: hu, Family: Uralic, Word Order: SOV, Phoneme Count: 36, Phon Density: 0.5625",
+          "output": "{\"mdd_word\": 3.752908184461986, \"mdd_phoneme\": 14.892189447444952, \"mdd_functional\": 4.501980198019802, \"mdd_lexical\": 3.3183161004431314}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Uralic\", \"mdd_word_mean\": 3.752908184461986}",
+          "predict_our_method": "{\"phon_density\": 0.5625, \"phoneme_count\": 36, \"mdd_word_mean\": 3.752908184461986, \"mdd_phoneme_mean\": 14.892189447444952}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "is_icepahc",
+      "examples": [
+        {
+          "input": "Language: is, Family: Indo-European, Word Order: SVO, Phoneme Count: 38, Phon Density: 0.59375",
+          "output": "{\"mdd_word\": 2.822030845267514, \"mdd_phoneme\": 7.261720308452675, \"mdd_functional\": 1.6549568670959858, \"mdd_lexical\": 3.5084284140396336}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 2.822030845267514}",
+          "predict_our_method": "{\"phon_density\": 0.59375, \"phoneme_count\": 38, \"mdd_word_mean\": 2.822030845267514, \"mdd_phoneme_mean\": 7.261720308452675}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "id_csui",
+      "examples": [
+        {
+          "input": "Language: id, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.7942616418080384, \"mdd_phoneme\": 14.370545371740864, \"mdd_functional\": 5.219961977186312, \"mdd_lexical\": 3.1848691695108076}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.7942616418080384}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.7942616418080384, \"mdd_phoneme_mean\": 14.370545371740864}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ga_twittirish",
+      "examples": [
+        {
+          "input": "Language: ga, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.733150023472604, \"mdd_phoneme\": 11.408490376232312, \"mdd_functional\": 2.8200118413262287, \"mdd_lexical\": 4.203169443315725}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.733150023472604}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.733150023472604, \"mdd_phoneme_mean\": 11.408490376232312}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "it_parlamint",
+      "examples": [
+        {
+          "input": "Language: it, Family: Indo-European, Word Order: SVO, Phoneme Count: 29, Phon Density: 0.453125",
+          "output": "{\"mdd_word\": 3.8202061855670104, \"mdd_phoneme\": 11.607525773195876, \"mdd_functional\": 3.5035087719298246, \"mdd_lexical\": 4.175711159737418}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.8202061855670104}",
+          "predict_our_method": "{\"phon_density\": 0.453125, \"phoneme_count\": 29, \"mdd_word_mean\": 3.8202061855670104, \"mdd_phoneme_mean\": 11.607525773195876}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ja_bccwjluw",
+      "examples": [
+        {
+          "input": "Language: ja, Family: Austronesian, Word Order: SVO, Phoneme Count: 17, Phon Density: 0.265625",
+          "output": "{\"mdd_word\": 2.8435843415442146, \"mdd_phoneme\": 1.8435843415442146, \"mdd_functional\": 1.6769752160190408, \"mdd_lexical\": 4.4070827756936115}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Austronesian\", \"mdd_word_mean\": 2.8435843415442146}",
+          "predict_our_method": "{\"phon_density\": 0.265625, \"phoneme_count\": 17, \"mdd_word_mean\": 2.8435843415442146, \"mdd_phoneme_mean\": 1.8435843415442146}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "kk_ktb",
+      "examples": [
+        {
+          "input": "Language: kk, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.9819277108433737, \"mdd_phoneme\": 8.740963855421686, \"mdd_functional\": 2.2222222222222223, \"mdd_lexical\": 3.290960451977401}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.9819277108433737}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.9819277108433737, \"mdd_phoneme_mean\": 8.740963855421686}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "naq_kdt",
+      "examples": [
+        {
+          "input": "Language: naq, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.8858011596662423, \"mdd_phoneme\": 6.192122754914439, \"mdd_functional\": 2.52518756698821, \"mdd_lexical\": 3.2888589398023362}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.8858011596662423}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.8858011596662423, \"mdd_phoneme_mean\": 6.192122754914439}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "koi_uh",
+      "examples": [
+        {
+          "input": "Language: koi, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.3271028037383177, \"mdd_phoneme\": 4.981308411214953, \"mdd_functional\": 2.977272727272727, \"mdd_lexical\": 1.873015873015873}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.3271028037383177}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.3271028037383177, \"mdd_phoneme_mean\": 4.981308411214953}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "kpv_lattice",
+      "examples": [
+        {
+          "input": "Language: kpv, Family: Uralic, Word Order: SOV, Phoneme Count: 32, Phon Density: 0.5",
+          "output": "{\"mdd_word\": 2.5652173913043477, \"mdd_phoneme\": 6.253623188405797, \"mdd_functional\": 3.0166666666666666, \"mdd_lexical\": 2.217948717948718}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Uralic\", \"mdd_word_mean\": 2.5652173913043477}",
+          "predict_our_method": "{\"phon_density\": 0.5, \"phoneme_count\": 32, \"mdd_word_mean\": 2.5652173913043477, \"mdd_phoneme_mean\": 6.253623188405797}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ko_kaist",
+      "examples": [
+        {
+          "input": "Language: ko, Family: Koreanic, Word Order: SOV, Phoneme Count: 28, Phon Density: 0.4375",
+          "output": "{\"mdd_word\": 2.4292119545341504, \"mdd_phoneme\": 4.098706827191738, \"mdd_functional\": 3.0723329166973015, \"mdd_lexical\": 2.216315940632134}",
+          "predict_baseline": "{\"word_order\": \"SOV\", \"family\": \"Koreanic\", \"mdd_word_mean\": 2.4292119545341504}",
+          "predict_our_method": "{\"phon_density\": 0.4375, \"phoneme_count\": 28, \"mdd_word_mean\": 2.4292119545341504, \"mdd_phoneme_mean\": 4.098706827191738}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ky_ktmu",
+      "examples": [
+        {
+          "input": "Language: ky, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 1.9253326092859082, \"mdd_phoneme\": 5.549551995655715, \"mdd_functional\": 1.0203784570596797, \"mdd_lexical\": 2.1328437917222964}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 1.9253326092859082}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 1.9253326092859082, \"mdd_phoneme_mean\": 5.549551995655715}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "la_perseus",
+      "examples": [
+        {
+          "input": "Language: la, Family: Indo-European, Word Order: SVO, Phoneme Count: 27, Phon Density: 0.421875",
+          "output": "{\"mdd_word\": 3.4190841949778434, \"mdd_phoneme\": 12.3802658788774, \"mdd_functional\": 3.525576556268424, \"mdd_lexical\": 3.364043735436458}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4190841949778434}",
+          "predict_our_method": "{\"phon_density\": 0.421875, \"phoneme_count\": 27, \"mdd_word_mean\": 3.4190841949778434, \"mdd_phoneme_mean\": 12.3802658788774}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "lv_lvtb",
+      "examples": [
+        {
+          "input": "Language: lv, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.3945527883654663, \"mdd_phoneme\": 11.995756701081795, \"mdd_functional\": 4.295686255357078, \"mdd_lexical\": 2.9370141222273194}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.3945527883654663}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.3945527883654663, \"mdd_phoneme_mean\": 11.995756701081795}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "lij_glt",
+      "examples": [
+        {
+          "input": "Language: lij, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.7427184466019416, \"mdd_phoneme\": 4.912621359223301, \"mdd_functional\": 2.5514018691588785, \"mdd_lexical\": 2.9494949494949494}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.7427184466019416}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.7427184466019416, \"mdd_phoneme_mean\": 4.912621359223301}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "lt_alksnis",
+      "examples": [
+        {
+          "input": "Language: lt, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 3.715849889624724, \"mdd_phoneme\": 14.893995584988962, \"mdd_functional\": 4.789409397901998, \"mdd_lexical\": 3.2397234083232425}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 3.715849889624724}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 3.715849889624724, \"mdd_phoneme_mean\": 14.893995584988962}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "olo_kkpp",
+      "examples": [
+        {
+          "input": "Language: olo, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 2.256, \"mdd_phoneme\": 5.808, \"mdd_functional\": 2.673469387755102, \"mdd_lexical\": 1.986842105263158}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 2.256}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 2.256, \"mdd_phoneme_mean\": 5.808}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "nds_lsdc",
+      "examples": [
+        {
+          "input": "Language: nds, Family: Unknown, Word Order: SVO, Phoneme Count: 30, Phon Density: 0.46875",
+          "output": "{\"mdd_word\": 4.159143829482357, \"mdd_phoneme\": 11.786584273687982, \"mdd_functional\": 4.311601339373646, \"mdd_lexical\": 4.032024963048119}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Unknown\", \"mdd_word_mean\": 4.159143829482357}",
+          "predict_our_method": "{\"phon_density\": 0.46875, \"phoneme_count\": 30, \"mdd_word_mean\": 4.159143829482357, \"mdd_phoneme_mean\": 11.786584273687982}",
+          "eval_ols_phon_density_coef": 1.4776545892463426,
+          "eval_ols_phon_density_p": 0.1088897964563814,
+          "eval_mixed_phon_density_coef": 0.8433469468082913,
+          "eval_mixed_phon_density_p": 0.38930612315552093,
+          "eval_residual_ols": 0.0
+        }
+      ]
+    }
+  ]
+}
