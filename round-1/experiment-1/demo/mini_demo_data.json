@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "method_name": "Phonological Density and Dependency Distance Minimization",
+    "description": "Computes word-space and phoneme-space dependency distances across UD treebanks",
+    "n_treebanks": 55,
+    "n_successful": 55,
+    "n_languages": 55,
+    "n_families": 10,
+    "runtime_seconds": 600,
+    "baseline_comparison": {
+      "SVO": {
+        "n": 41,
+        "mean": 3.0704112250046447,
+        "std": 0.627020094305298,
+        "median": 3.2912835601324018
+      },
+      "SOV": {
+        "n": 11,
+        "mean": 3.037240415600176,
+        "std": 0.5807105536737617,
+        "median": 2.9048950841989996
+      },
+      "VSO": {
+        "n": 3,
+        "mean": 3.670602960813337,
+        "std": 0.3507039642684216,
+        "median": 3.525046997677762
+      },
+      "anova_f": 1.3584783601134198,
+      "anova_p": 0.2660214378500177,
+      "kruskal_h": 2.2305525959627914,
+      "kruskal_p": 0.3278246890854276
+    },
+    "regression_results": {
+      "model": "SimpleOLS",
+      "n_languages": 55,
+      "r_squared": 0.049867992873755984,
+      "phon_density_coefficient": 1.497678659368229,
+      "intercept": 2.3425697417813556,
+      "spearman_r": 0.1898685285441185,
+      "spearman_p": 0.1650071176072114
+    },
+    "figures": [
+      "figures/fig1_density_vs_mdd.pdf",
+      "figures/fig2_word_vs_phoneme_mdd.pdf",
+      "figures/fig3_functional_vs_lexical.pdf"
+    ]
+  },
+  "regression_results": {},
+  "baseline_comparison": {},
+  "datasets": [
+    {
+      "dataset": "ar_padt",
+      "examples": [
+        {
+          "input": "Language: ar, Family: Afroasiatic, Word Order: VSO, Phoneme Count: 47, Phon Density: 0.734",
+          "output": "{\"mdd_word\": {\"mean\": 4.153990248202529, \"median\": 1.0, \"std\": 10.208962246239988, \"entropy\": 2.193004751976777, \"p_gt_2\": 0.27991882684590874, \"p_gt_5\": 0.13795763202115643}, \"mdd_phoneme\": {\"mean\": 12.183268596824698, \"median\": 0.0, \"std\": 39.55386642318975, \"entropy\": 3.918921359097905, \"p_gt_2\": 0.3456745911499224, \"p_gt_5\": 0.27488682589093044}, \"mdd_word_functional\": {\"mean\": 5.584829712523908, \"median\": 1.0, \"std\": 14.93285778935478, \"entropy\": 1.437484200425463, \"p_gt_2\": 0.20061948671101087, \"p_gt_5\": 0.1362728025350424}, \"mdd_word_lexical\": {\"mean\": 3.4755258954435932, \"median\": 2.0, \"std\": 6.817305268192879, \"entropy\": 2.454824686359828, \"p_gt_2\": 0.31752037252619325, \"p_gt_5\": 0.13875653139128788}, \"n_sentences\": 6075, \"n_arcs\": 217806}",
+          "predict_baseline": "{\"word_order\": \"VSO\", \"family\": \"Afroasiatic\", \"mdd_word_mean\": 4.153990248202529}",
+          "predict_our_method": "{\"phon_density\": 0.734375, \"phoneme_count\": 47, \"mdd_word_mean\": 4.153990248202529, \"mdd_phoneme_mean\": 12.183268596824698}"
+        }
+      ]
+    },
+    {
+      "dataset": "en_gumreddit",
+      "examples": [
+        {
+          "input": "Language: en, Family: Indo-European, Word Order: SVO, Phoneme Count: 44, Phon Density: 0.688",
+          "output": "{\"mdd_word\": {\"mean\": 3.4369664318276003, \"median\": 2.0, \"std\": 4.8726705824601355, \"entropy\": 2.649269387817556, \"p_gt_2\": 0.38002486531288854, \"p_gt_5\": 0.1326150020721094}, \"mdd_phoneme\": {\"mean\": 2.4369664318276003, \"median\": 1.0, \"std\": 4.8726705824601355, \"entropy\": 2.7777816326660023, \"p_gt_2\": 0.2440116038126813, \"p_gt_5\": 0.10783257355988396}, \"mdd_word_functional\": {\"mean\": 3.7853222199634073, \"median\": 2.0, \"std\": 6.149808649457339, \"entropy\": 2.559793672048827, \"p_gt_2\": 0.34966456596869283, \"p_gt_5\": 0.1423053466151657}, \"mdd_word_lexical\": {\"mean\": 3.19717324377274, \"median\": 2.0, \"std\": 3.72984241586379, \"entropy\": 2.695158801500378, \"p_gt_2\": 0.40092359361880775, \"p_gt_5\": 0.12594458438287154}, \"n_sentences\": 686, \"n_arcs\": 12065}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Indo-European\", \"mdd_word_mean\": 3.4369664318276003}",
+          "predict_our_method": "{\"phon_density\": 0.6875, \"phoneme_count\": 44, \"mdd_word_mean\": 3.4369664318276003, \"mdd_phoneme_mean\": 2.4369664318276003}"
+        }
+      ]
+    },
+    {
+      "dataset": "ja_bccwjluw",
+      "examples": [
+        {
+          "input": "Language: ja, Family: Austronesian, Word Order: SVO, Phoneme Count: 17, Phon Density: 0.266",
+          "output": "{\"mdd_word\": {\"mean\": 2.8435843415442146, \"median\": 2.0, \"std\": 4.361170316113051, \"entropy\": 2.289413999116213, \"p_gt_2\": 0.253581704343085, \"p_gt_5\": 0.09948767182550618}, \"mdd_phoneme\": {\"mean\": 1.8435843415442146, \"median\": 1.0, \"std\": 4.361170316113051, \"entropy\": 2.4078905335888017, \"p_gt_2\": 0.17618429591174561, \"p_gt_5\": 0.07988348904672588}, \"mdd_word_functional\": {\"mean\": 1.6769752160190408, \"median\": 1.0, \"std\": 2.3885032317890205, \"entropy\": 1.428223129756343, \"p_gt_2\": 0.12366637346717028, \"p_gt_5\": 0.0180110725927459}, \"mdd_word_lexical\": {\"mean\": 4.4070827756936115, \"median\": 2.0, \"std\": 5.70928741991374, \"entropy\": 2.8369833796676804, \"p_gt_2\": 0.42769522013189193, \"p_gt_5\": 0.2086832305889369}, \"n_sentences\": 40801, \"n_arcs\": 674958}",
+          "predict_baseline": "{\"word_order\": \"SVO\", \"family\": \"Austronesian\", \"mdd_word_mean\": 2.8435843415442146}",
+          "predict_our_method": "{\"phon_density\": 0.265625, \"phoneme_count\": 17, \"mdd_word_mean\": 2.8435843415442146, \"mdd_phoneme_mean\": 1.8435843415442146}"
+        }
+      ]
+    }
+  ]
+}
