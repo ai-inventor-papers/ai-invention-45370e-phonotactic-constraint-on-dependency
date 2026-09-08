@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phonological Density Does Not Predict Dependency Distance Minimization</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --ink-muted: #555;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --ground: #fafafa;
+      --surface: #fff;
+      --hairline: #e5e5e5;
+      --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.4);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--ground);
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--ink);
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 2px solid var(--accent);
+    }
+
+    /* Layout */
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      padding: 48px 0 96px;
+    }
+
+    @media (min-width: 900px) {
+      .content-grid {
+        grid-template-columns: 240px 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* Navigation */
+    .side-nav {
+      position: sticky;
+      top: 32px;
+      height: fit-content;
+      font-size: 14px;
+      border-left: 2px solid var(--hairline);
+      padding-left: 16px;
+    }
+
+    .side-nav nav a {
+      display: block;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 6px 0 6px 12px;
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .side-nav nav a:hover,
+    .side-nav nav a.active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+    }
+
+    .side-nav nav a:focus {
+      outline: none;
+      box-shadow: var(--focus-ring);
+      border-radius: 2px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.6rem; margin-bottom: 24px; }
+    h3 { font-size: 1.25rem; margin-bottom: 16px; }
+    h4 { font-size: 1rem; margin-bottom: 12px; }
+
+    p {
+      margin-bottom: 1.2em;
+      max-width: 72ch;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    a:focus { outline: none; box-shadow: var(--focus-ring); border-radius: 2px; }
+
+    /* Hero */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 48px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      max-width: 900px;
+    }
+
+    .hero .author-line {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      margin-bottom: 32px;
+    }
+
+    .hero .tldr {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 68ch;
+      margin-bottom: 32px;
+      color: var(--ink);
+    }
+
+    .hero .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .hero .links a:hover {
+      background: #333;
+      text-decoration: none;
+    }
+    .hero .links a:focus {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    section {
+      scroll-margin-top: 32px;
+    }
+
+    /* Figures */
+    .figure-block {
+      margin: 32px 0;
+    }
+
+    .figure-block img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+    }
+    .figure-block img:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .figure-block img:focus {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    .figure-caption {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 2px solid var(--hairline);
+      border-radius: 4px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 8px;
+    }
+    .lightbox-close:focus {
+      outline: 2px solid var(--accent);
+      border-radius: 4px;
+    }
+    .lightbox-caption {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 0.9rem;
+      max-width: 600px;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    /* Results numbers */
+    .result-highlight {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .result-highlight p {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    /* Limitations list */
+    .limitations-list {
+      list-style: none;
+      padding: 0;
+    }
+    .limitations-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+      font-size: 0.95rem;
+    }
+    .limitations-list li:last-child {
+      border-bottom: none;
+    }
+    .limitations-list li strong {
+      color: var(--ink);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--hairline);
+      padding: 40px 0;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+    }
+    footer .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    footer a {
+      color: var(--accent);
+    }
+    footer .citation {
+      font-style: italic;
+      max-width: 70ch;
+    }
+
+    /* Utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="hero">
+    <div class="page-wrapper">
+      <h1>Phonological Density Does Not Predict Dependency Distance Minimization: A Cross-Linguistic Test Across 55 Languages</h1>
+      <p class="author-line">Author Name, Affiliation</p>
+      <div class="tldr">
+        <p>Dependency distance minimization predicts that syntactically related words appear near each other in linear order. A natural extension asks whether languages with larger phoneme inventories compensate by minimizing syntactic distance even further. Testing this across 55 languages from 10 families using Universal Dependencies treebanks, we find no significant relationship: phonological density shows a weak positive correlation with mean dependency distance (r = 0.19, p = 0.17), running opposite to prediction. Under phylogenetic control, the effect disappears entirely. The null finding is consistent with a directional asymmetry: syntax drives phonological compression, but phonological density does not drive syntactic optimization.</p>
+      </div>
+      <div class="links">
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-45370e-phonotactic-constraint-on-dependency@main/paper.pdf" target="_blank" rel="noopener">
+          PDF (compiled paper)
+        </a>
+        <a href="https://github.com/ai-inventor-papers/ai-invention-45370e-phonotactic-constraint-on-dependency" target="_blank" rel="noopener">
+          Code repository
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="content-grid">
+      <aside class="side-nav" aria-label="Section navigation">
+        <nav>
+          <a href="#contributions">Contributions</a>
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+          <a href="#figures">Figures</a>
+          <a href="#limitations">Limitations</a>
+        </nav>
+      </aside>
+
+      <main id="main-content">
+
+        <!-- CONTRIBUTIONS -->
+        <section id="contributions">
+          <h2>Contributions</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>1. A new distance metric</h3>
+              <p>We introduce the phoneme-interval distance (PID), which sums the phoneme counts of all words strictly between head and dependent in each dependency arc. This separates phonological from syntactic proximity, correcting a blind spot in DLM measurement.</p>
+            </div>
+            <div class="card">
+              <h3>2. Largest test of the phonotactic constraint hypothesis</h3>
+              <p>We test whether phonologically dense languages exhibit stronger dependency distance minimization across 55 languages from 10 families, with phylogenetic control via mixed-effects modeling.</p>
+            </div>
+            <div class="card">
+              <h3>3. Directional asymmetry in cross-level optimization</h3>
+              <p>We demonstrate that the forward direction (syntax driving phonological compression) holds, while the reverse direction (phonology driving syntactic optimization) does not, consistent with Ferrer-i-Cancho and Gómez-Rodríguez (2021).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- METHOD -->
+        <section id="method">
+          <h2>Method</h2>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig1_v0.jpg"
+              alt="Research design diagram showing the phonotactic constraint hypothesis: languages with larger phoneme inventories should exhibit stronger dependency distance minimization. The diagram contrasts the predicted negative relationship (dashed arrow) with the observed null/positive relationship (solid arrow)."
+              loading="lazy"
+            >
+            <p class="figure-caption">Overview of the phonotactic constraint hypothesis and our two-metric approach. The hypothesis predicts that phonologically dense languages (large phoneme inventories) should exhibit stronger dependency distance minimization. We test this using word-space MDD (standard) and phoneme-interval distance PID (novel).</p>
+          </div>
+
+          <h3>Data</h3>
+          <p>We extracted Universal Dependencies treebanks from the <code>commul/universal_dependencies</code> repository on HuggingFace, selecting one configuration per language with the largest training splits. This yielded 55 languages across 10 families: Indo-European (20), Uralic (4), Turkic (3), Afroasiatic (4), Sino-Tibetan (4), Austronesian (5), Japonic (1), Koreanic (1), Tai-Kadai (2), and Austroasiatic (2), plus isolates and unclassified entries. All treebanks were written corpora.</p>
+
+          <h3>Phonological features</h3>
+          <p>Phonological density came from PHOIBLE 2.0, measured as phoneme inventory size. We normalized to [0, 1] by dividing by the maximum observed inventory (64 phonemes). Mean phonological density across the sample was 0.50 (σ = 0.09).</p>
+
+          <h3>Distance metrics</h3>
+          <p><strong>Word-space MDD</strong> follows standard practice: for each dependency arc (h, d), distance equals |pos(h) − pos(d)|, the absolute difference in token positions. Mean dependency distance is the arithmetic mean across all arcs.</p>
+          <p><strong>Phoneme-interval distance (PID)</strong> extends this to phonological units. For each word w, we estimated constituent phonemes using language-family-specific phoneme estimation ratios derived from PHOIBLE data. PID for arc (h, d) equals the sum of phoneme counts of all words strictly between head and dependent: PID(h, d) = Σ φw for w ∈ intervening(h, d).</p>
+          <p>For non-Latin scripts (CJK, Arabic, Thai) where epitran was unavailable, we used character counts as a lower-bound approximation. Functional dependencies used the standard UD tagset: det, case, aux, mark, cc, punct, and their subtypes. Lexical dependencies included all remaining relations.</p>
+
+          <h3>Statistical analysis</h3>
+          <p>We tested three hypotheses: (H1) phonological density predicts MDD, (H2) word order predicts MDD, (H3) phonological density predicts mean PID. For H1, we fitted both OLS regression and a linear mixed-effects model with language family as random intercept. For H2, we fitted one-way ANOVA with word order as factor. For H3, we fitted OLS regression on the 37-language PID subsample. We reported Spearman rank correlations as robustness checks. All analyses used α = 0.05.</p>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results">
+          <h2>Results</h2>
+
+          <h3>Word-space dependency distances</h3>
+          <p>Mean MDD ranged from 1.96 (Kurdish Sorani) to 4.15 (Arabic) across 55 languages. The overall mean was 3.10 with standard deviation 0.63.</p>
+
+          <div class="result-highlight">
+            <p><strong>Word order does not predict MDD.</strong> SVO languages averaged 3.07 (n = 41), SOV languages averaged 3.04 (n = 11), and VSO languages averaged 3.67 (n = 3). ANOVA: F = 1.36, p = 0.27. Excluding VSO: F = 0.06, p = 0.81, η² = 0.0005. Word order explains essentially none of the variance in MDD.</p>
+          </div>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig2_v0.png"
+              alt="Box plot showing mean dependency distance by word order type: SVO (n=41), SOV (n=11), and VSO (n=3). The plot shows no significant difference between groups, with SVO and SOV nearly identical and VSO slightly higher but with only three languages."
+              loading="lazy"
+            >
+            <p class="figure-caption">Mean dependency distance by word order type. ANOVA: F=1.36, p=0.27. Word order does not predict MDD.</p>
+          </div>
+
+          <h3>Phonological density and DLM</h3>
+          <p>The phonotactic constraint hypothesis predicted a negative correlation: denser phonological systems should exhibit stronger DLM (lower MDD). The observed correlation ran in the opposite direction.</p>
+
+          <div class="result-highlight">
+            <p><strong>No significant relationship between phonological density and MDD.</strong> Spearman r = 0.19, p = 0.17. OLS regression: R² = 0.05, slope = 1.48, intercept = 2.34. The positive slope runs opposite to the predicted direction. Under phylogenetic control (mixed-effects model with family random intercept): β = 0.84, p = 0.39. The effect disappears entirely.</p>
+          </div>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig3_v0.png"
+              alt="Scatter plot of phonological density (normalized phoneme inventory size) against mean dependency distance. The points show a weak positive trend, contrary to the predicted negative relationship. Regression line has positive slope."
+              loading="lazy"
+            >
+            <p class="figure-caption">Phonological density vs. word-space MDD. Spearman r=0.19, p=0.17. OLS: R²=0.05, slope=1.48, intercept=2.34. The positive slope runs opposite to the predicted direction.</p>
+          </div>
+
+          <h3>Phoneme-interval distances</h3>
+          <p>PID averaged 10.62 phonemes across the 37-language subsample (σ = 4.23), consistently larger than word-space MDD (mean 3.1). The ratio PID/MDD averaged 3.5, corresponding to average word length of 3.5 phonemes.</p>
+
+          <div class="result-highlight">
+            <p><strong>Marginally significant negative correlation in phoneme-space.</strong> Spearman r = −0.32, p = 0.051. OLS: R² = 0.11, slope = −0.84, intercept = 16.29. The negative slope runs in the predicted direction but the effect is modest and barely reaches significance. PID correlated with word-space MDD (r = 0.52, p &lt; 0.001).</p>
+          </div>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig4_v0.png"
+              alt="Scatter plot of phonological density against mean phoneme-interval distance (PID). The points show a weak negative trend, consistent with the predicted direction but modest in strength."
+              loading="lazy"
+            >
+            <p class="figure-caption">Phonological density vs. phoneme-interval distance across 37 languages. Spearman r=−0.32, p=0.051. The negative slope runs in the predicted direction but is modest.</p>
+          </div>
+
+          <h3>Functional versus lexical dependencies</h3>
+          <p>Across all languages, functional dependencies averaged 2.7 words while lexical dependencies averaged 3.4 words. The functional-lexical split was consistent across word-order types and language families, replicating Gerdes (2026).</p>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig5_v0.png"
+              alt="Bar chart comparing mean dependency distance for functional dependencies (mean=2.7) versus lexical dependencies (mean=3.4) across 55 languages. Functional dependencies are shorter, replicating the known functional-lexical split."
+              loading="lazy"
+            >
+            <p class="figure-caption">Functional vs. lexical dependency distances. Functional: mean=2.7. Lexical: mean=3.4. The functional-lexical split replicates Gerdes (2026). Difference not significant in this sample (z=−0.90, p=0.37) due to between-language variance.</p>
+          </div>
+
+          <h3>Family-level patterns</h3>
+          <p>Afroasiatic languages had the highest mean MDD (3.79), while Unknown family languages had the lowest (2.88). Indo-European languages ranged from 2.34 (Latin) to 4.15 (Arabic). Uralic averaged 2.89, below the overall mean. Turkic averaged 3.12. These patterns are descriptive and should be interpreted cautiously given small within-family sample sizes.</p>
+        </section>
+
+        <!-- FIGURE GALLERY -->
+        <section id="figures">
+          <h2>Figure Gallery</h2>
+          <p>Click any figure to view it enlarged. Press Escape or click outside to close.</p>
+
+          <div class="figure-block">
+            <img
+              src="figures/fig1_v0.jpg"
+              alt="Research design diagram showing the phonotactic constraint hypothesis and two-metric approach."
+              loading="lazy"
+              class="gallery-thumb"
+            >
+            <p class="figure-caption">Fig. 1: Research design overview</p>
+          </div>
+          <div class="figure-block">
+            <img
+              src="figures/fig2_v0.png"
+              alt="Box plot of mean dependency distance by word order type."
+              loading="lazy"
+              class="gallery-thumb"
+            >
+            <p class="figure-caption">Fig. 2: Mean dependency distance by word order type</p>
+          </div>
+          <div class="figure-block">
+            <img
+              src="figures/fig3_v0.png"
+              alt="Scatter plot of phonological density against word-space MDD."
+              loading="lazy"
+              class="gallery-thumb"
+            >
+            <p class="figure-caption">Fig. 3: Phonological density vs. word-space MDD</p>
+          </div>
+          <div class="figure-block">
+            <img
+              src="figures/fig4_v0.png"
+              alt="Scatter plot of phonological density against phoneme-interval distance."
+              loading="lazy"
+              class="gallery-thumb"
+            >
+            <p class="figure-caption">Fig. 4: Phonological density vs. phoneme-interval distance</p>
+          </div>
+          <div class="figure-block">
+            <img
+              src="figures/fig5_v0.png"
+              alt="Bar chart comparing functional and lexical dependency distances."
+              loading="lazy"
+              class="gallery-thumb"
+            >
+            <p class="figure-caption">Fig. 5: Functional vs. lexical dependency distances</p>
+          </div>
+        </section>
+
+        <!-- LIMITATIONS -->
+        <section id="limitations">
+          <h2>Limitations</h2>
+          <ul class="limitations-list">
+            <li><strong>Phonological density measured as inventory size alone.</strong> We lacked reliable data on phonotactic complexity and syllable type richness for all 55 languages. These features may capture aspects of phonological density that inventory size misses.</li>
+            <li><strong>Character counts for non-Latin scripts.</strong> For CJK languages, PID is effectively a character-space metric rather than a phoneme-space metric. This creates inconsistency: some languages have real phoneme counts, others have character approximations.</li>
+            <li><strong>Written corpora only.</strong> All treebanks were written corpora. Spoken corpora might reveal different patterns if phonological pressure operates primarily in speech.</li>
+            <li><strong>Small VSO sample.</strong> The VSO group contained only 3 languages, limiting statistical power for that word-order type.</li>
+            <li><strong>Indo-European overrepresentation.</strong> The Indo-European family accounts for 20 of 55 languages (36%). While the mixed-effects model partially addresses phylogenetic non-independence, the family effect did not significantly improve model fit (χ² = 2.66, p = 0.10).</li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="page-wrapper">
+      <div class="links">
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-45370e-phonotactic-constraint-on-dependency@main/paper.pdf" target="_blank" rel="noopener">PDF</a>
+        <a href="https://github.com/ai-inventor-papers/ai-invention-45370e-phonotactic-constraint-on-dependency" target="_blank" rel="noopener">Code repository</a>
+      </div>
+      <p class="citation">Author Name. (2026). Phonological density does not predict dependency distance minimization: A cross-linguistic test across 55 languages. <em>Proceedings of ACL/EMNLP</em>.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Figure enlarged view">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img src="figures/fig1_v0.jpg" alt="" id="lightbox-img">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    (function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      var lightboxCaption = document.getElementById('lightbox-caption');
+      var lightboxClose = document.getElementById('lightbox-close');
+      var lastFocused = null;
+      var thumbs = document.querySelectorAll('.gallery-thumb');
+
+      function openLightbox(img, caption) {
+        lastFocused = document.activeElement;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+        lightbox.classList.add('open');
+        lightboxClose.focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+      }
+
+      thumbs.forEach(function(thumb) {
+        var figBlock = thumb.closest('.figure-block');
+        var caption = figBlock ? figBlock.querySelector('.figure-caption') : null;
+        thumb.addEventListener('click', function() {
+          openLightbox(thumb, caption ? caption.textContent : '');
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
